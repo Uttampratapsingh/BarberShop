@@ -61,7 +61,7 @@ const cards = [
 ];
 
 export default function BeautyFeatures() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const section = sectionRef.current;

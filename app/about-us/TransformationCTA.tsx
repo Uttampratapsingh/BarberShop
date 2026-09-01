@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 
 export default function TransformationCTA() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
