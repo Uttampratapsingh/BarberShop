@@ -1,0 +1,169 @@
+"use client";
+
+import { useState } from "react";
+
+type PortfolioCard = {
+  id: number;
+  title: string;
+  image: string;
+};
+
+const portfolioCards: PortfolioCard[] = [
+  {
+    id: 1,
+    title: "Luxe Party Collection",
+    image:
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=90",
+  },
+  {
+    id: 2,
+    title: "Luxe Party Collection",
+    image:
+      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=90",
+  },
+  {
+    id: 3,
+    title: "Luxe Party Collection",
+    image:
+      "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1200&q=90",
+  },
+];
+
+function EyeIcon() {
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      className="h-[42px] w-[42px] sm:h-[46px] sm:w-[46px]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="4"
+    >
+      <path
+        d="M7 32C14 20 23 13 32 13s18 7 25 19c-7 12-16 19-25 19S14 44 7 32Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="32" cy="32" r="8" />
+    </svg>
+  );
+}
+
+function HeartIcon({ active }: { active: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={`h-[24px] w-[24px] transition-all duration-300 ${
+        active ? "scale-110 fill-current" : "fill-transparent"
+      }`}
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path
+        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export default function PartyPortfolio() {
+  const [favorites, setFavorites] = useState<number[]>([]);
+
+  const toggleFavorite = (id: number) => {
+    setFavorites((prev) =>
+      prev.includes(id)
+        ? prev.filter((item) => item !== id)
+        : [...prev, id]
+    );
+  };
+
+  return (
+    <section className="relative overflow-hidden bg-[#080400] px-5 py-12 sm:px-8 md:px-12 lg:px-[7.5%]">
+      {/* Background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#030303_0%,#070300_72%,#140900_100%)]" />
+
+        <div className="absolute left-1/2 top-[-250px] h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-[#e5a900]/[0.025] blur-[150px]" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-[1460px]">
+        {/* Header */}
+        <div className="mb-[72px] flex flex-col items-center">
+          <div className="mb-7 animate-[partyFloat_3s_ease-in-out_infinite] text-[#ffd21a]">
+            <EyeIcon />
+          </div>
+
+          <h2 className="text-center text-[42px] font-extrabold leading-none tracking-[-0.045em] text-[#ffd21a] sm:text-[50px] md:text-[56px] lg:text-[58px]">
+            Party Portfolio
+          </h2>
+        </div>
+
+        {/* Portfolio */}
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3 xl:gap-9">
+          {portfolioCards.map((card) => {
+            const isFavorite = favorites.includes(card.id);
+
+            return (
+              <article
+                key={card.id}
+                className="group relative h-[440px] overflow-hidden rounded-[18px] border border-white/[0.06] bg-[#120c06] shadow-[0_20px_55px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out hover:-translate-y-[8px] hover:border-[#ffd21a]/25 hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)] sm:h-[465px] lg:h-[440px]"
+              >
+                {/* Image */}
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="absolute inset-0 h-full w-full object-cover object-center brightness-[0.82] saturate-[0.9] transition-all duration-1000 ease-out group-hover:scale-[1.08] group-hover:brightness-100 group-hover:saturate-100"
+                />
+
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-black/10 transition-opacity duration-700 group-hover:bg-black/0" />
+
+                {/* Bottom fade */}
+                <div className="absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-black via-black/75 to-transparent" />
+
+                {/* Heart */}
+                <button
+                  type="button"
+                  onClick={() => toggleFavorite(card.id)}
+                  aria-label={
+                    isFavorite ? "Remove from favorites" : "Add to favorites"
+                  }
+                  className="absolute right-[19px] top-[19px] z-20 flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#786343]/70 text-[#ffd21a] backdrop-blur-[4px] transition-all duration-300 hover:scale-110 hover:bg-[#8c7148]/80 active:scale-95"
+                >
+                  <HeartIcon active={isFavorite} />
+                </button>
+
+                {/* Title */}
+                <div className="absolute bottom-0 left-0 right-0 z-10 p-[27px]">
+                  <h3 className="text-[23px] font-bold leading-[1.1] tracking-[-0.035em] text-[#fff4b8] transition-transform duration-500 group-hover:-translate-y-1 sm:text-[25px]">
+                    {card.title}
+                  </h3>
+                </div>
+
+                {/* Gold hover border */}
+                <div className="pointer-events-none absolute inset-0 rounded-[18px] border border-transparent transition-all duration-500 group-hover:border-[#ffd21a]/30" />
+
+                {/* Shine */}
+                <div className="pointer-events-none absolute inset-y-0 -left-[120%] w-[55%] rotate-[12deg] bg-gradient-to-r from-transparent via-white/[0.08] to-transparent transition-all duration-[1200ms] ease-out group-hover:left-[140%]" />
+              </article>
+            );
+          })}
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes partyFloat {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+
+          50% {
+            transform: translateY(-6px);
+          }
+        }
+      `}</style>
+    </section>
+  );
+}
