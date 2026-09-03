@@ -165,18 +165,18 @@ export default function CoursesGrid() {
               }}
             >
               {/* Image */}
-              <div className="relative h-[335px] overflow-hidden rounded-[7px] bg-black">
+              <div className="course-image-frame relative h-[335px] overflow-hidden rounded-[7px] bg-black">
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="absolute inset-0 h-full w-full object-cover brightness-[0.55] saturate-[0.85] transition-all duration-[900ms] ease-out group-hover:scale-[1.07] group-hover:brightness-[0.72] group-hover:saturate-100"
+                  className="course-image absolute inset-0 z-0 h-full w-full object-cover brightness-[0.55] saturate-[0.85] opacity-100 transition-all duration-[900ms] ease-out group-hover:scale-[1.07] group-hover:brightness-[0.72] group-hover:saturate-100"
                 />
 
                 {/* Dark image overlay */}
-                <div className="absolute inset-0 bg-black/20 transition-opacity duration-500 group-hover:bg-black/5" />
+                <div className="course-image-overlay absolute inset-0 z-[1] transition-opacity duration-500" />
 
                 {/* Bottom image fade */}
-                <div className="absolute inset-x-0 bottom-0 h-[28%] bg-gradient-to-t from-black/70 to-transparent" />
+                <div className="course-image-gradient absolute inset-x-0 bottom-0 z-[2] h-[28%]" />
 
                 {/* Shine */}
                 <div className="pointer-events-none absolute inset-y-0 -left-[80%] w-[45%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/[0.07] to-transparent transition-transform duration-[1100ms] group-hover:translate-x-[360%]" />
@@ -208,6 +208,28 @@ export default function CoursesGrid() {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        .course-image-frame {
+          isolation: isolate;
+        }
+
+        .course-image {
+          display: block;
+        }
+
+        .course-image-overlay {
+          background: rgba(0, 0, 0, 0.2);
+        }
+
+        .group:hover .course-image-overlay {
+          background: rgba(0, 0, 0, 0.05);
+        }
+
+        .course-image-gradient {
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        }
+      `}</style>
     </section>
   );
 }
