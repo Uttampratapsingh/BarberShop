@@ -191,6 +191,25 @@ footer[class*="bg-black"] {
   background-color: var(--palette-ink) !important;
 }
 
+/* Keep the mobile navigation visually calm while the palette bridge styles the site. */
+header > div:nth-child(2) > div > div {
+  background-color: var(--palette-ink) !important;
+}
+
+header > div:nth-child(2) [class*="bg-[rgba"] {
+  background-color: transparent !important;
+}
+
+header > div:nth-child(2) nav a {
+  background-color: transparent !important;
+  color: var(--palette-ivory) !important;
+}
+
+header > div:nth-child(2) nav a[class*="bg-[rgba"] {
+  background-color: rgb(201 130 120 / 0.16) !important;
+  color: var(--palette-rose) !important;
+}
+
 section[style*="backgroundImage"] h1,
 section[style*="backgroundImage"] h2,
 section[style*="backgroundImage"] h3 {

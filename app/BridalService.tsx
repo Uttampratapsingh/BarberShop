@@ -1,3 +1,7 @@
+"use client";
+
+import React from "react";
+
 const BridalServices = () => {
     const services = [
         {
@@ -6,7 +10,7 @@ const BridalServices = () => {
         },
         {
             title: "Wedding Day Services",
-            image: "/bridal-1.png",
+            image: "/bridal-2.png",
         },
     ];
 
@@ -20,6 +24,7 @@ const BridalServices = () => {
                             opacity: 0;
                             transform: translateY(40px);
                         }
+
                         to {
                             opacity: 1;
                             transform: translateY(0);
@@ -51,8 +56,9 @@ const BridalServices = () => {
                     }
 
                     .service-card-enter {
-                        animation: serviceCardEnter 0.9s ease-out forwards,
-                                   goldGlow 4s ease-in-out infinite;
+                        animation:
+                            serviceCardEnter 0.9s ease-out forwards,
+                            goldGlow 4s ease-in-out infinite;
                     }
 
                     .service-card-delay {
@@ -65,6 +71,10 @@ const BridalServices = () => {
                             filter 900ms ease;
                     }
 
+                    .service-card-tint {
+                        background: rgba(0, 0, 0, 0.05);
+                    }
+
                     .service-card:hover .service-card-image {
                         transform: scale(1.08);
                         filter: brightness(1.08);
@@ -73,12 +83,12 @@ const BridalServices = () => {
                     .service-card-button {
                         transition:
                             transform 300ms ease,
-                            box-shadow 300ms ease,
-                            background 300ms ease;
+                            box-shadow 300ms ease;
                     }
 
                     .service-card:hover .service-card-button {
                         transform: translateY(-3px);
+
                         box-shadow:
                             0 10px 30px rgba(255, 210, 0, 0.28),
                             0 0 20px rgba(255, 210, 0, 0.12);
@@ -100,6 +110,7 @@ const BridalServices = () => {
                             transparent
                         );
                         transform: translateX(-120%);
+                        z-index: 30;
                     }
 
                     .service-card:hover::after {
@@ -109,22 +120,83 @@ const BridalServices = () => {
                 `}
             </style>
 
-            {/* Background texture */}
+
+            {/* =====================================================
+                SECTION BACKGROUND
+            ===================================================== */}
+
             <div
-                className="absolute inset-0 opacity-20"
+                className="
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    bg-black
+                "
+            />
+
+
+            {/* =====================================================
+                BACKGROUND TEXTURE
+            ===================================================== */}
+
+            <div
+                className="
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    z-[1]
+                    opacity-10
+                "
                 style={{
                     backgroundImage: "url('/noise-texture.webp')",
                     backgroundSize: "cover",
                 }}
             />
 
-            {/* Background glow */}
-            <div className="absolute left-1/2 top-20 h-[350px] w-[700px] -translate-x-1/2 rounded-full bg-[#D4AF37]/5 blur-[120px]" />
 
-            <div className="relative z-10 mx-auto max-w-[1500px] px-5 md:px-8 lg:px-12">
+            {/* =====================================================
+                BACKGROUND GOLD GLOW
+            ===================================================== */}
 
-                {/* Heading */}
+            <div
+                className="
+                    pointer-events-none
+                    absolute
+                    left-1/2
+                    top-20
+                    z-[2]
+                    h-[350px]
+                    w-[700px]
+                    -translate-x-1/2
+                    rounded-full
+                    bg-[#D4AF37]/5
+                    blur-[120px]
+                "
+            />
+
+
+            {/* =====================================================
+                MAIN CONTENT
+            ===================================================== */}
+
+            <div
+                className="
+                    relative
+                    z-10
+                    mx-auto
+                    max-w-[1500px]
+                    px-5
+                    md:px-8
+                    lg:px-12
+                "
+            >
+
+                {/* =================================================
+                    HEADING
+                ================================================= */}
+
                 <div className="mb-12 text-center md:mb-16">
+
                     <h2
                         className="
                             text-4xl
@@ -134,112 +206,248 @@ const BridalServices = () => {
                             sm:text-5xl
                             md:text-6xl
                             lg:text-[60px]
+
+                            [text-shadow:0_0_15px_rgba(245,197,24,0.18)]
                         "
                     >
                         Premium Bridal Services
                     </h2>
+
                 </div>
 
-                {/* Cards */}
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
+
+                {/* =================================================
+                    CARDS
+                ================================================= */}
+
+                <div
+                    className="
+                        grid
+                        grid-cols-1
+                        gap-8
+                        lg:grid-cols-2
+                        lg:gap-10
+                    "
+                >
 
                     {services.map((service, index) => (
+
                         <div
                             key={service.title}
                             className={`
                                 service-card
                                 service-card-enter
+                                group
+
                                 relative
+                                isolate
+
                                 h-[420px]
                                 overflow-hidden
                                 rounded-2xl
+
                                 border
                                 border-[#D4AF37]/50
+
                                 bg-black
+
                                 opacity-0
+
                                 ${index === 1 ? "service-card-delay" : ""}
                             `}
                         >
-                            {/* Image */}
-                            <div className="absolute inset-0 overflow-hidden">
+
+                            {/* =================================================
+                                IMAGE
+
+                                IMPORTANT:
+                                z-0 = image
+                            ================================================= */}
+
+                            <div
+                                className="
+                                    absolute
+                                    inset-0
+                                    z-0
+                                    overflow-hidden
+                                    bg-transparent
+                                "
+                            >
+
                                 <img
                                     src={service.image}
                                     alt={service.title}
                                     className="
                                         service-card-image
+
+                                        block
                                         h-full
                                         w-full
+
                                         object-cover
+                                        object-center
+
+                                        opacity-100
+                                        visible
                                     "
                                 />
+
                             </div>
 
-                            {/* Dark image overlay */}
+
+                            {/* =================================================
+                                LIGHT CINEMATIC OVERLAY
+
+                                IMPORTANT:
+                                This is deliberately VERY LIGHT.
+                            ================================================= */}
+
                             <div
                                 className="
+                                    pointer-events-none
                                     absolute
                                     inset-0
+                                    z-10
+
                                     bg-gradient-to-t
-                                    from-black
-                                    via-black/55
-                                    to-black/10
+                                    from-black/55
+                                    via-black/20
+                                    to-transparent
+                                    opacity-100
                                 "
                             />
 
-                            {/* Additional cinematic overlay */}
-                            <div className="absolute inset-0 bg-black/10 transition-all duration-500 group-hover:bg-black/0" />
 
-                            {/* Content */}
+                            {/* =================================================
+                                VERY SUBTLE DARK TINT
+                            ================================================= */}
+
+                            <div
+                                className="
+                                    pointer-events-none
+                                    absolute
+                                    inset-0
+                                    z-10
+
+                                    service-card-tint
+
+                                    transition-opacity
+                                    duration-500
+                                    opacity-100
+                                "
+                            />
+
+
+                            {/* =================================================
+                                CONTENT
+                            ================================================= */}
+
                             <div
                                 className="
                                     absolute
                                     inset-x-0
                                     bottom-0
-                                    z-10
+                                    z-20
                                     p-7
                                     md:p-8
                                 "
                             >
+
                                 <h3
                                     className="
                                         mb-6
+
                                         text-2xl
                                         font-bold
+
                                         text-[#FFD21F]
+
                                         md:text-3xl
+
+                                        [text-shadow:0_2px_10px_rgba(0,0,0,0.95)]
                                     "
                                 >
                                     {service.title}
                                 </h3>
 
+
                                 <a
                                     href="tel:+919999999999"
                                     className="
                                         service-card-button
+
+                                        inline-block
+
                                         rounded-lg
+
                                         bg-gradient-to-r
                                         from-[#D4AF37]
                                         to-[#FFD700]
+
                                         px-10
                                         py-4
+
                                         text-base
                                         font-bold
                                         text-black
+
+                                        shadow-[0_8px_25px_rgba(212,175,55,0.3)]
+
                                         md:text-lg
                                     "
                                 >
                                     Inquire Now
                                 </a>
+
                             </div>
 
-                            {/* Gold corner glow */}
-                            <div className="pointer-events-none absolute -left-16 -top-16 h-32 w-32 rounded-full bg-[#D4AF37]/10 blur-3xl" />
-                            <div className="pointer-events-none absolute -bottom-16 -right-16 h-32 w-32 rounded-full bg-[#D4AF37]/10 blur-3xl" />
+
+                            {/* =================================================
+                                GOLD CORNER GLOW
+                            ================================================= */}
+
+                            <div
+                                className="
+                                    pointer-events-none
+                                    absolute
+                                    -left-16
+                                    -top-16
+                                    z-30
+
+                                    h-32
+                                    w-32
+
+                                    rounded-full
+                                    bg-[#D4AF37]/10
+                                    blur-3xl
+                                "
+                            />
+
+                            <div
+                                className="
+                                    pointer-events-none
+                                    absolute
+                                    -bottom-16
+                                    -right-16
+                                    z-30
+
+                                    h-32
+                                    w-32
+
+                                    rounded-full
+                                    bg-[#D4AF37]/10
+                                    blur-3xl
+                                "
+                            />
+
                         </div>
+
                     ))}
 
                 </div>
+
             </div>
+
         </section>
     );
 };

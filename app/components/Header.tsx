@@ -98,7 +98,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black">
-      <div className="relative mx-auto flex h-[72px] sm:h-[88px] md:h-[120px] w-full max-w-[1920px] items-center gap-6 px-4 sm:px-10 lg:px-16 xl:px-20">
+      <div className="relative mx-auto flex h-[60px] sm:h-[70px] md:h-[80px] w-full max-w-[1920px] items-center gap-6 px-4 sm:px-10 lg:px-16 xl:px-20">
         <Link
           href="/"
           aria-label="Classic Bridal Studio home"
@@ -115,7 +115,7 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`group nav-link relative whitespace-nowrap px-2 py-2 text-[16px] font-semibold tracking-wide ease-out active:translate-y-px sm:text-[16px] lg:text-[17px] ${
+                className={`group nav-link relative whitespace-nowrap px-2 py-2 text-[12px] font-semibold tracking-wide ease-out active:translate-y-px sm:text-[14px] lg:text-[15px] ${
                   isActive ? "text-[#f7cc18]" : "text-[#d2d6dd] hover:text-[#f7cc18]"
                 }`}
               >
