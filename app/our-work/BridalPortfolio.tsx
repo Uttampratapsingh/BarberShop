@@ -108,20 +108,20 @@ export default function BridalPortfolio() {
             return (
               <article
                 key={card.id}
-                className="group relative h-[460px] overflow-hidden rounded-[18px] border border-white/[0.06] bg-[#16100a] shadow-[0_25px_70px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out hover:-translate-y-3 hover:border-[#ffd21a]/20 hover:shadow-[0_35px_90px_rgba(0,0,0,0.55)] sm:h-[500px]"
+                className="portfolio-card group relative h-[460px] overflow-hidden rounded-[18px] border border-white/[0.06] bg-[#16100a] shadow-[0_25px_70px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out hover:-translate-y-3 hover:border-[#ffd21a]/20 hover:shadow-[0_35px_90px_rgba(0,0,0,0.55)] sm:h-[500px]"
               >
                 {/* Image */}
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-[1.08]"
+                  className="portfolio-card-image absolute inset-0 z-0 h-full w-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-[1.08]"
                 />
 
                 {/* Image overlay */}
-                <div className="absolute inset-0 bg-black/10 transition-all duration-500 group-hover:bg-black/0" />
+                <div className="portfolio-card-overlay absolute inset-0 z-[1] transition-all duration-500" />
 
                 {/* Bottom gradient */}
-                <div className="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-black via-black/80 to-transparent" />
+                <div className="portfolio-card-gradient absolute inset-x-0 bottom-0 z-[2] h-[50%]" />
 
                 {/* Heart */}
                 <button
@@ -151,6 +151,23 @@ export default function BridalPortfolio() {
       </div>
 
       <style jsx>{`
+        .portfolio-card-overlay {
+          background: rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-card:hover .portfolio-card-overlay {
+          background: transparent;
+        }
+
+        .portfolio-card-gradient {
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.8),
+            transparent
+          );
+        }
+
         @keyframes float {
           0%,
           100% {

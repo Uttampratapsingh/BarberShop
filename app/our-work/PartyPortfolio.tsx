@@ -107,20 +107,20 @@ export default function PartyPortfolio() {
             return (
               <article
                 key={card.id}
-                className="group relative h-[440px] overflow-hidden rounded-[18px] border border-white/[0.06] bg-[#120c06] shadow-[0_20px_55px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out hover:-translate-y-[8px] hover:border-[#ffd21a]/25 hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)] sm:h-[465px] lg:h-[440px]"
+                className="portfolio-card group relative h-[440px] overflow-hidden rounded-[18px] border border-white/[0.06] bg-[#120c06] shadow-[0_20px_55px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out hover:-translate-y-[8px] hover:border-[#ffd21a]/25 hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)] sm:h-[465px] lg:h-[440px]"
               >
                 {/* Image */}
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="absolute inset-0 h-full w-full object-cover object-center brightness-[0.82] saturate-[0.9] transition-all duration-1000 ease-out group-hover:scale-[1.08] group-hover:brightness-100 group-hover:saturate-100"
+                  className="portfolio-card-image absolute inset-0 z-0 h-full w-full object-cover object-center brightness-[0.82] saturate-[0.9] transition-all duration-1000 ease-out group-hover:scale-[1.08] group-hover:brightness-100 group-hover:saturate-100"
                 />
 
                 {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/10 transition-opacity duration-700 group-hover:bg-black/0" />
+                <div className="portfolio-card-overlay absolute inset-0 z-[1] transition-opacity duration-700" />
 
                 {/* Bottom fade */}
-                <div className="absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-black via-black/75 to-transparent" />
+                <div className="portfolio-card-gradient absolute inset-x-0 bottom-0 z-[2] h-[48%]" />
 
                 {/* Heart */}
                 <button
@@ -153,6 +153,23 @@ export default function PartyPortfolio() {
       </div>
 
       <style jsx>{`
+        .portfolio-card-overlay {
+          background: rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-card:hover .portfolio-card-overlay {
+          background: transparent;
+        }
+
+        .portfolio-card-gradient {
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.75),
+            transparent
+          );
+        }
+
         @keyframes partyFloat {
           0%,
           100% {

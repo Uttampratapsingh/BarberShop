@@ -6,14 +6,12 @@ import PartyPortfolio from "./PartyPortfolio";
 
 export default function OurWorkPage(){
   return (
-    <main className="min-h-screen bg-black text-white flex items-start">
-      <div className="mx-auto w-full px-6 py-12">
+    <main className="our-work-page min-h-screen bg-black text-white items-start">
         <GoldenMasterpieces/>
         <BridalPortfolio/>
         <PartyPortfolio/>
         <GoldenReviews/>
         <GoldenEraCTA/>
-      </div>
     </main>
   )
 }

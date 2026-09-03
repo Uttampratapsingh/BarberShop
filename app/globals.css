@@ -191,6 +191,22 @@ footer[class*="bg-black"] {
   background-color: var(--palette-ink) !important;
 }
 
+/* Use one continuous visual surface across the Our Work page sections. */
+.our-work-page {
+  background: linear-gradient(160deg, #24343A 0%, #314B50 48%, #1D2B31 100%) !important;
+}
+
+.our-work-page > div > section,
+.our-work-page > div > section > div.absolute.inset-0,
+.our-work-page > div > section > div[class*="bg-[linear-gradient"] {
+  background-color: transparent !important;
+  background-image: linear-gradient(160deg, #24343A 0%, #314B50 48%, #1D2B31 100%) !important;
+}
+
+.our-work-page [class*="bg-[linear-gradient"] {
+  background-image: linear-gradient(160deg, #24343A 0%, #314B50 48%, #1D2B31 100%) !important;
+}
+
 /* Keep the mobile navigation visually calm while the palette bridge styles the site. */
 header > div:nth-child(2) > div > div {
   background-color: var(--palette-ink) !important;

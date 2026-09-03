@@ -1,9 +1,9 @@
 export default function GoldenMasterpieces() {
   return (
-    <section className="relative w-full overflow-hidden rounded-[6px] border border-white/10 bg-black">
+    <section className="relative w-full overflow-hidden rounded-[6px] bg-black mt-10">
       <div
         className="
-          relative flex min-h-[520px] w-full items-center justify-center
+          relative flex min-h-[420px] w-full items-center justify-center
           bg-[linear-gradient(to_bottom,#342000_0%,#1b1100_32%,#080600_68%,#000000_100%)]
           px-6
         "
@@ -23,7 +23,6 @@ export default function GoldenMasterpieces() {
               font-sans font-extrabold tracking-[-0.045em]
               text-[52px] leading-[1.05]
               text-[#ffd21a]
-              drop-shadow-[0_0_18px_rgba(255,191,0,0.08)]
               sm:text-[68px]
               md:text-[82px]
               lg:text-[92px]
