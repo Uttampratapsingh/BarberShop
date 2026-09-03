@@ -35,10 +35,10 @@ const BridalHero = () => {
             ))}
 
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/65" />
+            {/* <div className="absolute inset-0 bg-black/65" /> */}
 
             {/* Extra gradient for cinematic look */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/65" />
+            {/* <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/65" /> */}
 
             {/* Hero Content */}
             <div className="relative z-10 flex min-h-screen items-center justify-center px-6 text-center pt-[72px] sm:pt-[88px] md:pt-[120px]">
