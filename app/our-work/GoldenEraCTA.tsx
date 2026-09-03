@@ -56,7 +56,8 @@ export default function GoldenEraCTA() {
           </p>
 
           {/* CTA */}
-          <button
+          <a
+            href="tel:+919999999999"
             type="button"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
@@ -109,7 +110,7 @@ export default function GoldenEraCTA() {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </a>
         </div>
       </div>
 

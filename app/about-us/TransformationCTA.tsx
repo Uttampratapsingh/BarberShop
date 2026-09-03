@@ -396,7 +396,7 @@ export default function TransformationCTA() {
             >
               {/* CALL NOW */}
               <a
-                href="tel:+911234567890"
+                href="tel:+919999999999"
                 className="
                   cta-button
                   call-button
@@ -431,7 +431,7 @@ export default function TransformationCTA() {
 
               {/* EMAIL */}
               <a
-                href="mailto:hello@classicbridal.com"
+                href="mailto:hello@example.com"
                 className="
                   cta-button
                   email-button

@@ -3,29 +3,42 @@ const WhatsAppButton = () => {
         <>
             <style>
                 {`
-                    @keyframes whatsapp-wave {
+                    @keyframes whatsapp-ring {
                         0% {
-                            transform: scale(1);
-                            opacity: 0.7;
-                        }
-
-                        70% {
-                            transform: scale(1.8);
-                            opacity: 0.15;
+                            transform: scale(0.96);
+                            opacity: 0.55;
                         }
 
                         100% {
-                            transform: scale(2.2);
+                            transform: scale(1.16);
                             opacity: 0;
                         }
                     }
 
-                    .whatsapp-wave {
-                        animation: whatsapp-wave 1.8s ease-out infinite;
+                    .whatsapp-float {
+                        box-shadow: 0 10px 24px rgba(24, 92, 61, 0.28), 0 2px 8px rgba(36, 52, 58, 0.16);
+                        transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
                     }
 
-                    .whatsapp-wave-delay {
-                        animation-delay: 0.9s;
+                    .whatsapp-float:hover {
+                        transform: translateY(-3px);
+                        background-color: #239b5d;
+                        box-shadow: 0 14px 30px rgba(24, 92, 61, 0.36), 0 4px 10px rgba(36, 52, 58, 0.16);
+                    }
+
+                    .whatsapp-float:focus-visible {
+                        outline: 3px solid rgba(201, 130, 120, 0.6);
+                        outline-offset: 4px;
+                    }
+
+                    .whatsapp-ring {
+                        animation: whatsapp-ring 2.8s ease-out infinite;
+                    }
+
+                    @media (prefers-reduced-motion: reduce) {
+                        .whatsapp-ring {
+                            animation: none;
+                        }
                     }
                 `}
             </style>
@@ -43,49 +56,34 @@ const WhatsAppButton = () => {
                     z-[9999]
                     flex
                     items-center
-                    gap-5
-                    px-3
-                    py-2
+                    gap-2.5
+                    px-3.5
+                    py-2.5
                     md:px-4
-                    md:py-3
-                    bg-[#25D366]
+                    md:py-2.5
+                    bg-[#1FAF68]
                     rounded-full
                     text-white
-                    shadow-[0_0_25px_rgba(37,211,102,0.65)]
+                    whatsapp-float
                 "
+                aria-label="Chat with us on WhatsApp"
             >
-                {/* First wave */}
                 <span
                     className="
                         absolute
                         inset-0
                         rounded-full
-                        border-2
-                        border-[#25D366]
+                        border
+                        border-[#1FAF68]
                         pointer-events-none
-                        whatsapp-wave
+                        whatsapp-ring
                     "
                 />
 
-                {/* Second wave */}
-                <span
-                    className="
-                        absolute
-                        inset-0
-                        rounded-full
-                        border-2
-                        border-[#25D366]
-                        pointer-events-none
-                        whatsapp-wave
-                        whatsapp-wave-delay
-                    "
-                />
-
-                {/* WhatsApp Icon */}
                 <svg
                     viewBox="0 0 32 32"
-                    className="relative z-10 w-8 h-8 md:w-10 md:h-10 fill-none stroke-white"
-                    strokeWidth="2.5"
+                    className="relative z-10 h-7 w-7 fill-none stroke-white md:h-8 md:w-8"
+                    strokeWidth="2.25"
                 >
                     <path
                         d="M16 3.5a12.5 12.5 0 0 0-10.8 19L3.5 28.5l6.2-1.6A12.5 12.5 0 1 0 16 3.5Z"
@@ -100,7 +98,7 @@ const WhatsAppButton = () => {
                     />
                 </svg>
 
-                <span className="relative z-10 text-xl md:text-2xl font-semibold whitespace-nowrap">
+                <span className="relative z-10 whitespace-nowrap text-base font-semibold tracking-tight md:text-lg">
                     Chat with us
                 </span>
             </a>

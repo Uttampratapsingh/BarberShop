@@ -37,7 +37,7 @@ const AboutLegacy = () => {
                     </p>
 
                     {/* Button */}
-                    <button className="legacy-button group mt-12 inline-flex items-center gap-3 rounded-lg border border-[#D4AF37]/60 bg-black/20 px-8 py-4 text-lg font-bold text-[#FFD21F] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#FFD700] hover:bg-[#D4AF37]/10 hover:text-[#FFE45C] hover:shadow-[0_0_30px_rgba(212,175,55,0.18)]">
+                    <a href="tel:+919999999999" className="legacy-button group mt-12 inline-flex items-center gap-3 rounded-lg border border-[#D4AF37]/60 bg-black/20 px-8 py-4 text-lg font-bold text-[#FFD21F] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#FFD700] hover:bg-[#D4AF37]/10 hover:text-[#FFE45C] hover:shadow-[0_0_30px_rgba(212,175,55,0.18)]">
                         
                         {/* Chat icon */}
                         <svg
@@ -55,7 +55,7 @@ const AboutLegacy = () => {
                         </svg>
 
                         <span>Book Free Consultation</span>
-                    </button>
+                    </a>
                 </div>
             </div>
 

@@ -107,9 +107,9 @@ const BridalServicesDetails = () => {
 
                                 {/* Button */}
                                 <div className="mt-auto pt-8">
-                                    <button className="rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-10 py-4 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_10px_25px_rgba(255,215,0,0.3)]">
+                                    <a href="tel:+919999999999" className="inline-block rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-10 py-4 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_10px_25px_rgba(255,215,0,0.3)]">
                                         Inquire Now
-                                    </button>
+                                    </a>
                                 </div>
 
                             </div>

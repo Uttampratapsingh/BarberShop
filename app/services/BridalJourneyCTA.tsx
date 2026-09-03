@@ -56,7 +56,8 @@ export default function BridalJourneyCTA() {
         </p>
 
         {/* CTA */}
-        <button
+        <a
+          href="tel:+919999999999"
           type="button"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
@@ -99,7 +100,7 @@ export default function BridalJourneyCTA() {
               group-hover:translate-x-1
             "
           />
-        </button>
+        </a>
 
         {/* Information */}
         <div

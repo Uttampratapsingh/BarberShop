@@ -91,9 +91,9 @@ const CertificationPrograms = () => {
                                         {program.title}
                                     </h3>
 
-                                    <button className="cert-button mt-5 rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-8 py-3.5 text-base font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_10px_25px_rgba(255,215,0,0.35)] md:text-lg">
+                                    <a href="tel:+919999999999" className="cert-button mt-5 inline-block rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-8 py-3.5 text-base font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_10px_25px_rgba(255,215,0,0.35)] md:text-lg">
                                         Inquire Now
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

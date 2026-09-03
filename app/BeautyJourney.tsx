@@ -106,9 +106,9 @@ const BeautyJourney = () => {
                             career
                         </p>
 
-                        <button className="beauty-button mt-12 rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-12 py-5 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,215,0,0.35)]">
+                        <a href="tel:+919999999999" className="beauty-button mt-12 inline-block rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-12 py-5 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,215,0,0.35)]">
                             Inquire Now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

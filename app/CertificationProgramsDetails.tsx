@@ -122,9 +122,9 @@ const CertificationProgramsDetails = () => {
 
                                 {/* Button */}
                                 <div className="mt-auto pt-8">
-                                    <button className="program-button w-full rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-6 py-4 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_12px_30px_rgba(255,215,0,0.35)]">
+                                    <a href="tel:+919999999999" className="program-button block w-full rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-6 py-4 text-center text-lg font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_12px_30px_rgba(255,215,0,0.35)]">
                                         Inquire Now
-                                    </button>
+                                    </a>
                                 </div>
 
                             </div>

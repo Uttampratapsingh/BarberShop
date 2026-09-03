@@ -212,7 +212,8 @@ const BridalServices = () => {
                                     {service.title}
                                 </h3>
 
-                                <button
+                                <a
+                                    href="tel:+919999999999"
                                     className="
                                         service-card-button
                                         rounded-lg
@@ -228,7 +229,7 @@ const BridalServices = () => {
                                     "
                                 >
                                     Inquire Now
-                                </button>
+                                </a>
                             </div>
 
                             {/* Gold corner glow */}
