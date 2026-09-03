@@ -92,8 +92,8 @@ export default function BeautyFeatures() {
     <>
       <style>{`
         .beauty-card {
-          opacity: 0;
-          transform: translateY(55px);
+          opacity: 1;
+          transform: translateY(0);
           transition:
             opacity 0.8s ease,
             transform 0.8s cubic-bezier(.22,1,.36,1);
@@ -132,6 +132,10 @@ export default function BeautyFeatures() {
         }
 
         .beauty-card-image {
+          position: absolute;
+          z-index: 0;
+          display: block;
+          opacity: 1;
           transition:
             transform 0.9s cubic-bezier(.22,1,.36,1),
             filter 0.6s ease;
@@ -143,7 +147,17 @@ export default function BeautyFeatures() {
         }
 
         .beauty-card-overlay {
+          background-color: rgba(0, 0, 0, 0.45);
           transition: opacity 0.5s ease;
+        }
+
+        .beauty-card-gradient {
+          background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.48) 52%,
+            rgba(0, 0, 0, 0.08)
+          );
         }
 
         .beauty-card:hover .beauty-card-overlay {
@@ -248,19 +262,17 @@ export default function BeautyFeatures() {
                       beauty-card-overlay
                       absolute
                       inset-0
-                      bg-black/45
+                      z-[1]
                     "
                   />
 
                   {/* Bottom gradient */}
                   <div
                     className="
+                      beauty-card-gradient
                       absolute
                       inset-0
-                      bg-gradient-to-t
-                      from-black
-                      via-black/55
-                      to-black/10
+                      z-[2]
                     "
                   />
 

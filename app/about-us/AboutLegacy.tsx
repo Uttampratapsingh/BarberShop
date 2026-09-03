@@ -14,10 +14,10 @@ const AboutLegacy = () => {
             />
 
             {/* Dark cinematic overlay */}
-            <div className="absolute inset-0 bg-black/70" />
+            {/* <div className="absolute inset-0 bg-black/70" /> */}
 
             {/* Additional gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/35 to-black/90" />
+            {/* <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/35 to-black/90" /> */}
 
             {/* Subtle gold ambient glow */}
             <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D4AF37]/5 blur-[130px]" />
@@ -37,7 +37,7 @@ const AboutLegacy = () => {
                     </p>
 
                     {/* Button */}
-                    <a href="tel:+919999999999" className="legacy-button group mt-12 inline-flex items-center gap-3 rounded-lg border border-[#D4AF37]/60 bg-black/20 px-8 py-4 text-lg font-bold text-[#FFD21F] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#FFD700] hover:bg-[#D4AF37]/10 hover:text-[#FFE45C] hover:shadow-[0_0_30px_rgba(212,175,55,0.18)]">
+                    <a href="tel:+919999999999" aria-label="Call to book a free consultation" className="legacy-button group mt-12 inline-flex items-center gap-3 rounded-lg border border-[#D4AF37]/60 bg-black/20 px-8 py-4 text-lg font-bold text-[#FFD21F] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#FFD700] hover:bg-[#D4AF37]/10 hover:text-[#FFE45C] hover:shadow-[0_0_30px_rgba(212,175,55,0.18)]">
                         
                         {/* Chat icon */}
                         <svg
