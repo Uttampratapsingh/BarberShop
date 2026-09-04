@@ -52,7 +52,7 @@ function HeartIcon({ active }: { active: boolean }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className={`h-[24px] w-[24px] transition-all duration-300 ${
+      className={`h-[28px] w-[28px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)] transition-all duration-300 ${
         active ? "scale-110 fill-current" : "fill-transparent"
       }`}
       stroke="currentColor"
@@ -129,7 +129,7 @@ export default function PartyPortfolio() {
                   aria-label={
                     isFavorite ? "Remove from favorites" : "Add to favorites"
                   }
-                  className="absolute right-[19px] top-[19px] z-20 flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#786343]/70 text-[#ffd21a] backdrop-blur-[4px] transition-all duration-300 hover:scale-110 hover:bg-[#8c7148]/80 active:scale-95"
+                  className="absolute right-[19px] top-[19px] z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#ffd21a]/80 bg-[#120c06]/90 text-[#ffd21a] shadow-[0_4px_16px_rgba(0,0,0,0.6),0_0_14px_rgba(255,210,26,0.2)] backdrop-blur-[4px] transition-all duration-300 hover:scale-110 hover:bg-[#2a1b08] hover:shadow-[0_5px_20px_rgba(0,0,0,0.7),0_0_18px_rgba(255,210,26,0.35)] active:scale-95"
                 >
                   <HeartIcon active={isFavorite} />
                 </button>
