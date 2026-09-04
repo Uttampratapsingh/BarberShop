@@ -43,28 +43,28 @@ const CertificationProgramsDetails = () => {
     ];
 
     return (
-        <section className="relative w-full overflow-hidden bg-[#E7C928] px-5 py-16 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        <section className="details-section relative w-full overflow-hidden px-5 py-16 sm:px-8 md:px-10 lg:px-12 xl:px-16">
             
             {/* Background texture */}
-            <div
+            {/* <div
                 className="pointer-events-none absolute inset-0 opacity-25"
                 style={{
                     backgroundImage: "url('/noise-texture.webp')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
-            />
+            /> */}
 
             {/* Gold ambient glow */}
-            <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[1000px] -translate-x-1/2 rounded-full bg-[#FFF06A]/30 blur-[140px]" />
+            <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[1000px] -translate-x-1/2 rounded-full blur-[140px]" />
 
-            <div className="pointer-events-none absolute bottom-0 left-1/4 h-[300px] w-[500px] rounded-full bg-[#C7A900]/20 blur-[120px]" />
+            <div className="pointer-events-none absolute bottom-0 left-1/4 h-[300px] w-[500px] rounded-full blur-[120px]" />
 
             <div className="relative z-10 mx-auto max-w-[1850px]">
 
                 {/* Heading */}
                 <div className="mb-14 text-center md:mb-16">
-                    <h2 className="text-4xl font-bold tracking-tight text-black sm:text-5xl md:text-6xl lg:text-[56px]">
+                    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[56px]">
                         Professional Certification Programs Details
                     </h2>
                 </div>
@@ -75,7 +75,7 @@ const CertificationProgramsDetails = () => {
                     {programs.map((program, index) => (
                         <div
                             key={program.title}
-                            className={`program-details-card group relative min-h-[430px] overflow-hidden rounded-2xl bg-[#18181B] p-6 opacity-0 transition-all duration-500 ease-out hover:-translate-y-2 hover:bg-[#202023] hover:shadow-[0_20px_45px_rgba(0,0,0,0.32),0_0_35px_rgba(255,215,0,0.18)] md:p-7 ${
+                            className={`program-details-card details-card group relative min-h-[430px] overflow-hidden rounded-2xl p-6 opacity-0 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.32),0_0_35px_rgba(255,215,0,0.18)] md:p-7 ${
                                 index === 0
                                     ? "program-card-1"
                                     : index === 1
@@ -135,6 +135,19 @@ const CertificationProgramsDetails = () => {
             </div>
 
             <style>{`
+                .details-section {
+                    background: #24343a !important;
+                }
+
+                .details-card {
+                    background: rgb(255 255 255 / 0.08) !important;
+                    border: 1px solid rgb(255 255 255 / 0.18);
+                }
+
+                .details-card:hover {
+                    background: rgb(255 255 255 / 0.13) !important;
+                }
+
                 .certification-course-title,
                 .certification-course-item {
                     color: #f7f4e8 !important;

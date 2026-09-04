@@ -149,13 +149,17 @@ export default function Header() {
           </button>
 
           <a
-            className="hidden md:inline-flex z-10 inline-flex shrink-0 items-center gap-3 rounded-full bg-[#f4be14] px-5 py-3 text-[16px] font-semibold text-black shadow-call transition duration-200 hover:-translate-y-0.5 hover:bg-[#f7c71a] active:translate-y-px active:scale-95"
+            className="call-button hidden md:inline-flex z-10 inline-flex shrink-0 items-center gap-3 rounded-full bg-[#f4be14] px-5 py-3 text-[16px] font-semibold text-black shadow-call transition duration-200 hover:-translate-y-0.5 hover:bg-[#f7c71a] active:translate-y-px active:scale-95"
             href="tel:+919999999999"
           >
             <span aria-hidden="true" className="text-[19px] leading-none">
               ☎
             </span>
             Call Us
+            <span aria-hidden="true" className="call-bubble bubble-one" />
+            <span aria-hidden="true" className="call-bubble bubble-two" />
+            <span aria-hidden="true" className="call-bubble bubble-three" />
+            <span aria-hidden="true" className="call-bubble bubble-four" />
           </a>
         </div>
       </div>
@@ -212,15 +216,103 @@ export default function Header() {
             <div className="mt-8 border-t border-white/6 pt-6">
               <a
                 href="tel:+919999999999"
-                className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#f4be14] px-6 py-4 text-[18px] font-semibold text-black"
+                className="call-button inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#f4be14] px-6 py-4 text-[18px] font-semibold text-black"
               >
                 <span aria-hidden>☎</span>
                 Call Us
+                <span aria-hidden="true" className="call-bubble bubble-one" />
+                <span aria-hidden="true" className="call-bubble bubble-two" />
+                <span aria-hidden="true" className="call-bubble bubble-three" />
+                <span aria-hidden="true" className="call-bubble bubble-four" />
               </a>
             </div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .call-button {
+          position: relative;
+          overflow: visible;
+        }
+
+        .call-bubble {
+          position: absolute;
+          bottom: calc(100% - 3px);
+          left: 50%;
+          z-index: 2;
+          width: 4px;
+          height: 4px;
+          border-radius: 999px;
+          background: #fff4a8;
+          box-shadow: 0 0 8px rgba(255, 244, 168, 0.9);
+          pointer-events: none;
+          opacity: 0;
+          animation: callBubbleRise 2.8s ease-out infinite;
+        }
+
+        .bubble-one {
+          margin-left: -30px;
+          animation-delay: 0s;
+        }
+
+        .bubble-two {
+          width: 3px;
+          height: 3px;
+          margin-left: -8px;
+          animation-delay: 0.7s;
+        }
+
+        .bubble-three {
+          width: 5px;
+          height: 5px;
+          margin-left: 14px;
+          animation-delay: 1.35s;
+        }
+
+        .bubble-four {
+          width: 3px;
+          height: 3px;
+          margin-left: 32px;
+          animation-delay: 2s;
+        }
+
+        @keyframes callBubbleRise {
+          0% {
+            opacity: 0;
+            transform: translate3d(0, 8px, 0) scale(0.45);
+          }
+          15% {
+            opacity: 0.95;
+          }
+          100% {
+            opacity: 0;
+            transform: translate3d(var(--bubble-drift, 0px), -48px, 0) scale(1.15);
+          }
+        }
+
+        .bubble-one {
+          --bubble-drift: -10px;
+        }
+
+        .bubble-two {
+          --bubble-drift: -4px;
+        }
+
+        .bubble-three {
+          --bubble-drift: 6px;
+        }
+
+        .bubble-four {
+          --bubble-drift: 12px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .call-bubble {
+            animation: none;
+          }
+        }
+      `}</style>
     </header>
   );
 }

@@ -18,7 +18,7 @@ const BeautyJourney = () => {
             <div className="absolute inset-0 bg-black/75" />
 
             {/* Gold tint */}
-            <div className="absolute inset-0 bg-[#6F5A16]/10" />
+            {/* <div className="absolute inset-0 bg-[#6F5A16]/10" /> */}
 
             {/* Background texture */}
             <div

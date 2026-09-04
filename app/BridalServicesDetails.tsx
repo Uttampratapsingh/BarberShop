@@ -23,20 +23,20 @@ const BridalServicesDetails = () => {
     ];
 
     return (
-        <section className="relative w-full overflow-hidden bg-[#E7C928] px-5 py-16 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+        <section className="details-section relative w-full overflow-hidden px-5 py-16 sm:px-8 md:px-12 lg:px-16 xl:px-20">
             
             {/* Background texture */}
-            <div
+            {/* <div
                 className="absolute inset-0 pointer-events-none opacity-25"
                 style={{
                     backgroundImage: "url('/noise-texture.webp')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
-            />
+            /> */}
 
             {/* Background glow */}
-            <div className="absolute left-1/2 top-0 h-[350px] w-[800px] -translate-x-1/2 rounded-full bg-[#FFE45C]/30 blur-[130px] pointer-events-none" />
+            {/* <div className="absolute left-1/2 top-0 h-[350px] w-[800px] -translate-x-1/2 rounded-full bg-[#FFE45C]/30 blur-[130px] pointer-events-none" /> */}
 
             <div className="absolute bottom-0 left-0 h-[220px] w-[400px] rounded-full bg-[#C9A800]/20 blur-[100px] pointer-events-none" />
 
@@ -44,7 +44,7 @@ const BridalServicesDetails = () => {
 
                 {/* Heading */}
                 <div className="mb-14 text-center md:mb-16">
-                    <h2 className="text-4xl font-bold tracking-tight text-black sm:text-5xl md:text-6xl lg:text-[58px]">
+                    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[58px]">
                         Premium Bridal Services Details
                     </h2>
                 </div>
@@ -63,7 +63,7 @@ const BridalServicesDetails = () => {
                                 rounded-2xl
                                 border-2
                                 border-black
-                                bg-black
+                                details-card
                                 p-8
                                 md:p-10
                                 lg:min-h-[395px]
@@ -121,6 +121,15 @@ const BridalServicesDetails = () => {
 
             {/* Animation */}
             <style>{`
+                .details-section {
+                    background: #24343a !important;
+                }
+
+                .details-card {
+                    background: rgb(255 255 255 / 0.08) !important;
+                    border-color: rgb(255 255 255 / 0.18) !important;
+                }
+
                 @keyframes fadeUp {
                     from {
                         opacity: 0;

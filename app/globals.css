@@ -155,7 +155,7 @@ section [class*="w-[1000px]"] {
 [class*="bg-[#E6C516"],
 [class*="bg-[#C9A800"],
 [class*="bg-[#C7A900"] {
-  background-color: var(--palette-rose) !important;
+  background-color: rgb(231 201 40 / 0.16) !important;
 }
 
 [class*="bg-[linear-gradient"],
