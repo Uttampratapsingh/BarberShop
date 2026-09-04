@@ -47,13 +47,13 @@ export default function GoldenEducationStandards() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#080808] px-5 py-[28px] sm:px-8 md:px-12 lg:px-[6.1%]">
+    <section className="relative min-h-screen overflow-hidden bg-[#080808] px-5 py-[28px] sm:px-8 md:px-12 lg:px-[6.1%] mt-32">
       {/* Background */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#090909_0%,#070707_100%)]" />
+      {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#090909_0%,#070707_100%)]" /> */}
 
       <div className="pointer-events-none absolute left-1/2 top-[-260px] h-[550px] w-[1000px] -translate-x-1/2 rounded-full bg-[#dca315]/[0.018] blur-[150px]" />
 
-      <div className="relative z-10 mx-auto max-w-[1700px]">
+      <div className="relative z-10 mx-auto max-w-[1700px] md:border-t-1 md:border-[#dca315]">
         {/* Heading */}
         <div
           className={`text-center transition-all duration-1000 ease-out ${
@@ -62,7 +62,7 @@ export default function GoldenEducationStandards() {
               : "translate-y-8 opacity-0"
           }`}
         >
-          <h1 className="text-[42px] font-extrabold leading-none tracking-[-0.045em] text-[#ffd21a] sm:text-[50px] md:text-[56px] lg:text-[58px]">
+          <h1 className="md:mt-20 text-[42px] font-extrabold leading-none tracking-[-0.045em] text-[#ffd21a] sm:text-[50px] md:text-[56px] lg:text-[58px]">
             Golden Education Standards
           </h1>
         </div>

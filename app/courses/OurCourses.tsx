@@ -17,14 +17,14 @@ export default function OurCourses() {
   return (
     <section className="relative min-h-[410px] overflow-hidden bg-[#080808] px-5 sm:px-8">
       {/* Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,#090909_0%,#080808_100%)]" />
+      {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,#090909_0%,#080808_100%)]" /> */}
 
       {/* Subtle golden glow */}
-      <div
+      {/* <div
         className={`pointer-events-none absolute left-1/2 top-[30%] h-[420px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[150px] transition-all duration-1000 ${
           hovered ? "bg-[#e0ad12]/[0.05]" : "bg-[#e0ad12]/[0.018]"
         }`}
-      />
+      /> */}
 
       <div className="relative z-10 mx-auto flex min-h-[410px] max-w-[1500px] flex-col items-center text-center">
         {/* Heading */}
@@ -71,7 +71,7 @@ export default function OurCourses() {
 
         {/* Divider */}
         <div
-          className={`mt-[47px] h-px w-[45%] max-w-[700px] bg-[#57420d]/60 transition-all duration-[1200ms] ease-out ${
+          className={`mt-[47px] h-[1px] w-[45%] max-w-[700px] bg-[#57420d] transition-all duration-[1200ms] ease-out ${
             visible ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
           }`}
         />
@@ -85,7 +85,7 @@ export default function OurCourses() {
       </div>
 
       {/* Bottom edge */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-[#3a2b08]/30" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-[#3a2b08]/40" />
     </section>
   );
 }

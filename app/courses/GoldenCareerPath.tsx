@@ -1,10 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
+
+const programs = [
+  "Skin Care Expertise",
+  "Bridal Makeup Mastery",
+  "Nail Artistry",
+  "Hair Designing",
+];
 
 export default function GoldenCareerPath() {
   const [visible, setVisible] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -14,10 +24,32 @@ export default function GoldenCareerPath() {
     return () => window.clearTimeout(timer);
   }, []);
 
+  function closeModal() {
+    if (!isSubmitting) {
+      setIsModalOpen(false);
+      setIsSubmitted(false);
+    }
+  }
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSubmitting(true);
+
+    window.setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+
+      window.setTimeout(() => {
+        setIsModalOpen(false);
+        setIsSubmitted(false);
+      }, 1800);
+    }, 1200);
+  }
+
   return (
     <section className="relative min-h-[640px] overflow-hidden bg-[#080808] px-5 sm:px-8">
       {/* Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,#090909_0%,#080808_100%)]" />
+      {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,#090909_0%,#080808_100%)]" /> */}
 
       {/* Very subtle golden glow */}
       <div
@@ -27,7 +59,7 @@ export default function GoldenCareerPath() {
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[640px] max-w-[1500px] flex-col items-center justify-center text-center">
+      <div className=" border-t-1 border-[#dcae18] relative z-10 mx-auto flex min-h-[640px] max-w-[1500px] flex-col items-center justify-center text-center">
         {/* Heading */}
         <h1
           className={`text-[44px] font-extrabold leading-[1.05] tracking-[-0.05em] text-[#d9aa20] transition-all duration-1000 ease-out sm:text-[54px] md:text-[64px] lg:text-[68px] ${
@@ -52,8 +84,9 @@ export default function GoldenCareerPath() {
         {/* Button */}
         <button
           type="button"
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
+          onClick={() => setIsModalOpen(true)}
+          // onMouseEnter={() => setHovered(true)}
+          // onMouseLeave={() => setHovered(false)}
           className={`group mt-[67px] flex h-[80px] w-[250px] items-center justify-center rounded-full bg-[#d9b238] text-[20px] font-bold tracking-[-0.02em] text-black shadow-[0_10px_35px_rgba(217,178,56,0.08)] transition-all duration-700 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:bg-[#e4bc45] hover:shadow-[0_18px_45px_rgba(217,178,56,0.2)] active:scale-[0.98] ${
             visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
@@ -65,7 +98,7 @@ export default function GoldenCareerPath() {
       </div>
 
       {/* Button shimmer */}
-      <div
+      {/* <div
         className={`pointer-events-none absolute left-1/2 top-1/2 h-[80px] w-[250px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full ${
           hovered ? "opacity-100" : "opacity-0"
         } transition-opacity duration-300`}
@@ -75,10 +108,120 @@ export default function GoldenCareerPath() {
             hovered ? "translate-x-[430%]" : "translate-x-0"
           }`}
         />
-      </div>
+      </div> */}
 
       {/* Bottom border */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-[#4f3c0b]/30" />
+
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-[#080808]/80 px-4 py-8"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="admissions-title"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) closeModal();
+          }}
+        >
+          <div className="relative w-full max-w-[540px] rounded-[22px] border border-[#d9aa20]/45 bg-[#182428] p-6 text-left shadow-[0_24px_90px_rgba(0,0,0,0.55)] sm:p-9">
+            <button
+              type="button"
+              onClick={closeModal}
+              disabled={isSubmitting}
+              aria-label="Close admissions form"
+              className="absolute right-5 top-4 flex h-9 w-9 items-center justify-center rounded-full text-2xl leading-none text-[#f7f1ea]/70 transition-colors hover:bg-[#c98278]/15 hover:text-[#f7f1ea] disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              &times;
+            </button>
+
+            {isSubmitted ? (
+              <div className="flex min-h-[360px] flex-col items-center justify-center text-center">
+                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-[#d9aa20] text-4xl text-[#d9aa20] animate-[pop-in_500ms_ease-out]">
+                  &#10003;
+                </div>
+                <h2 id="admissions-title" className="text-3xl font-bold text-[#f7f1ea]">
+                  Application Submitted
+                </h2>
+                <p className="mt-3 text-base text-[#f7f1ea]/75">
+                  Your journey to excellence has begun.
+                </p>
+              </div>
+            ) : (
+              <>
+                <div className="mb-7 pr-8">
+                  <h2 id="admissions-title" className="text-3xl font-bold text-[#d9aa20] sm:text-4xl">
+                    Elite Admissions Portal
+                  </h2>
+                  <p className="mt-2 text-base text-[#f7f1ea]/70">
+                    Begin your journey to excellence
+                  </p>
+                </div>
+
+                <form className="space-y-5" onSubmit={handleSubmit}>
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-semibold text-[#f7f1ea]">Full Name</span>
+                    <input
+                      required
+                      name="fullName"
+                      type="text"
+                      autoComplete="name"
+                      placeholder="Enter your full name"
+                      className="h-14 w-full rounded-xl border border-[#d9aa20]/45 bg-[#24343a] px-4 text-base text-[#f7f1ea] outline-none transition-colors placeholder:text-[#f7f1ea]/45 focus:border-[#d9aa20] focus:ring-2 focus:ring-[#d9aa20]/20"
+                    />
+                  </label>
+
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-semibold text-[#f7f1ea]">Contact Number</span>
+                    <input
+                      required
+                      name="contactNumber"
+                      type="tel"
+                      autoComplete="tel"
+                      placeholder="+91 12345-67890"
+                      pattern="[+0-9 ()-]{8,}"
+                      className="h-14 w-full rounded-xl border border-[#d9aa20]/45 bg-[#24343a] px-4 text-base text-[#f7f1ea] outline-none transition-colors placeholder:text-[#f7f1ea]/45 focus:border-[#d9aa20] focus:ring-2 focus:ring-[#d9aa20]/20"
+                    />
+                  </label>
+
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-semibold text-[#f7f1ea]">Program Selection</span>
+                    <select
+                      required
+                      name="program"
+                      defaultValue=""
+                      className="h-14 w-full rounded-xl border border-[#d9aa20]/45 bg-[#24343a] px-4 text-base text-[#f7f1ea] outline-none transition-colors focus:border-[#d9aa20] focus:ring-2 focus:ring-[#d9aa20]/20"
+                    >
+                      <option value="" disabled>
+                        Select your program
+                      </option>
+                      {programs.map((program) => (
+                        <option key={program} value={program}>
+                          {program}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="flex h-14 w-full items-center justify-center rounded-xl bg-[#d9b238] text-base font-bold text-black transition-all hover:bg-[#e4bc45] hover:shadow-[0_10px_28px_rgba(217,178,56,0.22)] disabled:cursor-wait disabled:opacity-75"
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center gap-3">
+                        <span className="h-5 w-5 animate-spin rounded-full border-2 border-[#24343a]/30 border-t-[#24343a] text-black" />
+                        Submitting Application...
+                      </span>
+                    ) : (
+                      "Submit Application"
+                    )}
+                  </button>
+                </form>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
