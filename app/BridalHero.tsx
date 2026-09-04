@@ -7,7 +7,7 @@ const BridalHero = () => {
 
             {/* Background Video */}
             <video
-                className="absolute inset-0 h-full w-full object-cover brightness-[0.42]"
+                className="absolute inset-0 h-full w-full object-contain brightness-[0.42] md:object-cover"
                 src="/r3.mp4"
                 autoPlay
                 muted
