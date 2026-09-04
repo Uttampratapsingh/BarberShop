@@ -16,13 +16,13 @@ const SiteFooter = () => {
 
                     {/* Brand */}
                     <div className="footer-item footer-item-1">
-                        <div className="group inline-block">
+                        {/* <div className="group inline-block">
                             <img
                                 src="/logo.png"
                                 alt="GSO Bridal Studio"
                                 className="h-auto w-[190px] object-contain transition-all duration-500 group-hover:scale-105 group-hover:brightness-125"
                             />
-                        </div>
+                        </div> */}
 
                         <p className="mt-10 max-w-[520px] text-lg leading-relaxed text-gray-300">
                             Premium bridal beauty studio specializing in creating elegant,
