@@ -96,11 +96,11 @@ const CertificationProgramsDetails = () => {
 
                                 {/* Icon */}
                                 <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] shadow-[0_5px_20px_rgba(255,215,0,0.12)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-2 group-hover:shadow-[0_8px_25px_rgba(255,215,0,0.3)]">
-                                    <div className="h-4 w-4 rounded-sm bg-[#FFE45C]" />
+                                     <div className="h-4 w-4 rounded-sm bg-[#FFF8D6]" />
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="text-2xl font-bold leading-tight text-[#FFD21F] transition-colors duration-300 group-hover:text-[#FFE45C]">
+                                <h3 className="certification-course-title text-2xl font-bold leading-tight transition-colors duration-300 group-hover:text-white">
                                     {program.title}
                                 </h3>
 
@@ -109,9 +109,9 @@ const CertificationProgramsDetails = () => {
                                     {program.items.map((item) => (
                                         <div
                                             key={item}
-                                            className="flex items-start gap-2 text-[17px] leading-snug text-gray-200 transition-all duration-300 hover:translate-x-2 hover:text-white"
+                                            className="certification-course-item flex items-start gap-2 text-[17px] leading-snug transition-all duration-300 hover:translate-x-2 hover:text-white"
                                         >
-                                            <span className="mt-[1px] flex-shrink-0 text-lg text-white">
+                                                <span className="certification-course-star mt-[1px] flex-shrink-0 text-lg">
                                                 ✦
                                             </span>
 
@@ -135,6 +135,15 @@ const CertificationProgramsDetails = () => {
             </div>
 
             <style>{`
+                .certification-course-title,
+                .certification-course-item {
+                    color: #f7f4e8 !important;
+                }
+
+                .certification-course-star {
+                    color: #ffd21f !important;
+                }
+
                 @keyframes programFadeUp {
                     from {
                         opacity: 0;
