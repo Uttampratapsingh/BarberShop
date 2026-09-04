@@ -1,38 +1,26 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const BridalHero = () => {
-    const images = [
-        "/bridal-1.png",
-        "/bridal-2.png",
-        "/bridal-3.png",
-        "/bridal-4.png",
-    ];
-
-    const [currentImage, setCurrentImage] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImage((prev) => (prev + 1) % images.length);
-        }, 3500);
-
-        return () => clearInterval(interval);
-    }, [images.length]);
-
     return (
         <section className="relative min-h-screen w-full overflow-hidden bg-black">
 
-            {/* Background Images */}
-            {images.map((image, index) => (
-                <div
-                    key={image}
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-[1800ms] ease-in-out"
-                    style={{
-                        backgroundImage: `url("${image}")`,
-                        opacity: index === currentImage ? 1 : 0,
-                    }}
-                />
-            ))}
+            {/* Background Video */}
+            <video
+                className="absolute inset-0 h-full w-full object-cover brightness-[0.42]"
+                src="/r3.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                aria-hidden="true"
+            />
+
+            <div
+                className="pointer-events-none absolute inset-0 z-[1]"
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.28)" }}
+            />
 
             {/* Dark overlay */}
             {/* <div className="absolute inset-0 bg-black/65" /> */}
