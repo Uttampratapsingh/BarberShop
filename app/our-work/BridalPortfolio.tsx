@@ -13,19 +13,19 @@ const bridalCards: BridalCard[] = [
     id: 1,
     title: "Luxe Bridal Collection",
     image:
-      "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=1200&q=85",
+      "/r5.png",
   },
   {
     id: 2,
     title: "Luxe Bridal Collection",
     image:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85",
+    "/r6.png",
   },
   {
     id: 3,
     title: "Luxe Bridal Collection",
     image:
-      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=1200&q=85",
+"/r7.png",
   },
 ];
 
@@ -130,7 +130,8 @@ export default function BridalPortfolio() {
                     isFavorite ? "Remove from favorites" : "Add to favorites"
                   }
                   onClick={() => toggleFavorite(card.id)}
-                  className="absolute right-5 top-5 z-20 flex h-[52px] w-[52px] items-center justify-center rounded-full bg-[#685c45]/70 text-[#ffd21a] backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-[#806d47]/80 active:scale-95"
+                  className="absolute right-5 top-5 z-20 flex h-[52px] w-[52px] items-center justify-center rounded-full border border-[#ffd21a]/70 bg-[#080808]/90 shadow-[0_4px_18px_rgba(0,0,0,0.45)] backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-[#16100a] hover:shadow-[0_0_22px_rgba(255,210,26,0.35)] active:scale-95"
+                  style={{ color: "#ffd21a" }}
                 >
                   <HeartIcon filled={isFavorite} />
                 </button>

@@ -5,12 +5,21 @@ import React from "react";
 const AboutLegacy = () => {
     return (
         <section className="relative h-screen w-full overflow-hidden bg-black">
-            {/* Background image */}
+            {/* Background video */}
+            <video
+                className="absolute inset-0 h-full w-full object-contain brightness-[0.42] md:object-cover"
+                src="/r3.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                aria-hidden="true"
+            />
+
             <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{
-                    backgroundImage: "url('/bridal-1.png')",
-                }}
+                className="pointer-events-none absolute inset-0 z-[1]"
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.28)" }}
             />
 
             {/* Dark cinematic overlay */}
@@ -37,7 +46,7 @@ const AboutLegacy = () => {
                     </p>
 
                     {/* Button */}
-                    <a href="tel:+919999999999" aria-label="Call to book a free consultation" className="legacy-button group mt-12 inline-flex items-center gap-3 rounded-lg border border-[#D4AF37]/60 bg-black/20 px-8 py-4 text-lg font-bold text-[#FFD21F] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#FFD700] hover:bg-[#D4AF37]/10 hover:text-[#FFE45C] hover:shadow-[0_0_30px_rgba(212,175,55,0.18)]">
+                    <a href="tel:+919781265400" aria-label="Call to book a free consultation" className="legacy-button group mt-12 inline-flex items-center gap-3 rounded-lg border border-[#FFD700] bg-[#D4AF37] px-8 py-4 text-lg font-bold text-black shadow-[0_8px_30px_rgba(212,175,55,0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#FFD700] hover:shadow-[0_0_35px_rgba(255,215,0,0.5)]">
                         
                         {/* Chat icon */}
                         <svg
@@ -75,23 +84,9 @@ const AboutLegacy = () => {
                     }
                 }
 
-                @keyframes legacyImageZoom {
-                    0% {
-                        transform: scale(1);
-                    }
-
-                    100% {
-                        transform: scale(1.04);
-                    }
-                }
-
                 .about-legacy-content {
                     opacity: 0;
                     animation: legacyFadeUp 1s ease-out 0.15s forwards;
-                }
-
-                section:hover > div:first-child {
-                    animation: legacyImageZoom 8s ease-out forwards;
                 }
             `}</style>
         </section>
