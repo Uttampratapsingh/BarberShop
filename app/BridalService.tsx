@@ -6,11 +6,11 @@ const BridalServices = () => {
     const services = [
         {
             title: "Pre-Bridal Packages",
-            image: "/bridal-1.png",
+            image: "/r1.jpeg",
         },
         {
             title: "Wedding Day Services",
-            image: "/bridal-2.png",
+            image: "/r2.jpeg",
         },
     ];
 
@@ -227,6 +227,8 @@ const BridalServices = () => {
                         gap-8
                         lg:grid-cols-2
                         lg:gap-10
+                        lg:mx-auto
+                        lg:max-w-[70%]
                     "
                 >
 
@@ -242,7 +244,7 @@ const BridalServices = () => {
                                 relative
                                 isolate
 
-                                h-[420px]
+                                aspect-[1179/1380]
                                 overflow-hidden
                                 rounded-2xl
 
