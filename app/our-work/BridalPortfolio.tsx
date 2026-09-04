@@ -88,7 +88,7 @@ export default function BridalPortfolio() {
         <div className="absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-[#d49b00]/[0.025] blur-[140px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1515px]">
+      <div className="our-work-rail relative z-10 mx-auto max-w-[1460px]">
         {/* Header */}
         <div className="mb-16 flex flex-col items-center">
           <div className="mb-6 animate-[float_3s_ease-in-out_infinite] text-[#ffd21a]">

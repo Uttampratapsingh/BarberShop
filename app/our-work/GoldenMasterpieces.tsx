@@ -1,20 +1,19 @@
 export default function GoldenMasterpieces() {
   return (
-    <section className="relative w-full overflow-hidden rounded-[6px] bg-black mt-10">
+    <section className="relative w-full overflow-hidden rounded-[6px] mt-10">
       <div
         className="
-          relative flex min-h-[420px] w-full items-center justify-center
-          bg-[linear-gradient(to_bottom,#342000_0%,#1b1100_32%,#080600_68%,#000000_100%)]
+          relative mx-auto flex min-h-[420px] w-full max-w-[1460px] items-center justify-center
           px-6
         "
       >
         {/* Subtle top glow */}
-        <div
+        {/* <div
           className="
             pointer-events-none absolute inset-0
-            bg-[radial-gradient(ellipse_at_center_top,rgba(255,194,0,0.10)_0%,transparent_55%)]
+            bg-[radial-gradient(ellipse_at_center_top,rgba(255,194,0,0.10)_0%,transparent_5%)]
           "
-        />
+        /> */}
 
         {/* Content */}
         <div className="relative z-10 -mt-2 text-center">

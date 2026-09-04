@@ -80,7 +80,7 @@ export default function GoldenReviews() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#090502] px-5 py-[72px] sm:px-8 md:px-12 lg:px-[10.3%]">
+    <section className="relative overflow-hidden bg-[#090502] px-5 py-[72px] sm:px-8 md:px-12 lg:px-16">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(180deg,#080402_0%,#0a0502_100%)]" />
@@ -88,7 +88,7 @@ export default function GoldenReviews() {
         <div className="absolute left-1/2 top-0 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-[#d69a00]/[0.025] blur-[140px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1600px]">
+      <div className="our-work-rail relative z-10 mx-auto max-w-[1460px]">
         {/* Header */}
         <div
           className={`mb-[78px] flex flex-col items-center transition-all duration-1000 ${

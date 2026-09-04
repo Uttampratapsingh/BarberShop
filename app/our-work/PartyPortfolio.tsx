@@ -13,19 +13,19 @@ const portfolioCards: PortfolioCard[] = [
     id: 1,
     title: "Luxe Party Collection",
     image:
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=90",
+      "/r8.jpeg",
   },
   {
     id: 2,
     title: "Luxe Party Collection",
     image:
-      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=90",
+      "/r9.jpeg",
   },
   {
     id: 3,
     title: "Luxe Party Collection",
     image:
-      "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1200&q=90",
+      "/r10.jpeg",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function PartyPortfolio() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#080400] px-5 py-12 sm:px-8 md:px-12 lg:px-[7.5%]">
+    <section className="relative overflow-hidden bg-[#080400] px-5 py-12 sm:px-8 md:px-12 lg:px-16">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#030303_0%,#070300_72%,#140900_100%)]" />
@@ -87,10 +87,10 @@ export default function PartyPortfolio() {
         <div className="absolute left-1/2 top-[-250px] h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-[#e5a900]/[0.025] blur-[150px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1460px]">
+      <div className="our-work-rail relative z-10 mx-auto max-w-[1460px]">
         {/* Header */}
         <div className="mb-[72px] flex flex-col items-center">
-          <div className="mb-7 animate-[partyFloat_3s_ease-in-out_infinite] text-[#ffd21a]">
+          <div className="mb-6 animate-[float_3s_ease-in-out_infinite] text-[#ffd21a]">
             <EyeIcon />
           </div>
 
