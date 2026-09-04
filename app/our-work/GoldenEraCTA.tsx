@@ -76,7 +76,7 @@ export default function GoldenEraCTA() {
               px-8
               text-[21px]
               font-bold
-              text-white
+              text-black
               shadow-[0_12px_40px_rgba(191,126,0,0.15)]
               transition-all
               duration-500

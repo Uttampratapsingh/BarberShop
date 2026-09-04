@@ -6,19 +6,19 @@ const CertificationPrograms = () => {
     const programs = [
         {
             title: "Skin Care Course",
-            image: "/bridal-1.png",
+            image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=90",
         },
         {
             title: "Advance Makeup Course",
-            image: "/bridal-2.png",
+            image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1400&q=90",
         },
         {
             title: "Nail Artistry Course",
-            image: "/bridal-3.png",
+            image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=90",
         },
         {
             title: "Hair Designing Course",
-            image: "/bridal-4.png",
+            image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1400&q=90",
         },
     ];
 
