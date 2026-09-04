@@ -16,6 +16,7 @@ export default function ContactSection() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    e.currentTarget.reset();
     setSent(true);
 
     window.setTimeout(() => {
@@ -212,10 +213,15 @@ export default function ContactSection() {
                 {/* Button */}
                 <button
                   type="submit"
-                  className="group mt-[29px] flex h-[48px] w-full items-center justify-center rounded-[8px] bg-[linear-gradient(90deg,#dbb438_0%,#ffd20b_100%)] text-[16px] font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(235,190,25,0.18)] active:translate-y-0"
+                  className="group mt-[29px] flex h-[48px] w-full items-center justify-center rounded-[8px] !bg-[#f0c525] text-[16px] font-bold !text-[#090909] transition-all duration-300 hover:-translate-y-1 hover:!bg-[#ffd21a] hover:shadow-[0_12px_30px_rgba(235,190,25,0.28)] active:translate-y-0"
                 >
                   {sent ? (
-                    <span className="animate-pulse">Message Sent ✓</span>
+                    <span className="flex items-center gap-2 animate-pulse">
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#090909] text-xs">
+                        ✓
+                      </span>
+                      Message Sent
+                    </span>
                   ) : (
                     <span>Send Message</span>
                   )}

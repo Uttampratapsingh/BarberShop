@@ -125,15 +125,6 @@ const SiteFooter = () => {
 
                     <p className="text-base leading-relaxed text-gray-400 sm:text-lg">
                         © 2025 Classic Bridal Studio. All rights reserved.
-                        <span className="ml-1">
-                            Powered by{" "}
-                            <a
-                                href="#"
-                                className="font-semibold text-[#FFD21F] underline decoration-[#FFD21F]/50 underline-offset-2 transition-all duration-300 hover:text-[#FFE45C]"
-                            >
-                                KN Tech Works
-                            </a>
-                        </span>
                     </p>
 
                 </div>
