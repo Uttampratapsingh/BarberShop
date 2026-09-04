@@ -15,47 +15,72 @@ const OurFoundation = () => {
             <div className="pointer-events-none absolute left-[35%] top-1/2 h-[450px] w-[650px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D4AF37]/5 blur-[140px]" />
 
             <div className="relative z-10 mx-auto max-w-[1450px]">
-                <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-16">
+                <div className="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14 xl:gap-20">
 
-                    {/* LEFT IMAGE */}
-                    <div className="foundation-image group relative overflow-hidden rounded-2xl border border-[#D4AF37]/45 bg-black shadow-[0_0_30px_rgba(0,0,0,0.45)]">
-                        <div className="relative h-[430px] sm:h-[500px] lg:h-[490px]">
-                            <img
-                                src="/bridal-2.png"
-                                alt="Classic Bridal Studio"
-                                className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
-                            />
+                    {/* LEFT COLUMN: IMAGE AND STATS */}
+                    <div className="flex h-full flex-col gap-6">
+                        <div className="foundation-image group relative overflow-hidden rounded-2xl border border-[#D4AF37]/45 bg-black shadow-[0_0_30px_rgba(0,0,0,0.45)]">
+                            <div className="relative aspect-[4/5] min-h-[420px] sm:min-h-[500px] lg:aspect-auto lg:h-[560px]">
+                                <img
+                                    src="/r4.jpeg"
+                                    alt="Classic Bridal Studio"
+                                    className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
+                                />
 
-                            {/* Dark gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-black/5" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-black/5" />
+                                <div className="absolute inset-0 bg-[#D4AF37]/0 transition-all duration-700 group-hover:bg-[#D4AF37]/5" />
+                                <div className="foundation-shine pointer-events-none absolute inset-y-0 -left-[120%] w-[35%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-                            {/* Hover gold tint */}
-                            <div className="absolute inset-0 bg-[#D4AF37]/0 transition-all duration-700 group-hover:bg-[#D4AF37]/5" />
-
-                            {/* Light sweep */}
-                            <div className="foundation-shine pointer-events-none absolute inset-y-0 -left-[120%] w-[35%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-                            {/* Bottom text */}
-                            <div className="absolute bottom-7 left-7 z-10 sm:bottom-8 sm:left-8">
-                                <h3 className="text-3xl font-bold text-[#FFD21F] transition-all duration-300 group-hover:text-[#FFE45C] sm:text-4xl">
-                                    Since 2016
-                                </h3>
-
-                                <p className="mt-1 text-lg font-medium text-[#E4C51F] sm:text-xl">
-                                    Pioneers in bridal transformation
-                                </p>
+                                <div className="absolute bottom-7 left-7 z-10 sm:bottom-8 sm:left-8">
+                                    <h3 className="text-3xl font-bold text-[#FFD21F] transition-all duration-300 group-hover:text-[#FFE45C] sm:text-4xl">
+                                        Since 2016
+                                    </h3>
+                                    <p className="mt-1 text-lg font-medium text-[#E4C51F] sm:text-xl">
+                                        Pioneers in bridal transformation
+                                    </p>
+                                </div>
                             </div>
                         </div>
+
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:flex-1 lg:auto-rows-fr">
+                        <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
+                            <div className="text-2xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
+                                Over 100
+                            </div>
+                            <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">Brides</div>
+                        </div>
+
+                        <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
+                            <div className="text-2xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
+                                Multiple
+                            </div>
+                            <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">Awards</div>
+                        </div>
+
+                        <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
+                            <div className="text-2xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
+                                Highly
+                            </div>
+                            <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">Rated</div>
+                        </div>
+
+                        <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
+                            <div className="text-2xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
+                                Since 2016
+                            </div>
+                            <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">In Beauty</div>
+                        </div>
+                    </div>
                     </div>
 
-                    {/* RIGHT CONTENT */}
-                    <div className="foundation-content">
+                    {/* RIGHT COLUMN: BADGE AND TEXT */}
+                    <div className="foundation-content flex h-full flex-col">
 
                         {/* Badge */}
-                        <div className="mb-7">
+                        <div className="mb-5">
                             <svg
                                 viewBox="0 0 48 48"
-                                className="h-12 w-12 text-[#D4AF37]"
+                                className="h-10 w-10 text-[#D4AF37] sm:h-12 sm:w-12"
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth="2.6"
@@ -81,57 +106,33 @@ const OurFoundation = () => {
 
                         {/* Heading */}
                         <h2 className="text-4xl font-bold leading-tight text-[#DDBA18] sm:text-5xl md:text-6xl">
-                            Our Foundation
+                            GSO Bridal Studio
                         </h2>
 
                         {/* Description */}
-                        <p className="mt-7 max-w-[760px] text-lg leading-relaxed text-gray-300 sm:text-xl">
-                            Established in 2016 under the guidance of Mr. Pal Pabla
-                            ( Owner of Oraane International Nawanshahr and Nangal ).
-                            Mr. Tarandeep Singh, and Mrs. Amanpreet Kaur, Classic
-                            Bridal Studio embarked on its journey. Mr. Tarandeep
-                            Singh's entrepreneurial spirit and dedication have been
-                            instrumental in evolving our studio into a leading brand
-                            within the beauty and salon sector.
-                        </p>
-
-                        {/* Stats */}
-                        <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-3">
-
-                            {/* Stat 1 */}
-                            <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-5 py-6 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
-                                <div className="text-3xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105">
-                                    Over 100
-                                </div>
-
-                                <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">
-                                    Brides
-                                </div>
+                        <div className="mt-6 max-w-[760px] space-y-5 text-base leading-relaxed text-gray-300 sm:text-lg">
+                            <p>
+                                At GSO Bridal Studio, we believe that every bride deserves to feel confident, beautiful, and truly herself on her special day.
+                            </p>
+                            <p>
+                                Our journey is built on a passion for bridal beauty, makeup, styling, and personalized experiences. We focus on understanding every bride&apos;s individual personality, preferences, and vision to create a look that feels elegant, timeless, and uniquely hers.
+                            </p>
+                            <p>
+                                From the first consultation to the final bridal look, our aim is to make every experience comfortable, memorable, and special. We pay attention to the little details because we believe that true beauty lies in the perfect balance of elegance, confidence, and individuality.
+                            </p>
+                            <div className="border-l-2 border-[#D4AF37]/60 pl-4 sm:pl-5">
+                                <h3 className="text-2xl font-bold text-[#DDBA18] sm:text-3xl">Our Foundation</h3>
+                                <p className="mt-2">Our foundation is based on three simple values:</p>
+                                <p className="mt-2 font-semibold text-[#D4AF37]">Quality &bull; Personalization &bull; Trust</p>
                             </div>
-
-                            {/* Stat 2 */}
-                            <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-5 py-6 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
-                                <div className="text-3xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105">
-                                    Multiple
-                                </div>
-
-                                <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">
-                                    Awards
-                                </div>
-                            </div>
-
-                            {/* Stat 3 */}
-                            <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-5 py-6 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
-                                <div className="text-3xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105">
-                                    Highly
-                                </div>
-
-                                <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">
-                                    Rated
-                                </div>
-                            </div>
-
+                            <p>
+                                We believe that bridal makeup is not just about creating a beautiful look; it is about creating a feeling that a bride will remember for years to come.
+                            </p>
+                            <p>
+                                At GSO Bridal Studio, we continuously strive to bring together professional expertise, creativity, premium beauty practices, and a personal touch so that every bride can walk into her special moment with confidence and a smile. Your special day deserves a look as special as you are.
+                            </p>
                         </div>
+
                     </div>
                 </div>
             </div>
