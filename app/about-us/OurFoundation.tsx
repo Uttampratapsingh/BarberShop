@@ -4,7 +4,7 @@ import React from "react";
 
 const OurFoundation = () => {
     return (
-        <section className="relative w-full overflow-hidden bg-black px-5 py-16 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+        <section className="our-foundation relative w-full overflow-hidden bg-[#713600] px-5 py-16 sm:px-8 md:px-12 lg:px-16 xl:px-20">
             {/* Background */}
             <div
                 className="pointer-events-none absolute inset-0 opacity-20"
@@ -12,14 +12,14 @@ const OurFoundation = () => {
             />
 
             {/* Ambient gold glow */}
-            <div className="pointer-events-none absolute left-[35%] top-1/2 h-[450px] w-[650px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D4AF37]/5 blur-[140px]" />
+            <div className="pointer-events-none absolute left-[35%] top-1/2 h-[450px] w-[650px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C05800]/5 blur-[140px]" />
 
             <div className="relative z-10 mx-auto max-w-[1450px]">
                 <div className="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14 xl:gap-20">
 
                     {/* LEFT COLUMN: IMAGE AND STATS */}
                     <div className="flex h-full flex-col gap-6">
-                        <div className="foundation-image group relative overflow-hidden rounded-2xl border border-[#D4AF37]/45 bg-black shadow-[0_0_30px_rgba(0,0,0,0.45)]">
+                        <div className="foundation-image group relative overflow-hidden rounded-2xl border border-[#C05800]/45 bg-[#713600] shadow-[0_0_30px_rgba(56, 36, 13, 0.45)]">
                             <div className="relative aspect-[4/5] min-h-[420px] sm:min-h-[500px] lg:aspect-auto lg:h-[560px]">
                                 <img
                                     src="/r4.jpeg"
@@ -28,14 +28,14 @@ const OurFoundation = () => {
                                 />
 
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-black/5" />
-                                <div className="absolute inset-0 bg-[#D4AF37]/0 transition-all duration-700 group-hover:bg-[#D4AF37]/5" />
+                                <div className="absolute inset-0 bg-[#C05800]/0 transition-all duration-700 group-hover:bg-[#C05800]/5" />
                                 <div className="foundation-shine pointer-events-none absolute inset-y-0 -left-[120%] w-[35%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
                                 <div className="absolute bottom-7 left-7 z-10 sm:bottom-8 sm:left-8">
-                                    <h3 className="text-3xl font-bold text-[#FFD21F] transition-all duration-300 group-hover:text-[#FFE45C] sm:text-4xl">
+                                    <h3 className="text-3xl font-bold text-[#FDFBD4] transition-all duration-300 group-hover:text-[#FDFBD4] sm:text-4xl">
                                         Since 2016
                                     </h3>
-                                    <p className="mt-1 text-lg font-medium text-[#E4C51F] sm:text-xl">
+                                    <p className="mt-1 text-lg font-medium text-[#FDFBD4] sm:text-xl">
                                         Pioneers in bridal transformation
                                     </p>
                                 </div>
@@ -43,32 +43,32 @@ const OurFoundation = () => {
                         </div>
 
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:flex-1 lg:auto-rows-fr">
-                        <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
-                            <div className="text-2xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
+                        <div className="foundation-stat group rounded-xl border border-[#C05800]/25 bg-[#713600] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#C05800]/70 hover:bg-[#8A4300] hover:shadow-[0_15px_35px_rgba(192, 88, 0, 0.10)]">
+                            <div className="text-2xl font-bold text-[#38240D] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
                                 Over 100
                             </div>
-                            <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">Brides</div>
+                            <div className="mt-1 text-base text-[#38240D] sm:text-lg">Brides</div>
                         </div>
 
-                        <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
-                            <div className="text-2xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
+                        <div className="foundation-stat group rounded-xl border border-[#C05800]/25 bg-[#713600] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#C05800]/70 hover:bg-[#8A4300] hover:shadow-[0_15px_35px_rgba(192, 88, 0, 0.10)]">
+                            <div className="text-2xl font-bold text-[#38240D] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
                                 Multiple
                             </div>
-                            <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">Awards</div>
+                            <div className="mt-1 text-base text-[#38240D] sm:text-lg">Awards</div>
                         </div>
 
-                        <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
-                            <div className="text-2xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
+                        <div className="foundation-stat group rounded-xl border border-[#C05800]/25 bg-[#713600] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#C05800]/70 hover:bg-[#8A4300] hover:shadow-[0_15px_35px_rgba(192, 88, 0, 0.10)]">
+                            <div className="text-2xl font-bold text-[#38240D] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
                                 Highly
                             </div>
-                            <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">Rated</div>
+                            <div className="mt-1 text-base text-[#38240D] sm:text-lg">Rated</div>
                         </div>
 
-                        <div className="foundation-stat group rounded-xl border border-[#D4AF37]/25 bg-[#080808] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#D4AF37]/70 hover:bg-[#0D0D0D] hover:shadow-[0_15px_35px_rgba(212,175,55,0.10)]">
-                            <div className="text-2xl font-bold text-[#FFD21F] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
+                        <div className="foundation-stat group rounded-xl border border-[#C05800]/25 bg-[#713600] px-4 py-5 text-center transition-all duration-400 hover:-translate-y-2 hover:border-[#C05800]/70 hover:bg-[#8A4300] hover:shadow-[0_15px_35px_rgba(192, 88, 0, 0.10)]">
+                            <div className="text-2xl font-bold text-[#38240D] transition-transform duration-300 group-hover:scale-105 sm:text-3xl">
                                 Since 2016
                             </div>
-                            <div className="mt-1 text-base text-[#D4AF37] sm:text-lg">In Beauty</div>
+                            <div className="mt-1 text-base text-[#38240D] sm:text-lg">In Beauty</div>
                         </div>
                     </div>
                     </div>
@@ -80,7 +80,7 @@ const OurFoundation = () => {
                         <div className="mb-5">
                             <svg
                                 viewBox="0 0 48 48"
-                                className="h-10 w-10 text-[#D4AF37] sm:h-12 sm:w-12"
+                                className="h-10 w-10 text-[#C05800] sm:h-12 sm:w-12"
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth="2.6"
@@ -105,12 +105,12 @@ const OurFoundation = () => {
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-4xl font-bold leading-tight text-[#DDBA18] sm:text-5xl md:text-6xl">
+                        <h2 className="text-4xl font-bold leading-tight text-[#38240D] sm:text-5xl md:text-6xl">
                             GSO Bridal Studio
                         </h2>
 
                         {/* Description */}
-                        <div className="mt-6 max-w-[760px] space-y-5 text-base leading-relaxed text-gray-300 sm:text-lg">
+                        <div className="mt-6 max-w-[760px] space-y-5 text-base leading-relaxed text-[#6B4A2A] sm:text-lg">
                             <p>
                                 At GSO Bridal Studio, we believe that every bride deserves to feel confident, beautiful, and truly herself on her special day.
                             </p>
@@ -120,10 +120,10 @@ const OurFoundation = () => {
                             <p>
                                 From the first consultation to the final bridal look, our aim is to make every experience comfortable, memorable, and special. We pay attention to the little details because we believe that true beauty lies in the perfect balance of elegance, confidence, and individuality.
                             </p>
-                            <div className="border-l-2 border-[#D4AF37]/60 pl-4 sm:pl-5">
-                                <h3 className="text-2xl font-bold text-[#DDBA18] sm:text-3xl">Our Foundation</h3>
+                            <div className="border-l-2 border-[#C05800]/60 pl-4 sm:pl-5">
+                                <h3 className="text-2xl font-bold text-[#38240D] sm:text-3xl">Our Foundation</h3>
                                 <p className="mt-2">Our foundation is based on three simple values:</p>
-                                <p className="mt-2 font-semibold text-[#D4AF37]">Quality &bull; Personalization &bull; Trust</p>
+                                <p className="mt-2 font-semibold text-[#38240D]">Quality &bull; Personalization &bull; Trust</p>
                             </div>
                             <p>
                                 We believe that bridal makeup is not just about creating a beautiful look; it is about creating a feeling that a bride will remember for years to come.
@@ -184,6 +184,11 @@ const OurFoundation = () => {
 
                 .foundation-image:hover .foundation-shine {
                     animation: foundationShine 1.2s ease;
+                }
+
+                .our-foundation .foundation-image h3,
+                .our-foundation .foundation-image p {
+                    color: #FDFBD4 !important;
                 }
             `}</style>
         </section>

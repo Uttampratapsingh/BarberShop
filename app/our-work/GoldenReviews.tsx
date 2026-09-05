@@ -80,12 +80,12 @@ export default function GoldenReviews() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#090502] px-5 py-[72px] sm:px-8 md:px-12 lg:px-16">
+    <section className="relative overflow-hidden bg-[#713600] px-5 py-[72px] sm:px-8 md:px-12 lg:px-16">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,#080402_0%,#0a0502_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#713600_0%,#713600_100%)]" />
 
-        <div className="absolute left-1/2 top-0 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-[#d69a00]/[0.025] blur-[140px]" />
+        <div className="absolute left-1/2 top-0 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-[#C05800]/[0.025] blur-[140px]" />
       </div>
 
       <div className="our-work-rail relative z-10 mx-auto max-w-[1460px]">
@@ -97,11 +97,11 @@ export default function GoldenReviews() {
               : "translate-y-6 opacity-0"
           }`}
         >
-          <div className="mb-[38px] animate-[messageFloat_3s_ease-in-out_infinite] text-[#ffd21a]">
+          <div className="mb-[38px] animate-[messageFloat_3s_ease-in-out_infinite] text-[#38240D]">
             <MessageIcon />
           </div>
 
-          <h2 className="text-center text-[42px] font-extrabold leading-none tracking-[-0.045em] text-[#ffd21a] sm:text-[48px] md:text-[54px] lg:text-[58px]">
+          <h2 className="text-center text-[42px] font-extrabold leading-none tracking-[-0.045em] text-[#38240D] sm:text-[48px] md:text-[54px] lg:text-[58px]">
             Golden Reviews
           </h2>
         </div>
@@ -114,7 +114,7 @@ export default function GoldenReviews() {
             return (
               <article
                 key={review.id}
-                className={`group relative min-h-[305px] overflow-hidden rounded-[19px] border border-[#5f3808]/60 bg-[#211205] px-[39px] py-[39px] shadow-[0_20px_60px_rgba(0,0,0,0.18)] transition-all duration-700 ease-out hover:-translate-y-2 hover:border-[#a9670c]/70 hover:bg-[#271506] hover:shadow-[0_28px_70px_rgba(0,0,0,0.35)] ${
+                className={`group relative min-h-[305px] overflow-hidden rounded-[19px] border border-[#713600]/60 bg-[#713600] px-[39px] py-[39px] shadow-[0_20px_60px_rgba(56, 36, 13, 0.18)] transition-all duration-700 ease-out hover:-translate-y-2 hover:border-[#A85A1A]/70 hover:bg-[#A85A1A] hover:shadow-[0_28px_70px_rgba(56, 36, 13, 0.35)] ${
                   visible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
@@ -124,7 +124,7 @@ export default function GoldenReviews() {
                 }}
               >
                 {/* Hover glow */}
-                <div className="pointer-events-none absolute inset-0 rounded-[19px] bg-[radial-gradient(circle_at_20%_20%,rgba(255,196,0,0.05),transparent_35%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 rounded-[19px] bg-[radial-gradient(circle_at_20%_20%,rgba(192,88,0,0.05),transparent_35%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                 {/* Header row */}
                 <div className="relative z-10 flex items-center gap-[21px]">
@@ -137,8 +137,8 @@ export default function GoldenReviews() {
                         ? `Unlike ${review.name}`
                         : `Like ${review.name}`
                     }
-                    className={`flex h-[61px] w-[61px] shrink-0 items-center justify-center rounded-full bg-[#48320a] text-[#ffd21a] transition-all duration-300 hover:scale-110 hover:bg-[#59400d] active:scale-95 ${
-                      isLiked ? "bg-[#59400d]" : ""
+                    className={`flex h-[61px] border-1 w-[61px] shrink-0 items-center justify-center rounded-full bg-[#713600] text-[#C05800] transition-all duration-300 hover:scale-110 hover:bg-[#A85A1A] active:scale-95 ${
+                      isLiked ? "bg-[#A85A1A]" : ""
                     }`}
                   >
                     <span
@@ -152,23 +152,23 @@ export default function GoldenReviews() {
 
                   {/* User */}
                   <div>
-                    <h3 className="text-[23px] font-bold leading-[1.1] tracking-[-0.025em] text-[#fff8dc]">
+                    <h3 className="text-[23px] font-bold leading-[1.1] tracking-[-0.025em] text-[#38240D]">
                       {review.name}
                     </h3>
 
-                    <p className="mt-[7px] text-[18px] font-medium leading-none text-[#ffd21a]">
+                    <p className="mt-[7px] text-[18px] font-medium leading-none text-[#713600]">
                       {review.role}
                     </p>
                   </div>
                 </div>
 
                 {/* Review text */}
-                <p className="relative z-10 mt-[39px] max-w-[800px] text-[18px] font-medium leading-[1.72] tracking-[-0.01em] text-[#ffed9a] sm:text-[19px]">
+                <p className="relative z-10 mt-[39px] max-w-[800px] text-[18px] font-medium leading-[1.72] tracking-[-0.01em] text-[#713600] sm:text-[19px]">
                   {review.review}
                 </p>
 
                 {/* Bottom golden glow */}
-                <div className="pointer-events-none absolute bottom-0 left-0 h-[1px] w-0 bg-[#ffd21a]/60 transition-all duration-700 group-hover:w-full" />
+                <div className="pointer-events-none absolute bottom-0 left-0 h-[1px] w-0 bg-[#C05800]/60 transition-all duration-700 group-hover:w-full" />
               </article>
             );
           })}

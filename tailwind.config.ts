@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       boxShadow: {
-        call: "0 0 0 3px #ffffff, 0 0 0 6px #2f80ff"
+        call: "0 0 0 3px #FDFBD4, 0 0 0 6px #C05800"
       }
     }
   },

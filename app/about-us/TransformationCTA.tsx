@@ -59,11 +59,11 @@ export default function TransformationCTA() {
 
         .cta-card:hover {
           transform: translateY(-7px);
-          border-color: rgba(255, 210, 0, 0.7);
+          border-color: rgba(192, 88, 0, 0.7);
           box-shadow:
-            0 25px 70px rgba(0, 0, 0, 0.75),
-            0 0 35px rgba(255, 210, 0, 0.08);
-          background-color: rgba(0, 0, 0, 0.82);
+            0 25px 70px rgba(56, 36, 13, 0.75),
+            0 0 35px rgba(192, 88, 0, 0.08);
+          background-color: rgba(56, 36, 13, 0.82);
         }
 
         /* =========================================
@@ -95,8 +95,8 @@ export default function TransformationCTA() {
         .cta-card:hover .cta-title {
           transform: translateY(-3px);
           text-shadow:
-            0 0 12px rgba(255, 210, 0, 0.22),
-            0 0 30px rgba(255, 210, 0, 0.08);
+            0 0 12px rgba(192, 88, 0, 0.22),
+            0 0 30px rgba(192, 88, 0, 0.08);
         }
 
         /* =========================================
@@ -110,7 +110,7 @@ export default function TransformationCTA() {
         }
 
         .cta-card:hover .cta-description {
-          color: #eeeeee;
+          color: #5E4023;
           transform: translateY(-2px);
         }
 
@@ -140,7 +140,7 @@ export default function TransformationCTA() {
           background: linear-gradient(
             90deg,
             transparent,
-            rgba(255,255,255,0.28),
+            rgba(253,251,212,0.28),
             transparent
           );
           transition: left 0.7s ease;
@@ -158,10 +158,15 @@ export default function TransformationCTA() {
            CALL BUTTON
         ========================================= */
 
-        .call-button:hover {
-          background: #f5d34c;
+        .cta-section .call-button:hover {
+          background: #38240D !important;
           box-shadow:
-            0 10px 30px rgba(255, 210, 0, 0.2);
+            0 10px 30px rgba(192, 88, 0, 0.2);
+        }
+
+        .cta-section .call-button {
+          background: #713600 !important;
+          color: #FDFBD4 !important;
         }
 
         /* =========================================
@@ -169,11 +174,11 @@ export default function TransformationCTA() {
         ========================================= */
 
         .email-button:hover {
-          background: #ffd200;
-          color: #050505;
-          border-color: #ffd200;
+          background: transparent;
+          color: #C05800;
+          border-color: #C05800;
           box-shadow:
-            0 10px 30px rgba(255, 210, 0, 0.2);
+            0 10px 30px rgba(192, 88, 0, 0.2);
         }
 
         /* =========================================
@@ -257,7 +262,7 @@ export default function TransformationCTA() {
           items-center
           justify-center
           overflow-hidden
-          bg-black
+          bg-[#713600]
           px-6
           py-20
         "
@@ -285,7 +290,7 @@ export default function TransformationCTA() {
           className="
             absolute
             inset-0
-            bg-black/70
+            bg-[#713600]/70
           "
         />
 
@@ -315,8 +320,8 @@ export default function TransformationCTA() {
             max-w-full
             rounded-[20px]
             border
-            border-[#4f4200]
-            bg-black/75
+            border-[#713600]
+            bg-[#713600]/75
             px-[58px]
             py-[60px]
             text-center
@@ -352,7 +357,7 @@ export default function TransformationCTA() {
                 font-bold
                 leading-[1]
                 tracking-[-2px]
-                text-[#f4c400]
+                text-[#38240D]
               "
             >
               Begin Your
@@ -373,7 +378,7 @@ export default function TransformationCTA() {
                 text-[22px]
                 font-medium
                 leading-[1.55]
-                text-[#d7d7d7]
+                text-[#6B4A2A]
               "
             >
               Experience the Classic Bridal difference with our personalized
@@ -407,11 +412,11 @@ export default function TransformationCTA() {
                   justify-center
                   gap-3
                   rounded-[10px]
-                  bg-[#e2bd35]
+                  bg-[#713600]
                   px-6
                   text-[20px]
                   font-bold
-                  text-black
+                  text-[#38240D]
                 "
               >
                 <svg
@@ -443,12 +448,12 @@ export default function TransformationCTA() {
                   gap-3
                   rounded-[10px]
                   border-2
-                  border-[#dcb900]
+                  border-[#C05800]
                   bg-transparent
                   px-6
                   text-[20px]
                   font-bold
-                  text-[#ffd200]
+                  text-[#C05800]
                 "
               >
                 <svg

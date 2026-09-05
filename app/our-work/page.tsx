@@ -6,7 +6,7 @@ import PartyPortfolio from "./PartyPortfolio";
 
 export default function OurWorkPage(){
   return (
-    <main className="our-work-page min-h-screen bg-black text-white items-start">
+    <main className="our-work-page min-h-screen bg-[#713600] text-[#FDFBD4] items-start">
         <GoldenMasterpieces/>
         <div className="our-work-divider" aria-hidden="true"><span /></div>
         <BridalPortfolio/>
@@ -38,7 +38,7 @@ export default function OurWorkPage(){
             height: 1px;
             margin: 0 auto;
             overflow: hidden;
-            background: rgba(184, 155, 94, 0.3);
+            background: rgba(113, 54, 0, 0.3);
           }
 
           .our-work-divider span {
@@ -47,7 +47,7 @@ export default function OurWorkPage(){
             left: -20%;
             width: 20%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            background: linear-gradient(90deg, transparent, #C05800, transparent);
             animation: ourWorkDividerShine 3.2s ease-in-out infinite;
           }
 

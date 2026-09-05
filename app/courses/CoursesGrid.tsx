@@ -149,23 +149,23 @@ export default function CoursesGrid() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#090909] px-5 py-[10px] sm:px-8 lg:px-10">
+    <section className="relative min-h-screen overflow-hidden bg-[#713600] px-5 py-[10px] sm:px-8 lg:px-10">
       <div className="relative mx-auto w-full max-w-[1125px]">
         <div className="grid grid-cols-1 gap-[40px] md:grid-cols-2">
           {courses.map((course, index) => (
             <article
               key={course.id}
-              className={`group relative overflow-hidden rounded-[13px] border border-[#554008] bg-black p-[20px] transition-all duration-700 ease-out ${
+              className={`group relative overflow-hidden rounded-[13px] border border-[#713600] bg-[#713600] p-[20px] transition-all duration-700 ease-out ${
                 visible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-[35px] opacity-0"
-              } hover:-translate-y-[7px] hover:border-[#a17811] hover:shadow-[0_25px_70px_rgba(0,0,0,0.55)]`}
+              } hover:-translate-y-[7px] hover:border-[#A85A1A] hover:shadow-[0_25px_70px_rgba(56, 36, 13, 0.55)]`}
               style={{
                 transitionDelay: `${index * 130}ms`,
               }}
             >
               {/* Image */}
-              <div className="course-image-frame relative h-[335px] overflow-hidden rounded-[7px] bg-black">
+              <div className="course-image-frame relative h-[335px] overflow-hidden rounded-[7px] bg-[#713600]">
                 <img
                   src={course.image}
                   alt={course.title}
@@ -185,25 +185,25 @@ export default function CoursesGrid() {
               {/* Content */}
               <div className="px-[1px] pb-[1px] pt-[20px]">
                 <div className="flex items-center gap-[10px]">
-                  <div className="text-[#e2b72b] transition-transform duration-500 group-hover:scale-110">
+                  <div className="text-[#713600] transition-transform duration-500 group-hover:scale-110">
                     <CourseIcon type={course.icon} />
                   </div>
 
-                  <h2 className="text-[20px] font-extrabold leading-none tracking-[-0.03em] text-[#dfb328] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#ffd21a] sm:text-[21px]">
+                  <h2 className="text-[20px] font-extrabold leading-none tracking-[-0.03em] text-[#713600] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#38240D] sm:text-[21px]">
                     {course.title}
                   </h2>
                 </div>
 
-                <p className="mt-[22px] text-[14px] font-medium leading-[1.45] tracking-[-0.01em] text-[#b58c15] transition-colors duration-300 group-hover:text-[#d0a519] sm:text-[15px]">
+                <p className="mt-[22px] text-[14px] font-medium leading-[1.45] tracking-[-0.01em] text-[#713600]/50 transition-colors duration-300 group-hover:text-[#713600] sm:text-[15px]">
                   {course.description}
                 </p>
               </div>
 
               {/* Bottom gold line */}
-              <div className="absolute bottom-0 left-0 h-px w-0 bg-[#ffd21a] transition-all duration-700 group-hover:w-full" />
+              <div className="absolute bottom-0 left-0 h-px w-0 bg-[#C05800] transition-all duration-700 group-hover:w-full" />
 
               {/* Corner glow */}
-              <div className="pointer-events-none absolute -right-[80px] -top-[80px] h-[180px] w-[180px] rounded-full bg-[#ffd21a]/[0.045] blur-[65px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute -right-[80px] -top-[80px] h-[180px] w-[180px] rounded-full bg-[#C05800]/[0.045] blur-[65px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </article>
           ))}
         </div>
@@ -219,15 +219,15 @@ export default function CoursesGrid() {
         }
 
         .course-image-overlay {
-          background: rgba(0, 0, 0, 0.2);
+          background: rgba(56, 36, 13, 0.2);
         }
 
         .group:hover .course-image-overlay {
-          background: rgba(0, 0, 0, 0.05);
+          background: rgba(56, 36, 13, 0.05);
         }
 
         .course-image-gradient {
-          background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+          background: linear-gradient(to top, rgba(56, 36, 13, 0.7), transparent);
         }
       `}</style>
     </section>

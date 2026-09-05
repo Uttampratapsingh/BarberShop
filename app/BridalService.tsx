@@ -15,7 +15,7 @@ const BridalServices = () => {
     ];
 
     return (
-        <section className="relative w-full overflow-hidden bg-black py-16 md:py-20 lg:py-24">
+        <section className="bridal-services relative w-full overflow-hidden bg-[#713600] py-16 md:py-20 lg:py-24">
 
             <style>
                 {`
@@ -34,14 +34,14 @@ const BridalServices = () => {
                     @keyframes goldGlow {
                         0%, 100% {
                             box-shadow:
-                                0 0 0 rgba(212,175,55,0),
-                                inset 0 0 0 rgba(212,175,55,0);
+                                0 0 0 rgba(192, 88, 0, 0),
+                                inset 0 0 0 rgba(192, 88, 0, 0);
                         }
 
                         50% {
                             box-shadow:
-                                0 0 28px rgba(212,175,55,0.12),
-                                inset 0 0 18px rgba(212,175,55,0.04);
+                                0 0 28px rgba(192, 88, 0, 0.12),
+                                inset 0 0 18px rgba(192, 88, 0, 0.04);
                         }
                     }
 
@@ -72,7 +72,7 @@ const BridalServices = () => {
                     }
 
                     .service-card-tint {
-                        background: rgba(0, 0, 0, 0.05);
+                        background: rgba(56, 36, 13, 0.05);
                     }
 
                     .service-card:hover .service-card-image {
@@ -90,8 +90,19 @@ const BridalServices = () => {
                         transform: translateY(-3px);
 
                         box-shadow:
-                            0 10px 30px rgba(255, 210, 0, 0.28),
-                            0 0 20px rgba(255, 210, 0, 0.12);
+                            0 10px 30px rgba(192, 88, 0, 0.28),
+                            0 0 20px rgba(192, 88, 0, 0.12);
+                    }
+
+                    .bridal-services .service-card-button {
+                        background-color: rgba(192, 88, 0, 0.5) !important;
+                        background-image: none !important;
+                        color: #FDFBD4 !important;
+                    }
+
+                    .bridal-services .service-card-button:hover {
+                        background-color: #C05800 !important;
+                        color: #FDFBD4 !important;
                     }
 
                     .service-card::after {
@@ -106,7 +117,7 @@ const BridalServices = () => {
                         background: linear-gradient(
                             90deg,
                             transparent,
-                            rgba(255,255,255,0.08),
+                            rgba(253,251,212,0.08),
                             transparent
                         );
                         transform: translateX(-120%);
@@ -130,7 +141,7 @@ const BridalServices = () => {
                     pointer-events-none
                     absolute
                     inset-0
-                    bg-black
+                    bg-[#713600]
                 "
             />
 
@@ -169,7 +180,7 @@ const BridalServices = () => {
                     w-[700px]
                     -translate-x-1/2
                     rounded-full
-                    bg-[#D4AF37]/5
+                    bg-[#C05800]/5
                     blur-[120px]
                 "
             />
@@ -202,12 +213,12 @@ const BridalServices = () => {
                             text-4xl
                             font-bold
                             leading-tight
-                            text-[#F5C518]
+                            text-[#38240D]
                             sm:text-5xl
                             md:text-6xl
                             lg:text-[60px]
 
-                            [text-shadow:0_0_15px_rgba(245,197,24,0.18)]
+                            [text-shadow:0_0_15px_rgba(192,88,0,0.18)]
                         "
                     >
                         Premium Bridal Services
@@ -249,9 +260,9 @@ const BridalServices = () => {
                                 rounded-2xl
 
                                 border
-                                border-[#D4AF37]/50
+                                border-[#C05800]/80
 
-                                bg-black
+                                bg-[#713600]
 
                                 opacity-0
 
@@ -362,11 +373,11 @@ const BridalServices = () => {
                                         text-2xl
                                         font-bold
 
-                                        text-[#FFD21F]
+                                        text-[#FDFBD4]
 
                                         md:text-3xl
 
-                                        [text-shadow:0_2px_10px_rgba(0,0,0,0.95)]
+                                        [text-shadow:0_2px_10px_rgba(56, 36, 13, 0.95)]
                                     "
                                 >
                                     {service.title}
@@ -383,17 +394,17 @@ const BridalServices = () => {
                                         rounded-lg
 
                                         bg-gradient-to-r
-                                        from-[#D4AF37]
-                                        to-[#FFD700]
+                                        from-[#C05800]
+                                        to-[#C05800]
 
                                         px-10
                                         py-4
 
                                         text-base
                                         font-bold
-                                        text-black
+                                        text-[#FDFBD4]
 
-                                        shadow-[0_8px_25px_rgba(212,175,55,0.3)]
+                                        shadow-[0_8px_25px_rgba(192, 88, 0, 0.3)]
 
                                         md:text-lg
                                     "
@@ -420,7 +431,7 @@ const BridalServices = () => {
                                     w-32
 
                                     rounded-full
-                                    bg-[#D4AF37]/10
+                                    bg-[#C05800]/10
                                     blur-3xl
                                 "
                             />
@@ -437,7 +448,7 @@ const BridalServices = () => {
                                     w-32
 
                                     rounded-full
-                                    bg-[#D4AF37]/10
+                                    bg-[#C05800]/10
                                     blur-3xl
                                 "
                             />

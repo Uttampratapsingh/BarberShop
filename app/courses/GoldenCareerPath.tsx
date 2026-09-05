@@ -47,22 +47,22 @@ export default function GoldenCareerPath() {
   }
 
   return (
-    <section className="relative min-h-[640px] overflow-hidden bg-[#080808] px-5 sm:px-8">
+    <section className="golden-career-path relative min-h-[640px] overflow-hidden bg-[#713600] px-5 sm:px-8">
       {/* Background */}
-      {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,#090909_0%,#080808_100%)]" /> */}
+      {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,#713600_0%,#713600_100%)]" /> */}
 
       {/* Very subtle golden glow */}
       <div
         className={`pointer-events-none absolute left-1/2 top-[42%] h-[520px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[160px] transition-all duration-1000 ${
-          hovered ? "bg-[#dcae18]/[0.05]" : "bg-[#dcae18]/[0.018]"
+          hovered ? "bg-[#C05800]/[0.05]" : "bg-[#C05800]/[0.018]"
         }`}
       />
 
       {/* Content */}
-      <div className=" border-t-1 border-[#dcae18] relative z-10 mx-auto flex min-h-[640px] max-w-[1500px] flex-col items-center justify-center text-center">
+      <div className=" border-t-1 border-[#C05800] relative z-10 mx-auto flex min-h-[640px] max-w-[1500px] flex-col items-center justify-center text-center">
         {/* Heading */}
         <h1
-          className={`text-[44px] font-extrabold leading-[1.05] tracking-[-0.05em] text-[#d9aa20] transition-all duration-1000 ease-out sm:text-[54px] md:text-[64px] lg:text-[68px] ${
+          className={`text-[44px] font-extrabold leading-[1.05] tracking-[-0.05em] text-[#38240D] transition-all duration-1000 ease-out sm:text-[54px] md:text-[64px] lg:text-[68px] ${
             visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -71,7 +71,7 @@ export default function GoldenCareerPath() {
 
         {/* Description */}
         <p
-          className={`mt-[42px] max-w-[930px] text-[18px] font-normal leading-[1.65] tracking-[-0.015em] text-[#c49c1a] transition-all duration-1000 delay-150 ease-out sm:text-[20px] md:text-[22px] ${
+          className={`mt-[42px] max-w-[930px] text-[18px] font-normal leading-[1.65] tracking-[-0.015em] text-[#713600]/80 transition-all duration-1000 delay-150 ease-out sm:text-[20px] md:text-[22px] ${
             visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -87,11 +87,11 @@ export default function GoldenCareerPath() {
           onClick={() => setIsModalOpen(true)}
           // onMouseEnter={() => setHovered(true)}
           // onMouseLeave={() => setHovered(false)}
-          className={`group mt-[67px] flex h-[80px] w-[250px] items-center justify-center rounded-full bg-[#d9b238] text-[20px] font-bold tracking-[-0.02em] text-black shadow-[0_10px_35px_rgba(217,178,56,0.08)] transition-all duration-700 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:bg-[#e4bc45] hover:shadow-[0_18px_45px_rgba(217,178,56,0.2)] active:scale-[0.98] ${
+          className={`group mt-[67px] flex h-[80px] border border-[#C05800] w-[250px] items-center justify-center rounded-full bg-[#713600]  text-[20px] font-bold tracking-[-0.02em] text-[#FDFBD4] shadow-[0_10px_35px_rgba(192,88,0,0.08)] transition-all duration-700 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:bg-[#38240D] hover:shadow-[0_18px_45px_rgba(192,88,0,0.2)] active:scale-[0.98] ${
             visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <span className="transition-transform duration-300 group-hover:scale-[1.03]">
+          <span className="transition-transform duration-300 text-bold text-xl group-hover:scale-[1.03]">
             Enroll Now
           </span>
         </button>
@@ -104,18 +104,40 @@ export default function GoldenCareerPath() {
         } transition-opacity duration-300`}
       >
         <div
-          className={`absolute inset-y-0 left-[-60%] w-[30%] skew-x-[-20deg] bg-white/20 transition-transform duration-[900ms] ${
+          className={`absolute inset-y-0 left-[-60%] w-[30%] skew-x-[-20deg] bg-[#FDFBD4]/[20] transition-transform duration-[900ms] ${
             hovered ? "translate-x-[430%]" : "translate-x-0"
           }`}
         />
       </div> */}
 
       {/* Bottom border */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-[#4f3c0b]/30" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-[#713600]/30" />
+
+      <style>{`
+        .golden-career-path > .relative > button {
+          background-color: #713600 !important;
+          border-color: #C05800 !important;
+          color: #FDFBD4 !important;
+        }
+
+        .golden-career-path > .relative > button:hover {
+          background-color: #38240D !important;
+        }
+
+        .golden-career-path .program-submit-button {
+          background-color: #713600 !important;
+          border: 1px solid #C05800 !important;
+          color: #FDFBD4 !important;
+        }
+
+        .golden-career-path .program-submit-button:hover {
+          background-color: #38240D !important;
+        }
+      `}</style>
 
       {isModalOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-[#080808]/80 px-4 py-8"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-[#713600]/80 px-4 py-8"
           role="dialog"
           aria-modal="true"
           aria-labelledby="admissions-title"
@@ -123,55 +145,55 @@ export default function GoldenCareerPath() {
             if (event.target === event.currentTarget) closeModal();
           }}
         >
-          <div className="relative w-full max-w-[540px] rounded-[22px] border border-[#d9aa20]/45 bg-[#182428] p-6 text-left shadow-[0_24px_90px_rgba(0,0,0,0.55)] sm:p-9">
+          <div className="relative w-full max-w-[540px] rounded-[22px] border border-[#C05800]/45 bg-[#713600] p-6 text-left shadow-[0_24px_90px_rgba(56, 36, 13, 0.55)] sm:p-9">
             <button
               type="button"
               onClick={closeModal}
               disabled={isSubmitting}
               aria-label="Close admissions form"
-              className="absolute right-5 top-4 flex h-9 w-9 items-center justify-center rounded-full text-2xl leading-none text-[#f7f1ea]/70 transition-colors hover:bg-[#c98278]/15 hover:text-[#f7f1ea] disabled:cursor-not-allowed disabled:opacity-40"
+              className="absolute right-5 top-4 flex h-9 w-9 items-center justify-center rounded-full text-2xl leading-none text-[#FDFBD4]/70 transition-colors hover:bg-[#C05800]/15 hover:text-[#FDFBD4] disabled:cursor-not-allowed disabled:opacity-40"
             >
               &times;
             </button>
 
             {isSubmitted ? (
               <div className="flex min-h-[360px] flex-col items-center justify-center text-center">
-                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-[#d9aa20] text-4xl text-[#d9aa20] animate-[pop-in_500ms_ease-out]">
+                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-[#C05800] text-4xl text-[#C05800] animate-[pop-in_500ms_ease-out]">
                   &#10003;
                 </div>
-                <h2 id="admissions-title" className="text-3xl font-bold text-[#f7f1ea]">
+                <h2 id="admissions-title" className="text-3xl font-bold text-[#FDFBD4]">
                   Application Submitted
                 </h2>
-                <p className="mt-3 text-base text-[#f7f1ea]/75">
+                <p className="mt-3 text-base text-[#FDFBD4]/75">
                   Your journey to excellence has begun.
                 </p>
               </div>
             ) : (
               <>
                 <div className="mb-7 pr-8">
-                  <h2 id="admissions-title" className="text-3xl font-bold text-[#d9aa20] sm:text-4xl">
+                  <h2 id="admissions-title" className="text-3xl font-bold text-[#38240D] sm:text-4xl">
                     Elite Admissions Portal
                   </h2>
-                  <p className="mt-2 text-base text-[#f7f1ea]/70">
+                  <p className="mt-2 text-base text-[#713600]/60">
                     Begin your journey to excellence
                   </p>
                 </div>
 
                 <form className="space-y-5" onSubmit={handleSubmit}>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#f7f1ea]">Full Name</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#FDFBD4]">Full Name</span>
                     <input
                       required
                       name="fullName"
                       type="text"
                       autoComplete="name"
                       placeholder="Enter your full name"
-                      className="h-14 w-full rounded-xl border border-[#d9aa20]/45 bg-[#24343a] px-4 text-base text-[#f7f1ea] outline-none transition-colors placeholder:text-[#f7f1ea]/45 focus:border-[#d9aa20] focus:ring-2 focus:ring-[#d9aa20]/20"
+                      className="h-14 w-full rounded-xl border border-[#C05800]/45 bg-[#FDFBD4] px-4 text-base text-[#713600] outline-none transition-colors placeholder:text-[#713600] focus:border-[#C05800] focus:ring-2 focus:ring-[#C05800]/20"
                     />
                   </label>
 
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#f7f1ea]">Contact Number</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#FDFBD4]">Contact Number</span>
                     <input
                       required
                       name="contactNumber"
@@ -179,17 +201,17 @@ export default function GoldenCareerPath() {
                       autoComplete="tel"
                       placeholder="+91 12345-67890"
                       pattern="[+0-9 ()-]{8,}"
-                      className="h-14 w-full rounded-xl border border-[#d9aa20]/45 bg-[#24343a] px-4 text-base text-[#f7f1ea] outline-none transition-colors placeholder:text-[#f7f1ea]/45 focus:border-[#d9aa20] focus:ring-2 focus:ring-[#d9aa20]/20"
+                      className="h-14 w-full rounded-xl border border-[#C05800]/45 bg-[#FDFBD4] px-4 text-base text-[#713600] outline-none transition-colors placeholder:text-[#713600] focus:border-[#C05800] focus:ring-2 focus:ring-[#C05800]/20"
                     />
                   </label>
 
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#f7f1ea]">Program Selection</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#FDFBD4]">Program Selection</span>
                     <select
                       required
                       name="program"
                       defaultValue=""
-                      className="h-14 w-full rounded-xl border border-[#d9aa20]/45 bg-[#24343a] px-4 text-base text-[#f7f1ea] outline-none transition-colors focus:border-[#d9aa20] focus:ring-2 focus:ring-[#d9aa20]/20"
+                      className="h-14 w-full rounded-xl border border-[#C05800]/45 bg-[#FDFBD4] px-4 text-base text-[#713600] outline-none transition-colors focus:border-[#713600] focus:ring-2 focus:ring-[#C05800]/20"
                     >
                       <option value="" disabled>
                         Select your program
@@ -205,11 +227,11 @@ export default function GoldenCareerPath() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex h-14 w-full items-center justify-center rounded-xl bg-[#d9b238] text-base font-bold text-black transition-all hover:bg-[#e4bc45] hover:shadow-[0_10px_28px_rgba(217,178,56,0.22)] disabled:cursor-wait disabled:opacity-75"
+                    className="program-submit-button flex h-14 w-full items-center justify-center rounded-xl bg-[#713600] text-base font-bold text-[#FDFBD4] transition-all hover:bg-[#38240D] hover:shadow-[0_10px_28px_rgba(192,88,0,0.22)] disabled:cursor-wait disabled:opacity-75"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-3">
-                        <span className="h-5 w-5 animate-spin rounded-full border-2 border-[#24343a]/30 border-t-[#24343a] text-black" />
+                        <span className="h-5 w-5 animate-spin rounded-full border-2 border-[#C05800]/60 border-t-[#C05800] text-[#713600]" />
                         Submitting Application...
                       </span>
                     ) : (

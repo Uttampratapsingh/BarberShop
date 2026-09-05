@@ -6,16 +6,33 @@ export default function GoldenEraCTA() {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <section className="relative min-h-[630px] w-full overflow-hidden bg-[#100703]">
+    <section className="golden-era-cta relative min-h-[630px] w-full overflow-hidden bg-[#A85A1A]">
       {/* Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,#281304_0%,#140903_42%,#070301_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,#A85A1A_0%,#38240D_42%,#713600_100%)]" />
 
       {/* Soft golden glow */}
       <div
         className={`pointer-events-none absolute left-[-180px] top-1/2 h-[650px] w-[650px] -translate-y-1/2 rounded-full blur-[140px] transition-all duration-1000 ${
-          hovered ? "bg-[#c78700]/20" : "bg-[#b36d00]/10"
+          hovered ? "bg-[#C05800]/20" : "bg-[#A85A1A]/10"
         }`}
       />
+
+      <style>{`
+        .golden-era-cta .golden-era-button {
+          background-color: #713600 !important;
+          color: #FDFBD4 !important;
+        }
+
+        .golden-era-cta .golden-era-button span,
+        .golden-era-cta .golden-era-button svg {
+          color: #FDFBD4 !important;
+          stroke: #FDFBD4 !important;
+        }
+
+        .golden-era-cta .golden-era-button:hover {
+          background-color: #38240D !important;
+        }
+      `}</style>
 
       {/* Center content */}
       <div className="relative z-10 flex min-h-[630px] items-center justify-center px-5">
@@ -26,7 +43,7 @@ export default function GoldenEraCTA() {
               font-extrabold
               leading-[1.05]
               tracking-[-0.05em]
-              text-[#ffd21a]
+              text-[#38240D]
               transition-all
               duration-700
               sm:text-[60px]
@@ -45,7 +62,7 @@ export default function GoldenEraCTA() {
               font-medium
               leading-[1.55]
               tracking-[-0.02em]
-              text-[#fff1ad]
+              text-[#713600]
               sm:text-[21px]
               md:text-[23px]
             "
@@ -62,6 +79,7 @@ export default function GoldenEraCTA() {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             className="
+              golden-era-button
               group
               mt-[62px]
               flex
@@ -72,18 +90,18 @@ export default function GoldenEraCTA() {
               justify-center
               gap-4
               rounded-full
-              bg-[#d99600]
+              bg-[#713600]
               px-8
               text-[21px]
               font-bold
-              text-black
-              shadow-[0_12px_40px_rgba(191,126,0,0.15)]
+              text-[#FDFBD4]
+              shadow-[0_12px_40px_rgba(192,88,0,0.15)]
               transition-all
               duration-500
               hover:-translate-y-2
               hover:scale-[1.02]
-              hover:bg-[#e4a200]
-              hover:shadow-[0_18px_50px_rgba(217,150,0,0.3)]
+              hover:bg-[#38240D]
+              hover:shadow-[0_18px_50px_rgba(192,88,0,0.3)]
               active:translate-y-0
               active:scale-[0.98]
               sm:text-[22px]
@@ -115,11 +133,11 @@ export default function GoldenEraCTA() {
       </div>
 
       {/* Bottom subtle glow */}
-      <div className="pointer-events-none absolute bottom-0 left-1/2 h-[1px] w-[65%] -translate-x-1/2 bg-[#ffd21a]/10" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 h-[1px] w-[65%] -translate-x-1/2 bg-[#C05800]/10" />
 
       {/* Decorative hover shimmer */}
       <div
-        className={`pointer-events-none absolute inset-y-0 left-[-25%] w-[25%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-[#ffd21a]/[0.04] to-transparent transition-all duration-[1200ms] ${
+        className={`pointer-events-none absolute inset-y-0 left-[-25%] w-[25%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-[#C05800]/[0.04] to-transparent transition-all duration-[1200ms] ${
           hovered ? "translate-x-[550%]" : "translate-x-0"
         }`}
       />

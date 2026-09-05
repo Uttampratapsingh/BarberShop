@@ -15,14 +15,14 @@ export default function OurCourses() {
   }, []);
 
   return (
-    <section className="relative min-h-[410px] overflow-hidden bg-[#080808] px-5 sm:px-8">
+    <section className="relative min-h-[410px] overflow-hidden bg-[#713600] px-5 sm:px-8">
       {/* Background */}
-      {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,#090909_0%,#080808_100%)]" /> */}
+      {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,#713600_0%,#713600_100%)]" /> */}
 
       {/* Subtle golden glow */}
       {/* <div
         className={`pointer-events-none absolute left-1/2 top-[30%] h-[420px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[150px] transition-all duration-1000 ${
-          hovered ? "bg-[#e0ad12]/[0.05]" : "bg-[#e0ad12]/[0.018]"
+          hovered ? "bg-[#C05800]/[0.05]" : "bg-[#C05800]/[0.018]"
         }`}
       /> */}
 
@@ -41,7 +41,7 @@ export default function OurCourses() {
               font-extrabold
               leading-none
               tracking-[-0.05em]
-              text-[#ffd21a]
+              text-[#38240D]
               sm:text-[58px]
               md:text-[66px]
               lg:text-[72px]
@@ -58,7 +58,7 @@ export default function OurCourses() {
               font-normal
               leading-none
               tracking-[-0.02em]
-              text-[#c99f18]
+              text-[#713600]
               transition-all
               duration-500
               sm:text-[20px]
@@ -71,7 +71,7 @@ export default function OurCourses() {
 
         {/* Divider */}
         <div
-          className={`mt-[47px] h-[1px] w-[45%] max-w-[700px] bg-[#57420d] transition-all duration-[1200ms] ease-out ${
+          className={`mt-[47px] h-[1px] w-[45%] max-w-[700px] bg-[#713600] transition-all duration-[1200ms] ease-out ${
             visible ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
           }`}
         />
@@ -85,7 +85,7 @@ export default function OurCourses() {
       </div>
 
       {/* Bottom edge */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-[#3a2b08]/40" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-[#713600]/40" />
     </section>
   );
 }

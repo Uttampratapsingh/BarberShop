@@ -125,10 +125,10 @@ export default function BeautyFeatures() {
 
         .beauty-card:hover .beauty-card-inner {
           transform: translateY(-8px);
-          border-color: rgba(255, 214, 0, 0.85);
+          border-color: rgba(192, 88, 0, 0.85);
           box-shadow:
-            0 20px 50px rgba(0, 0, 0, 0.7),
-            0 0 25px rgba(255, 210, 0, 0.12);
+            0 20px 50px rgba(56, 36, 13, 0.7),
+            0 0 25px rgba(192, 88, 0, 0.12);
         }
 
         .beauty-card-image {
@@ -147,16 +147,16 @@ export default function BeautyFeatures() {
         }
 
         .beauty-card-overlay {
-          background-color: rgba(0, 0, 0, 0.45);
+          background-color: rgba(56, 36, 13, 0.45);
           transition: opacity 0.5s ease;
         }
 
         .beauty-card-gradient {
           background-image: linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.9),
-            rgba(0, 0, 0, 0.48) 52%,
-            rgba(0, 0, 0, 0.08)
+            rgba(56, 36, 13, 0.9),
+            rgba(56, 36, 13, 0.48) 52%,
+            rgba(56, 36, 13, 0.08)
           );
         }
 
@@ -172,7 +172,7 @@ export default function BeautyFeatures() {
 
         .beauty-card:hover .beauty-icon {
           transform: translateY(-5px) rotate(-6deg) scale(1.08);
-          filter: drop-shadow(0 0 8px rgba(255, 214, 0, 0.45));
+          filter: drop-shadow(0 0 8px rgba(192, 88, 0, 0.45));
         }
 
         .beauty-title {
@@ -183,7 +183,7 @@ export default function BeautyFeatures() {
 
         .beauty-card:hover .beauty-title {
           transform: translateX(3px);
-          text-shadow: 0 0 15px rgba(255, 214, 0, 0.3);
+          text-shadow: 0 0 15px rgba(192, 88, 0, 0.3);
         }
 
         .beauty-description {
@@ -191,7 +191,18 @@ export default function BeautyFeatures() {
         }
 
         .beauty-card:hover .beauty-description {
-          color: rgba(255, 235, 80, 0.95);
+          color: #FDFBD4;
+          opacity: 0.7;
+        }
+
+        .beauty-features .beauty-icon,
+        .beauty-features .beauty-title,
+        .beauty-features .beauty-description {
+          color: #FDFBD4 !important;
+        }
+
+        .beauty-features .beauty-description {
+          opacity: 0.7;
         }
 
         @media (max-width: 1024px) {
@@ -223,7 +234,7 @@ export default function BeautyFeatures() {
 
       <section
         ref={sectionRef}
-        className="w-full overflow-hidden bg-black px-5 py-24 sm:px-8 lg:px-12"
+        className="beauty-features w-full overflow-hidden bg-[#713600] px-5 py-24 sm:px-8 lg:px-12"
       >
         <div className="mx-auto max-w-[1170px]">
           <div className="beauty-grid grid grid-cols-3 gap-10">
@@ -238,8 +249,8 @@ export default function BeautyFeatures() {
                     overflow-hidden
                     rounded-[14px]
                     border
-                    border-[#4a3d00]
-                    bg-black
+                    border-[#713600]
+                    bg-[#713600]
                   "
                 >
                   {/* Background Image */}
@@ -257,14 +268,14 @@ export default function BeautyFeatures() {
                   />
 
                   {/* Dark overlay */}
-                  <div
+                  {/* <div
                     className="
                       beauty-card-overlay
                       absolute
                       inset-0
                       z-[1]
                     "
-                  />
+                  /> */}
 
                   {/* Bottom gradient */}
                   <div
@@ -296,7 +307,7 @@ export default function BeautyFeatures() {
                         w-12
                         items-center
                         justify-center
-                        text-[#ffd600]
+                        text-[#FDFBD4]
                       "
                     >
                       {card.icon}
@@ -310,7 +321,8 @@ export default function BeautyFeatures() {
                         font-bold
                         leading-[1.05]
                         tracking-[-0.8px]
-                        text-[#ffd600]
+                        text-[#FDFBD4]
+                        min-h-[2.1em]
                       "
                     >
                       {card.title}
@@ -323,7 +335,8 @@ export default function BeautyFeatures() {
                         text-[20px]
                         font-medium
                         leading-[1.4]
-                        text-[#ffd600]
+                        text-[#FDFBD4]
+                        opacity-70
                       "
                     >
                       {card.description}

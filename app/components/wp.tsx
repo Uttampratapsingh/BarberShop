@@ -16,18 +16,18 @@ const WhatsAppButton = () => {
                     }
 
                     .whatsapp-float {
-                        box-shadow: 0 10px 24px rgba(24, 92, 61, 0.28), 0 2px 8px rgba(36, 52, 58, 0.16);
+                        box-shadow: 0 10px 24px rgba(24, 92, 61, 0.28), 0 2px 8px rgba(56, 36, 13, 0.16);
                         transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
                     }
 
                     .whatsapp-float:hover {
                         transform: translateY(-3px);
-                        background-color: #239b5d;
-                        box-shadow: 0 14px 30px rgba(24, 92, 61, 0.36), 0 4px 10px rgba(36, 52, 58, 0.16);
+                        background-color: #239B5D;
+                        box-shadow: 0 14px 30px rgba(24, 92, 61, 0.36), 0 4px 10px rgba(56, 36, 13, 0.16);
                     }
 
                     .whatsapp-float:focus-visible {
-                        outline: 3px solid rgba(201, 130, 120, 0.6);
+                        outline: 3px solid rgba(192, 88, 0, 0.6);
                         outline-offset: 4px;
                     }
 
@@ -63,7 +63,7 @@ const WhatsAppButton = () => {
                     md:py-2.5
                     bg-[#1FAF68]
                     rounded-full
-                    text-white
+                    text-[#FDFBD4]
                     whatsapp-float
                 "
                 aria-label="Chat with us on WhatsApp"
@@ -93,7 +93,7 @@ const WhatsAppButton = () => {
 
                     <path
                         d="M11.5 10.5c.5-.6 1.1-.6 1.5-.1l1.2 1.8c.3.4.3.9 0 1.3l-.7.9c-.2.3-.2.6 0 .9 1 1.7 2.4 3.1 4.1 4.1.3.2.7.2.9 0l.9-.7c.4-.3.9-.3 1.3 0l1.8 1.2c.5.3.5 1 .1 1.5l-.7.9c-.6.8-1.5 1.1-2.5.9-5.5-1.2-9.8-5.5-11-11-.2-1 .1-1.9.9-2.5l.9-.7Z"
-                        fill="white"
+                        fill="#FDFBD4"
                         stroke="none"
                     />
                 </svg>

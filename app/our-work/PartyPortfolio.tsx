@@ -52,7 +52,7 @@ function HeartIcon({ active }: { active: boolean }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className={`h-[28px] w-[28px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)] transition-all duration-300 ${
+      className={`h-[28px] w-[28px] drop-shadow-[0_1px_2px_rgba(56, 36, 13, 0.7)] transition-all duration-300 ${
         active ? "scale-110 fill-current" : "fill-transparent"
       }`}
       stroke="currentColor"
@@ -79,22 +79,22 @@ export default function PartyPortfolio() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#080400] px-5 py-12 sm:px-8 md:px-12 lg:px-16">
+    <section className="relative overflow-hidden bg-[#713600] px-5 py-12 sm:px-8 md:px-12 lg:px-16">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#030303_0%,#070300_72%,#140900_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#713600_0%,#713600_72%,#38240D_100%)]" />
 
-        <div className="absolute left-1/2 top-[-250px] h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-[#e5a900]/[0.025] blur-[150px]" />
+        <div className="absolute left-1/2 top-[-250px] h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-[#C05800]/[0.025] blur-[150px]" />
       </div>
 
       <div className="our-work-rail relative z-10 mx-auto max-w-[1460px]">
         {/* Header */}
         <div className="mb-[72px] flex flex-col items-center">
-          <div className="mb-6 animate-[float_3s_ease-in-out_infinite] text-[#ffd21a]">
+          <div className="mb-6 animate-[float_3s_ease-in-out_infinite] text-[#38240D]">
             <EyeIcon />
           </div>
 
-          <h2 className="text-center text-[42px] font-extrabold leading-none tracking-[-0.045em] text-[#ffd21a] sm:text-[50px] md:text-[56px] lg:text-[58px]">
+          <h2 className="text-center text-[42px] font-extrabold leading-none tracking-[-0.045em] text-[#38240D] sm:text-[50px] md:text-[56px] lg:text-[58px]">
             Party Portfolio
           </h2>
         </div>
@@ -107,7 +107,7 @@ export default function PartyPortfolio() {
             return (
               <article
                 key={card.id}
-                className="portfolio-card group relative h-[440px] overflow-hidden rounded-[18px] border border-white/[0.06] bg-[#120c06] shadow-[0_20px_55px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out hover:-translate-y-[8px] hover:border-[#ffd21a]/25 hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)] sm:h-[465px] lg:h-[440px]"
+                className="portfolio-card group relative h-[440px] overflow-hidden rounded-[18px] border border-[#FDFBD4]/[0.06] bg-[#8A4300] shadow-[0_20px_55px_rgba(56, 36, 13, 0.35)] transition-all duration-500 ease-out hover:-translate-y-[8px] hover:border-[#C05800]/25 hover:shadow-[0_30px_70px_rgba(56, 36, 13, 0.5)] sm:h-[465px] lg:h-[440px]"
               >
                 {/* Image */}
                 <img
@@ -129,20 +129,20 @@ export default function PartyPortfolio() {
                   aria-label={
                     isFavorite ? "Remove from favorites" : "Add to favorites"
                   }
-                  className="absolute right-[19px] top-[19px] z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#ffd21a]/80 bg-[#120c06]/90 text-[#ffd21a] shadow-[0_4px_16px_rgba(0,0,0,0.6),0_0_14px_rgba(255,210,26,0.2)] backdrop-blur-[4px] transition-all duration-300 hover:scale-110 hover:bg-[#2a1b08] hover:shadow-[0_5px_20px_rgba(0,0,0,0.7),0_0_18px_rgba(255,210,26,0.35)] active:scale-95"
+                  className="absolute right-[19px] top-[19px] z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#FDFBD4]/80 bg-[#FDFBD4]/90 text-[#C05800] shadow-[0_4px_16px_rgba(56, 36, 13, 0.6),0_0_14px_rgba(192,88,0,0.2)] backdrop-blur-[4px] transition-all duration-300 hover:scale-110 hover:bg-[#A85A1A] hover:shadow-[0_5px_20px_rgba(56, 36, 13, 0.7),0_0_18px_rgba(192,88,0,0.35)] active:scale-95"
                 >
                   <HeartIcon active={isFavorite} />
                 </button>
 
                 {/* Title */}
                 <div className="absolute bottom-0 left-0 right-0 z-10 p-[27px]">
-                  <h3 className="text-[23px] font-bold leading-[1.1] tracking-[-0.035em] text-[#fff4b8] transition-transform duration-500 group-hover:-translate-y-1 sm:text-[25px]">
+                  <h3 className="text-[23px] font-bold leading-[1.1] tracking-[-0.035em] text-[#F3E9B0] transition-transform duration-500 group-hover:-translate-y-1 sm:text-[25px]">
                     {card.title}
                   </h3>
                 </div>
 
                 {/* Gold hover border */}
-                <div className="pointer-events-none absolute inset-0 rounded-[18px] border border-transparent transition-all duration-500 group-hover:border-[#ffd21a]/30" />
+                <div className="pointer-events-none absolute inset-0 rounded-[18px] border border-transparent transition-all duration-500 group-hover:border-[#C05800]/30" />
 
                 {/* Shine */}
                 <div className="pointer-events-none absolute inset-y-0 -left-[120%] w-[55%] rotate-[12deg] bg-gradient-to-r from-transparent via-white/[0.08] to-transparent transition-all duration-[1200ms] ease-out group-hover:left-[140%]" />
@@ -154,7 +154,7 @@ export default function PartyPortfolio() {
 
       <style jsx>{`
         .portfolio-card-overlay {
-          background: rgba(0, 0, 0, 0.1);
+          background: rgba(56, 36, 13, 0.1);
         }
 
         .portfolio-card:hover .portfolio-card-overlay {
@@ -164,8 +164,8 @@ export default function PartyPortfolio() {
         .portfolio-card-gradient {
           background: linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.9),
-            rgba(0, 0, 0, 0.75),
+            rgba(56, 36, 13, 0.9),
+            rgba(56, 36, 13, 0.75),
             transparent
           );
         }

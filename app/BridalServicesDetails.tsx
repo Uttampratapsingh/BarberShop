@@ -23,7 +23,7 @@ const BridalServicesDetails = () => {
     ];
 
     return (
-        <section className="details-section relative w-full overflow-hidden px-5 py-16 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+        <section className="bridal-services-details relative w-full overflow-hidden px-5 py-16 sm:px-8 md:px-12 lg:px-16 xl:px-20">
             
             {/* Background texture */}
             {/* <div
@@ -36,15 +36,15 @@ const BridalServicesDetails = () => {
             /> */}
 
             {/* Background glow */}
-            {/* <div className="absolute left-1/2 top-0 h-[350px] w-[800px] -translate-x-1/2 rounded-full bg-[#FFE45C]/30 blur-[130px] pointer-events-none" /> */}
+            {/* <div className="absolute left-1/2 top-0 h-[350px] w-[800px] -translate-x-1/2 rounded-full bg-[#E8D98A]/30 blur-[130px] pointer-events-none" /> */}
 
-            <div className="absolute bottom-0 left-0 h-[220px] w-[400px] rounded-full bg-[#C9A800]/20 blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 h-[220px] w-[400px] rounded-full bg-[#C05800]/20 blur-[100px] pointer-events-none" />
 
             <div className="relative z-10 mx-auto max-w-[1450px]">
 
                 {/* Heading */}
                 <div className="mb-14 text-center md:mb-16">
-                    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[58px]">
+                    <h2 className="text-4xl font-bold tracking-tight text-[#38240D] sm:text-5xl md:text-6xl lg:text-[58px]">
                         Premium Bridal Services Details
                     </h2>
                 </div>
@@ -62,7 +62,7 @@ const BridalServicesDetails = () => {
                                 overflow-hidden
                                 rounded-2xl
                                 border-2
-                                border-black
+                                border-[#713600]
                                 details-card
                                 p-8
                                 md:p-10
@@ -71,7 +71,7 @@ const BridalServicesDetails = () => {
                                 duration-500
                                 ease-out
                                 hover:-translate-y-2
-                                hover:shadow-[0_20px_45px_rgba(0,0,0,0.3),0_0_30px_rgba(255,215,0,0.15)]
+                                hover:shadow-[0_20px_45px_rgba(56, 36, 13, 0.3),0_0_30px_rgba(192, 88, 0, 0.15)]
                                 ${index === 0 ? "animate-fade-up" : "animate-fade-up-delay"}
                             `}
                         >
@@ -80,12 +80,12 @@ const BridalServicesDetails = () => {
                             <div className="pointer-events-none absolute inset-y-0 -left-[120%] w-[35%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-all duration-1000 ease-out group-hover:left-[120%]" />
 
                             {/* Card glow */}
-                            <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-[#FFD700]/10 blur-3xl" />
+                            <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-[#C05800]/10 blur-3xl" />
 
                             <div className="relative z-10 flex h-full flex-col">
 
                                 {/* Title */}
-                                <h3 className="text-2xl font-bold text-[#FFD21F] sm:text-3xl">
+                                <h3 className="text-2xl font-bold text-[#38240D] sm:text-3xl">
                                     {service.title}
                                 </h3>
 
@@ -94,9 +94,9 @@ const BridalServicesDetails = () => {
                                     {service.items.map((item) => (
                                         <div
                                             key={item}
-                                            className="flex items-center gap-3 text-base text-gray-200 transition-all duration-300 hover:translate-x-2 hover:text-white sm:text-lg md:text-xl"
+                                            className="flex items-center gap-3 text-base text-[#713600] transition-all duration-300 hover:translate-x-2 hover:text-[#713600] sm:text-lg md:text-xl"
                                         >
-                                            <span className="flex-shrink-0 text-xl text-white sm:text-2xl">
+                                            <span className="flex-shrink-0 text-xl text-[#713600] sm:text-2xl">
                                                 ✦
                                             </span>
 
@@ -107,7 +107,7 @@ const BridalServicesDetails = () => {
 
                                 {/* Button */}
                                 <div className="mt-auto pt-8">
-                                    <a href="tel:+919781265400" className="inline-block rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-10 py-4 text-lg font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_10px_25px_rgba(255,215,0,0.3)]">
+                                    <a href="tel:+919781265400" className="inline-block rounded-lg bg-gradient-to-r from-[#C05800] to-[#C05800] px-10 py-4 text-lg font-bold text-[#38240D] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_10px_25px_rgba(192, 88, 0, 0.3)]">
                                         Inquire Now
                                     </a>
                                 </div>
@@ -121,13 +121,15 @@ const BridalServicesDetails = () => {
 
             {/* Animation */}
             <style>{`
-                .details-section {
-                    background: #24343a !important;
+                .bridal-services-details {
+                    background: #FDFBD4 !important;
                 }
 
                 .details-card {
-                    background: rgb(255 255 255 / 0.08) !important;
-                    border-color: rgb(255 255 255 / 0.18) !important;
+                    background: rgba(253,251,212,0.72) !important;
+                    border: 2px solid rgba(113,54,0,0.40) !important;
+                    backdrop-filter: blur(14px);
+                    -webkit-backdrop-filter: blur(14px);
                 }
 
                 @keyframes fadeUp {

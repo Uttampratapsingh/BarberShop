@@ -47,13 +47,13 @@ export default function GoldenEducationStandards() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#080808] px-5 py-[28px] sm:px-8 md:px-12 lg:px-[6.1%] mt-32">
+    <section className="relative min-h-screen overflow-hidden bg-[#713600] px-5 py-[28px] sm:px-8 md:px-12 lg:px-[6.1%] mt-32">
       {/* Background */}
-      {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#090909_0%,#070707_100%)]" /> */}
+      {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#713600_0%,#713600_100%)]" /> */}
 
-      <div className="pointer-events-none absolute left-1/2 top-[-260px] h-[550px] w-[1000px] -translate-x-1/2 rounded-full bg-[#dca315]/[0.018] blur-[150px]" />
+      <div className="pointer-events-none absolute left-1/2 top-[-260px] h-[550px] w-[1000px] -translate-x-1/2 rounded-full bg-[#C05800]/[0.018] blur-[150px]" />
 
-      <div className="relative z-10 mx-auto max-w-[1700px] md:border-t-1 md:border-[#dca315]">
+      <div className="relative z-10 mx-auto max-w-[1700px] md:border-t-1 md:border-[#C05800]">
         {/* Heading */}
         <div
           className={`text-center transition-all duration-1000 ease-out ${
@@ -62,7 +62,7 @@ export default function GoldenEducationStandards() {
               : "translate-y-8 opacity-0"
           }`}
         >
-          <h1 className="md:mt-20 text-[42px] font-extrabold leading-none tracking-[-0.045em] text-[#ffd21a] sm:text-[50px] md:text-[56px] lg:text-[58px]">
+          <h1 className="md:mt-20 text-[42px] font-extrabold leading-none tracking-[-0.045em] text-[#38240D] sm:text-[50px] md:text-[56px] lg:text-[58px]">
             Golden Education Standards
           </h1>
         </div>
@@ -72,7 +72,7 @@ export default function GoldenEducationStandards() {
           {standards.map((standard, index) => (
             <article
               key={standard.id}
-              className={`group relative min-h-[188px] overflow-hidden rounded-[17px] border border-[#4c3808] bg-black px-[45px] py-[48px] transition-all duration-700 ease-out hover:-translate-y-2 hover:border-[#8f6b10] hover:bg-[#020202] hover:shadow-[0_24px_65px_rgba(0,0,0,0.45)] ${
+              className={`group relative min-h-[188px] overflow-hidden rounded-[17px] border border-[#C05800] bg-[#713600] px-[45px] py-[48px] transition-all duration-700 ease-out hover:-translate-y-2 hover:border-[#A85A1A] hover:bg-[#38240D] hover:shadow-[0_24px_65px_rgba(56, 36, 13, 0.45)] ${
                 visible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-12 opacity-0"
@@ -82,27 +82,27 @@ export default function GoldenEducationStandards() {
               }}
             >
               {/* Top animated line */}
-              <div className="absolute left-0 top-0 h-px w-0 bg-[#ffd21a]/80 transition-all duration-700 group-hover:w-full" />
+              <div className="absolute left-0 top-0 h-px w-0 bg-[#C05800]/80 transition-all duration-700 group-hover:w-full" />
 
               {/* Soft glow */}
-              <div className="pointer-events-none absolute -right-20 -top-20 h-[200px] w-[200px] rounded-full bg-[#ffd21a]/[0.035] blur-[75px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute -right-20 -top-20 h-[200px] w-[200px] rounded-full bg-[#C05800]/[0.035] blur-[75px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
               {/* Content */}
               <div className="relative z-10">
-                <h2 className="text-[25px] font-bold leading-[1.15] tracking-[-0.035em] text-[#deb31f] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#ffd21a] sm:text-[27px]">
+                <h2 className="text-[25px] font-bold leading-[1.15] tracking-[-0.035em] text-[#38240D]/80 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#38240D] sm:text-[27px]">
                   {standard.title}
                 </h2>
 
-                <p className="mt-[28px] text-[17px] font-normal leading-[1.45] tracking-[-0.012em] text-[#ba9417] transition-colors duration-300 group-hover:text-[#d0a71d] sm:text-[18px]">
+                <p className="mt-[28px] text-[17px] font-normal leading-[1.45] tracking-[-0.012em] text-[#713600]/70 transition-colors duration-300 group-hover:text-[#713600] sm:text-[18px]">
                   {standard.description}
                 </p>
               </div>
 
               {/* Bottom accent */}
-              <div className="absolute bottom-0 right-0 h-px w-0 bg-[#ffd21a]/60 transition-all duration-700 group-hover:w-[30%]" />
+              <div className="absolute bottom-0 right-0 h-px w-0 bg-[#C05800]/60 transition-all duration-700 group-hover:w-[30%]" />
 
               {/* Shine */}
-              <div className="pointer-events-none absolute inset-y-0 -left-[35%] w-[12%] skew-x-[-20deg] bg-white/[0.025] transition-transform duration-[1100ms] group-hover:translate-x-[950%]" />
+              <div className="pointer-events-none absolute inset-y-0 -left-[35%] w-[12%] skew-x-[-20deg] bg-[#FDFBD4]/[0.025] transition-transform duration-[1100ms] group-hover:translate-x-[950%]" />
             </article>
           ))}
         </div>

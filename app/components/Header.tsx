@@ -16,76 +16,11 @@ const navItems: { label: string; href: string }[] = [
 
 function LogoMark() {
   return (
-    <svg
-      aria-label="Classic Bridal Studio"
-      className="h-[76px] w-[140px] shrink-0 md:h-[92px] md:w-[170px]"
-      viewBox="0 0 520 320"
-      role="img"
-    >
-      <defs>
-        <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#fff1a8" />
-          <stop offset="45%" stopColor="#f6c90e" />
-          <stop offset="100%" stopColor="#b88a05" />
-        </linearGradient>
-      </defs>
-      <g fill="none" stroke="url(#logoGold)" strokeLinecap="round" strokeLinejoin="round">
-        <path
-          d="M132 118c18-28 45-46 88-52 34-5 76-2 107 9 29 10 58 29 79 54"
-          strokeWidth="8"
-        />
-        <path d="M146 116c-32 1-54 15-72 39 28 5 56 10 84 16" strokeWidth="7" />
-        <path d="M382 116c32 1 54 15 72 39-28 5-56 10-84 16" strokeWidth="7" />
-        <path d="M126 171c-20 18-30 37-33 60" strokeWidth="6" />
-        <path d="M394 171c20 18 30 37 33 60" strokeWidth="6" />
-        <path d="M91 226h338" strokeWidth="6" />
-      </g>
-
-      <g>
-        <circle cx="259" cy="126" r="55" fill="none" stroke="url(#logoGold)" strokeWidth="9" />
-        <circle cx="259" cy="126" r="41" fill="#080808" stroke="url(#logoGold)" strokeWidth="5" />
-        <text
-          x="259"
-          y="136"
-          fill="#f6c90e"
-          fontFamily="Georgia, serif"
-          fontSize="34"
-          fontWeight="700"
-          textAnchor="middle"
-        >
-          CBS
-        </text>
-        <path
-          d="M259 53l7 19 20 1-16 11 6 19-17-11-17 11 6-19-16-11 20-1z"
-          fill="url(#logoGold)"
-        />
-      </g>
-
-      <text
-        x="259"
-        y="228"
-        fill="#ffffff"
-        fontFamily="Arial, Helvetica, sans-serif"
-        fontSize="24"
-        fontWeight="800"
-        letterSpacing="1.4"
-        textAnchor="middle"
-      >
-        CLASSIC BRIDAL STUDIO
-      </text>
-      <text
-        x="259"
-        y="252"
-        fill="#f6c90e"
-        fontFamily="Arial, Helvetica, sans-serif"
-        fontSize="13"
-        fontWeight="700"
-        letterSpacing="3.2"
-        textAnchor="middle"
-      >
-        SALON & ACADEMY
-      </text>
-    </svg>
+    <img
+      src="/r11.jpeg"
+      alt="Classic Bridal Studio"
+      className="h-[76px] w-[140px] shrink-0 object-contain md:h-[70px] md:w-[170px] ml-[-20px] md:ml-[-50px]"
+    />
   );
 }
 
@@ -97,7 +32,7 @@ export default function Header() {
   useEffect(() => setOpen(false), [pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#FDFBD4]">
       <div className="relative mx-auto flex h-[60px] sm:h-[70px] md:h-[80px] w-full max-w-[1920px] items-center gap-6 px-4 sm:px-10 lg:px-16 xl:px-20">
         <Link
           href="/"
@@ -116,12 +51,12 @@ export default function Header() {
                 key={href}
                 href={href}
                 className={`group nav-link relative whitespace-nowrap px-2 py-2 text-[12px] font-semibold tracking-wide ease-out active:translate-y-px sm:text-[14px] lg:text-[15px] ${
-                  isActive ? "text-[#f7cc18]" : "text-[#d2d6dd] hover:text-[#f7cc18]"
+                  isActive ? "text-[#C05800]" : "text-[#38240D] hover:text-[#C05800]"
                 }`}
               >
                 {label}
                 <span
-                  className={`nav-underline absolute inset-x-0 -bottom-1 mx-auto h-[2px] rounded-full bg-[#f7cc18] ${
+                  className={`nav-underline absolute inset-x-0 -bottom-1 mx-auto h-[2px] rounded-full bg-[#C05800] ${
                     isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                   }`}
                 />
@@ -135,21 +70,21 @@ export default function Header() {
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((s) => !s)}
-            className="md:hidden z-20 inline-flex items-center justify-center rounded-md p-2 text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#f7cc18]"
+            className="md:hidden z-20 inline-flex items-center justify-center rounded-md p-2 text-[#38240D]/90 hover:text-[#38240D] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C05800]"
           >
             {open ? (
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 18L18 6M6 6l12 12" stroke="#F7CC18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M6 18L18 6M6 6l12 12" stroke="#C05800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             ) : (
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 7h16M4 12h16M4 17h16" stroke="#F7CC18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="#C05800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             )}
           </button>
 
           <a
-            className="call-button hidden md:inline-flex z-10 inline-flex shrink-0 items-center gap-3 rounded-full bg-[#f4be14] px-5 py-3 text-[16px] font-semibold text-black shadow-call transition duration-200 hover:-translate-y-0.5 hover:bg-[#f7c71a] active:translate-y-px active:scale-95"
+            className="call-button hidden md:inline-flex z-10 inline-flex shrink-0 items-center gap-3 rounded-full bg-[#C05800] px-5 py-3 text-[16px] font-semibold text-[#FDFBD4] shadow-call transition duration-200 hover:-translate-y-0.5 hover:bg-[#713600] active:translate-y-px active:scale-95"
             href="tel:+919781265400"
           >
             <span aria-hidden="true" className="text-[19px] leading-none">
@@ -168,29 +103,29 @@ export default function Header() {
       <div className={`md:hidden ${open ? "fixed" : "hidden"} inset-0 z-40`}> 
         {/* dim backdrop */}
         <div
-          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-[#713600]/60 backdrop-blur-sm"
           onClick={() => setOpen(false)}
         />
 
         <div className="relative z-50 flex h-full">
           {/* Left column with logo and subtle divider */}
-          <div className="w-2/5 min-w-[160px] max-w-[320px] bg-black flex items-start justify-center border-r border-[#3b2b06]">
+          <div className="w-2/5 min-w-[160px] max-w-[320px] bg-[#713600] flex items-start justify-center border-r border-[#C05800]">
             <div className="p-6">
-              <div className="bg-[rgba(255,255,255,0.02)] p-4 rounded transform scale-110">
+              <div className="bg-[rgba(253,251,212,0.02)] p-4 rounded transform scale-110">
                 <LogoMark />
               </div>
             </div>
           </div>
 
           {/* Right panel with nav items */}
-          <div className="flex-1 bg-black p-6 sm:p-10 text-white relative overflow-auto">
+          <div className="flex-1 bg-[#713600] p-6 sm:p-10 text-[#FDFBD4] relative overflow-auto">
             <button
               aria-label="Close menu"
               onClick={() => setOpen(false)}
-              className="absolute right-6 top-6 inline-flex items-center justify-center rounded-full p-2 text-[#f7cc18] hover:text-white"
+              className="absolute right-6 top-6 inline-flex items-center justify-center rounded-full p-2 text-[#C05800] hover:text-[#FDFBD4]"
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 18L18 6M6 6l12 12" stroke="#F7CC18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M6 18L18 6M6 6l12 12" stroke="#C05800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
 
@@ -204,7 +139,7 @@ export default function Header() {
                     href={href}
                     onClick={() => setOpen(false)}
                     className={`block rounded-xl px-6 py-5 text-[22px] font-semibold ${
-                      isActive ? "bg-[rgba(247,204,24,0.08)] text-[#f7cc18]" : "text-[#d2d6dd] hover:text-[#f7cc18]"
+                      isActive ? "bg-[rgba(192,88,0,0.08)] text-[#C05800]" : "text-[#E8D98A] hover:text-[#C05800]"
                     }`}
                   >
                     {label}
@@ -213,10 +148,10 @@ export default function Header() {
               })}
             </nav>
 
-            <div className="mt-8 border-t border-white/6 pt-6">
+            <div className="mt-8 border-t border-[#FDFBD4]/[6] pt-6">
               <a
                 href="tel:+919781265400"
-                className="call-button inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#f4be14] px-6 py-4 text-[18px] font-semibold text-black"
+                className="call-button inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#C05800] px-6 py-4 text-[18px] font-semibold text-[#FDFBD4]"
               >
                 <span aria-hidden>☎</span>
                 Call Us
@@ -244,8 +179,8 @@ export default function Header() {
           width: 4px;
           height: 4px;
           border-radius: 999px;
-          background: #fff4a8;
-          box-shadow: 0 0 8px rgba(255, 244, 168, 0.9);
+          background: #F3E9B0;
+          box-shadow: 0 0 8px rgba(243, 233, 176, 0.9);
           pointer-events: none;
           opacity: 0;
           animation: callBubbleRise 2.8s ease-out infinite;

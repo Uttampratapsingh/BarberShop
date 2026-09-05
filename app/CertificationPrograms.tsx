@@ -23,7 +23,7 @@ const CertificationPrograms = () => {
     ];
 
     return (
-        <section className="relative w-full overflow-hidden bg-black px-5 py-16 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        <section className="certification-programs relative w-full overflow-hidden bg-[#713600] px-5 py-16 sm:px-8 md:px-10 lg:px-12 xl:px-16">
 
             {/* Background texture */}
             <div
@@ -36,14 +36,14 @@ const CertificationPrograms = () => {
             />
 
             {/* Subtle gold ambient glow */}
-            <div className="pointer-events-none absolute left-1/2 top-20 h-[350px] w-[900px] -translate-x-1/2 rounded-full bg-[#D4AF37]/5 blur-[130px]" />
+            <div className="pointer-events-none absolute left-1/2 top-20 h-[350px] w-[900px] -translate-x-1/2 rounded-full bg-[#C05800]/5 blur-[130px]" />
 
             {/* Content */}
             <div className="relative z-10 mx-auto max-w-[1850px]">
 
                 {/* Heading */}
                 <div className="mb-14 text-center md:mb-16">
-                    <h2 className="text-4xl font-bold tracking-tight text-[#F5C518] sm:text-5xl md:text-6xl lg:text-[58px]">
+                    <h2 className="text-4xl font-bold tracking-tight text-[#38240D] sm:text-5xl md:text-6xl lg:text-[58px]">
                         Professional Certification Programs
                     </h2>
                 </div>
@@ -54,7 +54,7 @@ const CertificationPrograms = () => {
                     {programs.map((program, index) => (
                         <div
                             key={program.title}
-                            className={`cert-card group relative overflow-hidden rounded-2xl border border-[#D4AF37]/60 bg-black opacity-0 shadow-[0_0_0_rgba(212,175,55,0)] transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#FFD700] hover:shadow-[0_20px_40px_rgba(0,0,0,0.45),0_0_30px_rgba(212,175,55,0.18)] ${
+                            className={`cert-card group relative overflow-hidden rounded-2xl border border-[#C05800]/60 bg-[#713600] opacity-0 shadow-[0_0_0_rgba(192, 88, 0, 0)] transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#C05800] hover:shadow-[0_20px_40px_rgba(56, 36, 13, 0.45),0_0_30px_rgba(192, 88, 0, 0.18)] ${
                                 index === 0
                                     ? "cert-card-1"
                                     : index === 1
@@ -79,7 +79,7 @@ const CertificationPrograms = () => {
                                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 to-transparent" />
 
                                 {/* Hover glow */}
-                                <div className="pointer-events-none absolute inset-0 bg-[#D4AF37]/0 transition-all duration-500 group-hover:bg-[#D4AF37]/5" />
+                                <div className="pointer-events-none absolute inset-0 bg-[#C05800]/0 transition-all duration-500 group-hover:bg-[#C05800]/5" />
 
                                 {/* Shine sweep */}
                                 <div className="cert-shine pointer-events-none absolute inset-y-0 -left-[120%] w-[35%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -87,11 +87,11 @@ const CertificationPrograms = () => {
                                 {/* Content */}
                                 <div className="absolute inset-x-0 bottom-0 z-10 p-6 md:p-7">
 
-                                    <h3 className="max-w-[95%] text-2xl font-bold leading-tight text-[#FFD21F] transition-all duration-300 group-hover:text-[#FFE45C] md:text-[27px]">
+                                    <h3 className="max-w-[95%] text-2xl font-bold leading-tight text-[#FDFBD4] transition-all duration-300 group-hover:text-[#FDFBD4] md:text-[27px]">
                                         {program.title}
                                     </h3>
 
-                                    <a href="tel:+919781265400" className="cert-button mt-5 inline-block rounded-lg bg-gradient-to-r from-[#D4AF37] to-[#FFD700] px-8 py-3.5 text-base font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_10px_25px_rgba(255,215,0,0.35)] md:text-lg">
+                                    <a href="tel:+919781265400" className="cert-button mt-5 inline-block rounded-lg bg-gradient-to-r from-[#C05800] to-[#C05800] px-8 py-3.5 text-base font-bold text-[#FDFBD4] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_10px_25px_rgba(192, 88, 0, 0.35)] md:text-lg">
                                         Inquire Now
                                     </a>
                                 </div>

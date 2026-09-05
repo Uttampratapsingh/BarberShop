@@ -69,7 +69,7 @@ export default function CommitmentSection() {
           top: -14px;
           width: 0;
           height: 2px;
-          background: #ffd000;
+          background: #C05800;
           transition: width 0.5s ease;
         }
 
@@ -90,8 +90,8 @@ export default function CommitmentSection() {
 
         .commitment-item:hover .commitment-heading {
           transform: translateX(4px);
-          color: #ffe000;
-          text-shadow: 0 0 15px rgba(255, 208, 0, 0.2);
+          color: #38240D;
+          text-shadow: 0 0 15px rgba(192, 88, 0, 0.2);
         }
 
         .commitment-description {
@@ -101,8 +101,14 @@ export default function CommitmentSection() {
         }
 
         .commitment-item:hover .commitment-description {
-          color: #e2e2e2;
+          color: #713600;
           transform: translateX(2px);
+        }
+
+        .commitment-card {
+          border: 1px solid #C05800;
+          border-radius: 16px;
+          padding: 32px;
         }
 
         @media (max-width: 900px) {
@@ -148,10 +154,10 @@ export default function CommitmentSection() {
           commitment-section
           w-full
           overflow-hidden
-          bg-[#090909]
+          bg-[#713600]
           px-8
           py-[115px]
-          text-white
+          text-[#FDFBD4]
         "
       >
         <div className="mx-auto max-w-[1440px]">
@@ -167,7 +173,7 @@ export default function CommitmentSection() {
               font-bold
               leading-none
               tracking-[-1.5px]
-              text-[#f4c900]
+              text-[#38240D]
             "
           >
             Our Commitment
@@ -190,6 +196,7 @@ export default function CommitmentSection() {
                 commitment-animate
                 commitment-item-1
                 commitment-item
+                commitment-card
               "
             >
               <h3
@@ -200,7 +207,7 @@ export default function CommitmentSection() {
                   font-medium
                   leading-none
                   tracking-[-0.7px]
-                  text-[#ffd000]
+                  text-[#38240D]
                 "
               >
                 Uncompromising Excellence
@@ -214,7 +221,7 @@ export default function CommitmentSection() {
                   font-medium
                   leading-[1.55]
                   tracking-[-0.15px]
-                  text-[#cfcfcf]
+                  text-[#795633]
                 "
               >
                 Classic Bridal Studio combines state-of-the-art facilities
@@ -231,6 +238,7 @@ export default function CommitmentSection() {
                 commitment-animate
                 commitment-item-2
                 commitment-item
+                commitment-card
               "
             >
               <h3
@@ -241,7 +249,7 @@ export default function CommitmentSection() {
                   font-medium
                   leading-none
                   tracking-[-0.7px]
-                  text-[#ffd000]
+                  text-[#38240D]
                 "
               >
                 Complete Bridal Solutions
@@ -255,7 +263,7 @@ export default function CommitmentSection() {
                   font-medium
                   leading-[1.55]
                   tracking-[-0.15px]
-                  text-[#cfcfcf]
+                  text-[#795633]
                 "
               >
                 Offering a comprehensive range of services from traditional

@@ -80,22 +80,22 @@ export default function BridalPortfolio() {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#080400] px-5 py-14 sm:px-8 md:px-12 lg:px-16">
+    <section className="relative min-h-screen overflow-hidden bg-[#713600] px-5 py-14 sm:px-8 md:px-12 lg:px-16">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#050505_0%,#080400_60%,#130900_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#713600_0%,#713600_60%,#38240D_100%)]" />
 
-        <div className="absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-[#d49b00]/[0.025] blur-[140px]" />
+        <div className="absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-[#C05800]/[0.025] blur-[140px]" />
       </div>
 
       <div className="our-work-rail relative z-10 mx-auto max-w-[1460px]">
         {/* Header */}
         <div className="mb-16 flex flex-col items-center">
-          <div className="mb-6 animate-[float_3s_ease-in-out_infinite] text-[#ffd21a]">
+          <div className="mb-6 animate-[float_3s_ease-in-out_infinite] text-[#38240D]">
             <EyeIcon />
           </div>
 
-          <h2 className="text-center text-[44px] font-extrabold leading-none tracking-[-0.045em] text-[#ffd21a] sm:text-[52px] md:text-[58px] lg:text-[62px]">
+          <h2 className="text-center text-[44px] font-extrabold leading-none tracking-[-0.045em] text-[#38240D] sm:text-[52px] md:text-[58px] lg:text-[62px]">
             Bridal Portfolio
           </h2>
         </div>
@@ -108,7 +108,7 @@ export default function BridalPortfolio() {
             return (
               <article
                 key={card.id}
-                className="portfolio-card group relative h-[460px] overflow-hidden rounded-[18px] border border-white/[0.06] bg-[#16100a] shadow-[0_25px_70px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out hover:-translate-y-3 hover:border-[#ffd21a]/20 hover:shadow-[0_35px_90px_rgba(0,0,0,0.55)] sm:h-[500px]"
+                className="portfolio-card group relative h-[460px] overflow-hidden rounded-[18px] border border-[#FDFBD4]/[0.06] bg-[#8A4300] shadow-[0_25px_70px_rgba(56, 36, 13, 0.35)] transition-all duration-500 ease-out hover:-translate-y-3 hover:border-[#C05800]/20 hover:shadow-[0_35px_90px_rgba(56, 36, 13, 0.55)] sm:h-[500px]"
               >
                 {/* Image */}
                 <img
@@ -121,7 +121,7 @@ export default function BridalPortfolio() {
                 <div className="portfolio-card-overlay absolute inset-0 z-[1] transition-all duration-500" />
 
                 {/* Bottom gradient */}
-                <div className="portfolio-card-gradient absolute inset-x-0 bottom-0 z-[2] h-[50%]" />
+                {/* <div className="portfolio-card-gradient absolute inset-x-0 bottom-0 z-[2] h-[50%]" /> */}
 
                 {/* Heart */}
                 <button
@@ -130,21 +130,21 @@ export default function BridalPortfolio() {
                     isFavorite ? "Remove from favorites" : "Add to favorites"
                   }
                   onClick={() => toggleFavorite(card.id)}
-                  className="absolute right-5 top-5 z-20 flex h-[52px] w-[52px] items-center justify-center rounded-full border border-[#ffd21a]/70 bg-[#080808]/90 shadow-[0_4px_18px_rgba(0,0,0,0.45)] backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-[#16100a] hover:shadow-[0_0_22px_rgba(255,210,26,0.35)] active:scale-95"
-                  style={{ color: "#ffd21a" }}
+                  className="absolute right-5 top-5 z-20 flex h-[52px] w-[52px] items-center justify-center rounded-full border border-[#C05800]/70 bg-[#713600]/90 shadow-[0_4px_18px_rgba(56, 36, 13, 0.45)] backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-[#8A4300] hover:shadow-[0_0_22px_rgba(192,88,0,0.35)] active:scale-95"
+                  style={{ color: "#C05800" }}
                 >
                   <HeartIcon filled={isFavorite} />
                 </button>
 
                 {/* Title */}
                 <div className="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-7">
-                  <h3 className="text-[24px] font-bold leading-tight tracking-[-0.03em] text-[#fff4b8] transition-transform duration-500 group-hover:-translate-y-1 sm:text-[27px]">
+                  <h3 className="text-[24px] font-bold leading-tight tracking-[-0.03em] text-[#F3E9B0] transition-transform duration-500 group-hover:-translate-y-1 sm:text-[27px]">
                     {card.title}
                   </h3>
                 </div>
 
                 {/* Hover border */}
-                <div className="pointer-events-none absolute inset-0 rounded-[18px] border border-[#ffd21a]/0 transition-all duration-500 group-hover:border-[#ffd21a]/30" />
+                <div className="pointer-events-none absolute inset-0 rounded-[18px] border border-[#C05800]/0 transition-all duration-500 group-hover:border-[#C05800]/30" />
               </article>
             );
           })}
@@ -153,7 +153,7 @@ export default function BridalPortfolio() {
 
       <style jsx>{`
         .portfolio-card-overlay {
-          background: rgba(0, 0, 0, 0.1);
+          background: rgba(56, 36, 13, 0.1);
         }
 
         .portfolio-card:hover .portfolio-card-overlay {
@@ -163,8 +163,8 @@ export default function BridalPortfolio() {
         .portfolio-card-gradient {
           background: linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.9),
-            rgba(0, 0, 0, 0.8),
+            rgba(56, 36, 13, 0.9),
+            rgba(56, 36, 13, 0.8),
             transparent
           );
         }

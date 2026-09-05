@@ -3,12 +3,28 @@
 
 :root {
   color-scheme: light;
-  --palette-ivory: #F7F1EA;
-  --palette-ink: #24343A;
-  --palette-rose: #C98278;
-  --palette-olive: #7C8668;
-  --palette-brass: #B89B5E;
-  --palette-stone: #D9CEC5;
+  --background: #FDFBD4;
+  --foreground: #38240D;
+  --primary: #C05800;
+  --primary-hover: #713600;
+  --dark-surface: #713600;
+  --darkest-surface: #38240D;
+  --secondary-accent: #8A5A2B;
+  --light-accent: #E8D98A;
+  --light-highlight: #F3E9B0;
+  --border: #713600;
+  --border-soft: rgba(113, 54, 0, 0.20);
+  --border-medium: rgba(113, 54, 0, 0.40);
+  --border-primary: rgba(192, 88, 0, 0.60);
+  --shadow-dark: rgba(56, 36, 13, 0.22);
+  --shadow-primary: rgba(192, 88, 0, 0.18);
+  --focus: rgba(192, 88, 0, 0.38);
+  --palette-ivory: var(--background);
+  --palette-ink: var(--foreground);
+  --palette-rose: var(--primary);
+  --palette-olive: var(--secondary-accent);
+  --palette-brass: var(--dark-surface);
+  --palette-stone: var(--light-accent);
 }
 
 * {
@@ -25,8 +41,8 @@ body {
   margin: 0;
   min-height: 100vh;
   width: 100%;
-  background: var(--palette-ivory);
-  color: var(--palette-ink);
+  background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
 }
 
@@ -115,7 +131,7 @@ section [class*="w-[1000px]"] {
   height: 8px;
 }
 .thin-scrollbar::-webkit-scrollbar-thumb {
-  background: rgb(184 155 94 / 0.55);
+  background: rgba(113, 54, 0, 0.55);
   border-radius: 9999px;
 }
 
@@ -132,7 +148,7 @@ section [class*="w-[1000px]"] {
 }
 .nav-link:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgb(201 130 120 / 0.38);
+  box-shadow: 0 0 0 3px var(--focus);
   border-radius: 6px;
 }
 
@@ -141,73 +157,84 @@ section [class*="w-[1000px]"] {
   transition: transform 180ms cubic-bezier(.2,.8,.2,1), opacity 160ms ease;
 }
 
-/* Shared palette bridge for the existing utility classes. */
-[class*="bg-black"],
-[class*="bg-[#080"],
-[class*="bg-[#090"],
-[class*="bg-[#0"],
-[class*="bg-[#1"],
-[class*="bg-[#2"] {
-  background-color: var(--palette-ink) !important;
+/* Keep ordinary page surfaces cream; reserve dark brown for top-level chrome. */
+[class*="bg-[#713600]"],
+[class*="bg-black"] {
+  background-color: var(--background) !important;
 }
 
-[class*="bg-[#E7C928"],
-[class*="bg-[#E6C516"],
-[class*="bg-[#C9A800"],
-[class*="bg-[#C7A900"] {
-  background-color: rgb(231 201 40 / 0.16) !important;
+[class*="text-[#FDFBD4]"] {
+  color: var(--foreground) !important;
 }
 
-[class*="bg-[linear-gradient"],
-[class*="bg-[radial-gradient"] {
-  background-image: linear-gradient(135deg, rgb(36 52 58 / 0.96), rgb(66 84 82 / 0.86)) !important;
+.bridal-hero h1,
+.bridal-hero p {
+  color: var(--background) !important;
 }
 
-[class*="bg-[rgba"],
-[class*="bg-white/"] {
-  background-color: rgb(247 241 234 / 0.12) !important;
+.bridal-services h3,
+.bridal-services a {
+  color: var(--background) !important;
 }
 
-[class*="text-white"],
-[class*="text-gray-200"],
-[class*="text-gray-300"],
-[class*="text-gray-400"],
-[class*="text-[#d"],
-[class*="text-[#e"],
-[class*="text-[#f"] {
-  color: var(--palette-ivory) !important;
+.bridal-services h2 {
+  color: var(--foreground) !important;
 }
 
-[class*="text-[#"],
-[class*="text-\["] {
-  color: var(--palette-brass) !important;
+.home-page button,
+.home-page a[href^="tel:"] {
+  background-color: var(--dark-surface) !important;
+  background-image: none !important;
+  border-color: var(--primary) !important;
+  color: var(--background) !important;
+}
+
+.home-page button:hover,
+.home-page a[href^="tel:"]:hover {
+  background-color: var(--darkest-surface) !important;
+  color: var(--background) !important;
+}
+
+.certification-programs h3,
+.certification-programs a {
+  color: var(--background) !important;
+}
+
+[class*="bg-[#C05800]"][class*="text-[#38240D]"],
+[class*="bg-gradient"][class*="text-[#38240D]"] {
+  color: var(--background) !important;
+}
+
+[class*="bg-black"] {
+  background-color: var(--background) !important;
+}
+
+[class*="text-white"] {
+  color: var(--background) !important;
 }
 
 [class*="text-black"] {
-  color: var(--palette-ink) !important;
+  color: var(--foreground) !important;
 }
 
-[class*="border-[#"],
 [class*="border-white/"] {
-  border-color: rgb(184 155 94 / 0.48) !important;
-}
-
-[class*="shadow-["] {
-  box-shadow: 0 18px 45px rgb(36 52 58 / 0.22), 0 5px 18px rgb(201 130 120 / 0.14) !important;
-}
-
-[class*="blur-"] {
-  opacity: 0.34;
+  border-color: var(--border-soft) !important;
 }
 
 header,
-footer[class*="bg-black"] {
-  background-color: var(--palette-ink) !important;
+header[class*="bg-[#FDFBD4]"],
+footer[class*="bg-black"],
+footer[class*="bg-[#713600]"] {
+  background-color: var(--background) !important;
+}
+
+footer {
+  background-color: var(--dark-surface) !important;
 }
 
 /* Use one continuous visual surface across the Our Work page sections. */
 .our-work-page {
-  background: var(--palette-ink) !important;
+  background: var(--background) !important;
 }
 
 .our-work-page > section,
@@ -230,7 +257,22 @@ footer[class*="bg-black"] {
 
 /* Keep the mobile navigation visually calm while the palette bridge styles the site. */
 header > div:nth-child(2) > div > div {
-  background-color: var(--palette-ink) !important;
+  background-color: var(--dark-surface) !important;
+}
+
+header [class*="bg-[#713600]"],
+footer [class*="bg-[#713600]"] {
+  background-color: var(--dark-surface) !important;
+}
+
+header [class*="text-[#FDFBD4]"],
+footer [class*="text-[#FDFBD4]"] {
+  color: var(--foreground) !important;
+}
+
+header .call-button,
+header [class*="bg-[#713600]"][class*="text-[#FDFBD4]"] {
+  color: var(--background) !important;
 }
 
 header > div:nth-child(2) [class*="bg-[rgba"] {
@@ -243,38 +285,38 @@ header > div:nth-child(2) nav a {
 }
 
 header > div:nth-child(2) nav a[class*="bg-[rgba"] {
-  background-color: rgb(201 130 120 / 0.16) !important;
-  color: var(--palette-rose) !important;
+  background-color: rgba(192, 88, 0, 0.16) !important;
+  color: var(--primary) !important;
 }
 
 section[style*="backgroundImage"] h1,
 section[style*="backgroundImage"] h2,
 section[style*="backgroundImage"] h3 {
-  color: var(--palette-rose) !important;
+  color: var(--primary) !important;
 }
 
 section[style*="backgroundImage"] p,
 section[style*="backgroundImage"] span {
-  color: rgb(247 241 234 / 0.9) !important;
+  color: rgba(253, 251, 212, 0.9) !important;
 }
 
 main > div > section:nth-child(4n + 2) h1,
 main > div > section:nth-child(4n + 2) h2,
 main > div > section:nth-child(4n + 2) h3 {
-  color: var(--palette-olive) !important;
+  color: var(--secondary-accent) !important;
 }
 
 main > div > section:nth-child(4n + 2) [class*="border-[#"] {
-  border-color: rgb(124 134 104 / 0.56) !important;
+  border-color: rgba(138, 90, 43, 0.56) !important;
 }
 
 main > div > section:nth-child(4n + 2) [class*="bg-black"][class*="rounded"] {
-  background-color: rgb(124 134 104 / 0.12) !important;
+  background-color: rgba(138, 90, 43, 0.12) !important;
 }
 
 ::selection {
-  background: rgb(201 130 120 / 0.42);
-  color: var(--palette-ink);
+  background: rgba(192, 88, 0, 0.42);
+  color: var(--foreground);
 }
 
 @media (max-width: 767px) {

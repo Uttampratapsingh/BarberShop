@@ -7,7 +7,7 @@ import CertificationProgramsDetails from "./CertificationProgramsDetails";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-start">
+    <main className="home-page min-h-screen bg-[#713600] text-[#FDFBD4] flex flex-col items-start">
       {/* Full-bleed hero */}
       <BridalHero />
       <BridalServices/>

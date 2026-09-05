@@ -4,7 +4,7 @@ import React from "react";
 
 const AboutLegacy = () => {
     return (
-        <section className="relative h-screen w-full overflow-hidden bg-black">
+        <section className="relative h-screen w-full overflow-hidden bg-[#713600]">
             {/* Background video */}
             <video
                 className="absolute inset-0 h-full w-full object-contain brightness-[0.42] md:object-cover"
@@ -19,34 +19,34 @@ const AboutLegacy = () => {
 
             <div
                 className="pointer-events-none absolute inset-0 z-[1]"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.28)" }}
+                style={{ backgroundColor: "rgba(56, 36, 13, 0.28)" }}
             />
 
             {/* Dark cinematic overlay */}
-            {/* <div className="absolute inset-0 bg-black/70" /> */}
+            {/* <div className="absolute inset-0 bg-[#713600]/70" /> */}
 
             {/* Additional gradient */}
             {/* <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/35 to-black/90" /> */}
 
             {/* Subtle gold ambient glow */}
-            <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D4AF37]/5 blur-[130px]" />
+            <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C05800]/5 blur-[130px]" />
 
             {/* Content */}
             <div className="relative z-10 flex h-full items-center justify-center px-6 text-center pt-[72px] sm:pt-[88px] md:pt-[120px]">
                 <div className="about-legacy-content">
 
                     {/* Heading */}
-                    <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-[#F5C518] sm:text-6xl md:text-7xl lg:text-[76px]">
+                    <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-[#FDFBD4] sm:text-6xl md:text-7xl lg:text-[76px]">
                         About Our Legacy
                     </h1>
 
                     {/* Subtitle */}
-                    <p className="mt-5 text-2xl font-medium text-[#E6C516] sm:text-3xl md:text-4xl">
+                    <p className="mt-5 text-2xl font-medium text-[#FDFBD4] opacity-70 sm:text-3xl md:text-4xl">
                         Redefining bridal excellence since 2016
                     </p>
 
                     {/* Button */}
-                    <a href="tel:+919781265400" aria-label="Call to book a free consultation" className="legacy-button group mt-12 inline-flex items-center gap-3 rounded-lg border border-[#FFD700] bg-[#D4AF37] px-8 py-4 text-lg font-bold text-black shadow-[0_8px_30px_rgba(212,175,55,0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#FFD700] hover:shadow-[0_0_35px_rgba(255,215,0,0.5)]">
+                    <a href="tel:+919781265400" aria-label="Call to book a free consultation" className="legacy-button group mt-12 inline-flex items-center gap-3 rounded-lg border border-[#C05800] bg-[#C05800] px-8 py-4 text-lg font-bold text-[#FDFBD4] shadow-[0_8px_30px_rgba(192, 88, 0, 0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#713600] hover:shadow-[0_0_35px_rgba(192, 88, 0, 0.5)]">
                         
                         {/* Chat icon */}
                         <svg
@@ -87,6 +87,15 @@ const AboutLegacy = () => {
                 .about-legacy-content {
                     opacity: 0;
                     animation: legacyFadeUp 1s ease-out 0.15s forwards;
+                }
+
+                .about-legacy-content h1,
+                .about-legacy-content p {
+                    color: #FDFBD4 !important;
+                }
+
+                .about-legacy-content p {
+                    opacity: 0.7;
                 }
             `}</style>
         </section>

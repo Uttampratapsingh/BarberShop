@@ -4,7 +4,7 @@ import React from "react";
 
 const BridalHero = () => {
     return (
-        <section className="relative min-h-screen w-full overflow-hidden bg-black">
+        <section className="bridal-hero relative min-h-screen w-full overflow-hidden bg-[#713600]">
 
             {/* Background Video */}
             <video
@@ -20,11 +20,11 @@ const BridalHero = () => {
 
             <div
                 className="pointer-events-none absolute inset-0 z-[1]"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.28)" }}
+                style={{ backgroundColor: "rgba(56, 36, 13, 0.28)" }}
             />
 
             {/* Dark overlay */}
-            {/* <div className="absolute inset-0 bg-black/65" /> */}
+            {/* <div className="absolute inset-0 bg-[#713600]/65" /> */}
 
             {/* Extra gradient for cinematic look */}
             {/* <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/65" /> */}
@@ -43,10 +43,12 @@ const BridalHero = () => {
                             lg:text-7xl
                             font-bold
                             leading-[1.05]
-                            text-[#F5C518]
+                            text-[#FDFBD4]
+                            brightness-100
+                            opacity-100
                         "
                     >
-                        Classic Bridal Studio
+                        GSO Bridal Studio
                         <br />
                         Salon & Academy
                     </h1>
@@ -62,12 +64,13 @@ const BridalHero = () => {
                             md:text-2xl
                             leading-relaxed
                             font-medium
-                            text-white
+                            text-[#FDFBD4]
+                            opacity-60
                         "
                     >
-                        Master the art of bridal beauty with professional training in
+                        Redefining Bridal Beauty, One Bride at a Time
                         <br className="hidden sm:block" />
-                        makeup, skincare, and hair designing
+                        Elegant makeup, skincare & hair styling for your special day.
                     </p>
 
                     {/* Button */}
@@ -79,18 +82,19 @@ const BridalHero = () => {
                             sm:mt-12
                             rounded-lg
                             bg-gradient-to-r
-                            from-[#D4AF37]
-                            to-[#FFD700]
+                            from-[#C05800]
+                            to-[#C05800]
                             px-12
                             py-5
                             text-lg
                             font-bold
-                            text-black
-                            shadow-[0_8px_30px_rgba(212,175,55,0.25)]
+                            text-[#38240D]
+                            shadow-[0_8px_30px_rgba(192, 88, 0, 0.25)]
                             transition-all
                             duration-300
                             hover:scale-105
-                            hover:shadow-[0_8px_40px_rgba(212,175,55,0.45)]
+                            hover:shadow-[0_8px_40px_rgba(192, 88, 0, 0.45)]
+                            opacity-70
                         "
                     >
                         View Our Work
@@ -101,12 +105,12 @@ const BridalHero = () => {
 
             {/* Subtle gold particles */}
             <div className="pointer-events-none absolute inset-0 z-[5] opacity-30">
-                <div className="absolute left-[12%] top-[20%] h-1 w-1 rounded-full bg-[#D4AF37]" />
-                <div className="absolute left-[27%] top-[70%] h-1 w-1 rounded-full bg-[#D4AF37]" />
-                <div className="absolute left-[52%] top-[18%] h-1 w-1 rounded-full bg-[#D4AF37]" />
-                <div className="absolute left-[73%] top-[62%] h-1 w-1 rounded-full bg-[#D4AF37]" />
-                <div className="absolute left-[88%] top-[30%] h-1 w-1 rounded-full bg-[#D4AF37]" />
-                <div className="absolute left-[45%] top-[82%] h-1 w-1 rounded-full bg-[#D4AF37]" />
+                <div className="absolute left-[12%] top-[20%] h-1 w-1 rounded-full bg-[#C05800]" />
+                <div className="absolute left-[27%] top-[70%] h-1 w-1 rounded-full bg-[#C05800]" />
+                <div className="absolute left-[52%] top-[18%] h-1 w-1 rounded-full bg-[#C05800]" />
+                <div className="absolute left-[73%] top-[62%] h-1 w-1 rounded-full bg-[#C05800]" />
+                <div className="absolute left-[88%] top-[30%] h-1 w-1 rounded-full bg-[#C05800]" />
+                <div className="absolute left-[45%] top-[82%] h-1 w-1 rounded-full bg-[#C05800]" />
             </div>
 
         </section>

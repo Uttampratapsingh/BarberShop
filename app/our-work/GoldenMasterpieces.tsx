@@ -11,7 +11,7 @@ export default function GoldenMasterpieces() {
         {/* <div
           className="
             pointer-events-none absolute inset-0
-            bg-[radial-gradient(ellipse_at_center_top,rgba(255,194,0,0.10)_0%,transparent_5%)]
+            bg-[radial-gradient(ellipse_at_center_top,rgba(192,88,0,0.10)_0%,transparent_5%)]
           "
         /> */}
 
@@ -21,7 +21,7 @@ export default function GoldenMasterpieces() {
             className="
               font-sans font-extrabold tracking-[-0.045em]
               text-[52px] leading-[1.05]
-              text-[#ffd21a]
+              text-[#38240D]
               sm:text-[68px]
               md:text-[82px]
               lg:text-[92px]
@@ -37,7 +37,7 @@ export default function GoldenMasterpieces() {
               font-sans font-normal
               text-[18px] leading-none
               tracking-[-0.025em]
-              text-[#fff4b8]
+              text-[#713600]
               sm:text-[21px]
               md:text-[25px]
               lg:text-[27px]
