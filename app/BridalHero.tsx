@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import React from "react";
 
 const BridalHero = () => {
@@ -70,9 +71,12 @@ const BridalHero = () => {
                     </p>
 
                     {/* Button */}
-                    <button
+                    <Link
+                        href="/our-work"
                         className="
-                            mt-12
+                            mt-10
+                            inline-block
+                            sm:mt-12
                             rounded-lg
                             bg-gradient-to-r
                             from-[#D4AF37]
@@ -90,7 +94,7 @@ const BridalHero = () => {
                         "
                     >
                         View Our Work
-                    </button>
+                    </Link>
 
                 </div>
             </div>

@@ -374,7 +374,7 @@ const BridalServices = () => {
 
 
                                 <a
-                                    href="tel:+919999999999"
+                                    href="tel:+919781265400"
                                     className="
                                         service-card-button
 

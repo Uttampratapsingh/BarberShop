@@ -150,7 +150,7 @@ export default function Header() {
 
           <a
             className="call-button hidden md:inline-flex z-10 inline-flex shrink-0 items-center gap-3 rounded-full bg-[#f4be14] px-5 py-3 text-[16px] font-semibold text-black shadow-call transition duration-200 hover:-translate-y-0.5 hover:bg-[#f7c71a] active:translate-y-px active:scale-95"
-            href="tel:+919999999999"
+            href="tel:+919781265400"
           >
             <span aria-hidden="true" className="text-[19px] leading-none">
               ☎
@@ -215,7 +215,7 @@ export default function Header() {
 
             <div className="mt-8 border-t border-white/6 pt-6">
               <a
-                href="tel:+919999999999"
+                href="tel:+919781265400"
                 className="call-button inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#f4be14] px-6 py-4 text-[18px] font-semibold text-black"
               >
                 <span aria-hidden>☎</span>

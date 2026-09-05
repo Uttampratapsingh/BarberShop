@@ -57,7 +57,7 @@ export default function BridalJourneyCTA() {
 
         {/* CTA */}
         <a
-          href="tel:+919999999999"
+          href="tel:+919781265400"
           type="button"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}

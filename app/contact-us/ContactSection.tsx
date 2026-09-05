@@ -53,7 +53,7 @@ export default function ContactSection() {
               </p>
 
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Golden+Studio+Garhshankar+Punjab"
+                href="https://maps.app.goo.gl/36g3yJB8tT1NUc8v9?g_st=iw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group mt-[27px] inline-flex h-[53px] items-center justify-center gap-3 rounded-full border border-[#72550e] bg-[#19150c] px-[28px] text-[16px] font-bold text-[#d8ad20] shadow-[0_8px_25px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-[#b2871a] hover:bg-[#241d0d] hover:text-[#ffd21a] hover:shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
@@ -95,11 +95,11 @@ export default function ContactSection() {
                 </h3>
 
                 <p className="mt-[12px] max-w-[390px] text-[15px] leading-[1.55] text-[#c19a17] sm:text-[16px]">
-                  First Floor Fateh Plaza,
+                  Bulewal Morh, Near Kulwinder DJ,
                   <br />
-                  Oppo. Dhillon Diary Banga-Garhshankar Rd,
+                  Balachur-Bhaddi Road, Balachur,
                   <br />
-                  Garhshankar, Punjab 144527
+                  Punjab 144521
                 </p>
               </div>
 
@@ -113,7 +113,7 @@ export default function ContactSection() {
                     href="mailto:tarandeep.singh01@gmail.com"
                     className="mt-[12px] inline-block text-[15px] text-[#c19a17] transition-colors duration-300 hover:text-[#ffd21a] sm:text-[16px]"
                   >
-                    tarandeep.singh01@gmail.com
+                    rajjpal33@gmail.com
                   </a>
                 </div>
 
@@ -123,10 +123,10 @@ export default function ContactSection() {
                   </h3>
 
                   <a
-                    href="tel:+919914118262"
+                    href="tel:+919781265400"
                     className="mt-[12px] inline-block text-[15px] text-[#c19a17] transition-colors duration-300 hover:text-[#ffd21a] sm:text-[16px]"
                   >
-                    +91 99141-18262
+                    +91 97812 65400
                   </a>
                 </div>
               </div>

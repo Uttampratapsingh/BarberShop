@@ -104,7 +104,7 @@ const SiteFooter = () => {
                                 <span className="mb-1 block text-sm uppercase tracking-[0.2em] text-gray-500">Email</span>
                                 rajjpal33@gmail.com
                             </a>
-                            <a href="https://maps.google.com/?q=Bulewal+Morh+Balachur+Punjab+144521" target="_blank" rel="noreferrer" className="block transition-all duration-300 hover:translate-x-1 hover:text-[#FFD21F]">
+                            <a href="https://maps.app.goo.gl/36g3yJB8tT1NUc8v9?g_st=iw" target="_blank" rel="noreferrer" className="block transition-all duration-300 hover:translate-x-1 hover:text-[#FFD21F]">
                                 <span className="mb-1 block text-sm uppercase tracking-[0.2em] text-gray-500">Studio</span>
                                 Bulewal Morh, Near Kulwinder DJ, Balachur-Bhaddi Road, Balachur, Punjab 144521
                             </a>
