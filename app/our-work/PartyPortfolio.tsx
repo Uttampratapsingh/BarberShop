@@ -129,7 +129,7 @@ export default function PartyPortfolio() {
                   aria-label={
                     isFavorite ? "Remove from favorites" : "Add to favorites"
                   }
-                  className="absolute right-[19px] top-[19px] z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#FDFBD4]/80 bg-[#FDFBD4]/90 text-[#C05800] shadow-[0_4px_16px_rgba(56, 36, 13, 0.6),0_0_14px_rgba(192,88,0,0.2)] backdrop-blur-[4px] transition-all duration-300 hover:scale-110 hover:bg-[#A85A1A] hover:shadow-[0_5px_20px_rgba(56, 36, 13, 0.7),0_0_18px_rgba(192,88,0,0.35)] active:scale-95"
+                  className="absolute right-[19px] top-[19px] z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#FDFBD4]/80 bg-[#FDFBD4]/90 text-[#C05800] shadow-[0_4px_16px_rgba(56, 36, 13, 0.6),0_0_14px_rgba(192,88,0,0.2)] backdrop-blur-[4px] transition-all duration-300 hover:scale-110  hover:shadow-[0_5px_20px_rgba(56, 36, 13, 0.7),0_0_18px_rgba(192,88,0,0.35)] active:scale-95"
                 >
                   <HeartIcon active={isFavorite} />
                 </button>

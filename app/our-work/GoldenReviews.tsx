@@ -12,17 +12,17 @@ type Review = {
 const reviews: Review[] = [
   {
     id: 1,
-    name: "Jasjit Kaur",
+    name: "Simran Kaur",
     role: "Our Client",
     review:
-      "Best service ever I got!! They made my day so special, I am so thankful to Aman Di who went above and beyond 🙏 I highly recommend her for your wedding days and other services! I never leave any kind of Reviews but I am just so impressed!!",
+      "Absolutely loved my bridal look! The makeup was elegant, flawless and exactly how I wanted it. The team was so professional, friendly and welcoming. Thank you GSO Bridal Studio for making my special day even more memorable! ❤️✨",
   },
   {
     id: 2,
-    name: "Jhanvi Sharma",
+    name: "Mehak Sharma",
     role: "Our Client",
     review:
-      "The ma'am that did the makeup is very professional and very friendly! She did an awesome job... Also, I loved her services!! Probably the best salon to visit in Garhshankar according to me 😍",
+      "Had such a wonderful experience at GSO Bridal Studio! The makeup and hair styling were beautifully done and lasted throughout the event. The service was amazing and the staff was very friendly. Highly recommended for bridal services! 💕",
   },
 ];
 
