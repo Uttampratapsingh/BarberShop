@@ -18,7 +18,7 @@ const SiteFooter = () => {
                     <div className="footer-item footer-item-1">
                         <div className="hidden md:block">
                             <img
-                                src="/r11.jpeg"
+                                src="/r11.png"
                                 alt="GSO Bridal Studio"
                                 className="h-auto w-[190px] object-contain transition-all duration-500 group-hover:scale-105 group-hover:brightness-125"
                             />
@@ -124,7 +124,7 @@ const SiteFooter = () => {
                 <div className="py-8">
 
                     <p className="text-base leading-relaxed text-[#795633] sm:text-lg">
-                        © 2025 Classic Bridal Studio. All rights reserved.
+                        © 2025 GSO Bridal Studio. All rights reserved.
                     </p>
 
                 </div>

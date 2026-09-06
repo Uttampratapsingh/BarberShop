@@ -17,9 +17,9 @@ const navItems: { label: string; href: string }[] = [
 function LogoMark() {
   return (
     <img
-      src="/r11.jpeg"
+      src="/r11.png"
       alt="Classic Bridal Studio"
-      className="h-[76px] w-[140px] shrink-0 object-contain md:h-[70px] md:w-[170px] ml-[-20px] md:ml-[-50px]"
+      className="h-[66px] w-[140px] shrink-0 object-contain md:h-[70px] md:w-[170px] ml-[-20px] md:ml-[-50px]"
     />
   );
 }
