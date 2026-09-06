@@ -31,20 +31,97 @@ export default function GoldenCareerPath() {
     }
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setIsSubmitting(true);
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  event.preventDefault();
 
-    window.setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
+  // console.log("=================================");
+  // console.log("🚀 FORM SUBMISSION STARTED");
+  // console.log("=================================");
 
-      window.setTimeout(() => {
-        setIsModalOpen(false);
-        setIsSubmitted(false);
-      }, 1800);
-    }, 1200);
+  setIsSubmitting(true);
+
+  const form = event.currentTarget;
+
+  // console.log("📋 Form element:", form);
+
+  const formData = new FormData(form);
+
+  // console.log("📦 Raw FormData:");
+
+  // for (const [key, value] of formData.entries()) {
+  //   // console.log(`   ${key}:`, value);
+  // }
+
+  const data = {
+    formType: "career",
+    fullName: formData.get("fullName"),
+    contactNumber: formData.get("contactNumber"),
+    program: formData.get("program"),
+  };
+
+  // console.log("📤 Data being sent:");
+  // console.log(data);
+
+  const url =
+    "https://script.google.com/macros/s/AKfycbwcRoh_sjn5QCWqNndV9VUMDLtrYflIF__MPdzH3iWPqPbzppv6rkda1VeRLsExV1D9HA/exec";
+
+  // console.log("🌐 Google Apps Script URL:");
+  // console.log(url);
+
+  const requestBody = JSON.stringify(data);
+
+  // console.log("📝 JSON body:");
+  // console.log(requestBody);
+  // console.log("📝 JSON body:");
+  // console.log(requestBody);
+
+  try {
+    // console.log("⏳ Sending request...");
+
+    const response = await fetch(url, {
+      method: "POST",
+      mode: "no-cors",
+      body: requestBody,
+    });
+
+    // console.log("✅ Fetch completed");
+    // console.log("📡 Response object:", response);
+    // console.log("📊 Response type:", response.type);
+    // console.log("📊 Response status:", response.status);
+    // console.log("📊 Response OK:", response.ok);
+
+    try {
+      const responseText = await response.text();
+      // console.log("📄 Response body:", responseText);
+    } catch (responseError) {
+      // console.log("⚠️ Could not read response body:", responseError);
+    }
+
+    // console.log("✅ Assuming request was sent");
+    // console.log("=================================");
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+
+    setTimeout(() => {
+      // console.log("🔄 Resetting form");
+
+      setIsModalOpen(false);
+      setIsSubmitted(false);
+      form.reset();
+    }, 1800);
+
+  } catch (error) {
+    // console.error("❌ FETCH ERROR");
+    // console.error(error);
+
+    setIsSubmitting(false);
+
+    alert(
+      "Submission failed. Check the browser console for details."
+    );
   }
+}
 
   return (
     <section className="golden-career-path relative min-h-[640px] overflow-hidden bg-[#713600] px-5 sm:px-8">
@@ -200,7 +277,6 @@ export default function GoldenCareerPath() {
                       type="tel"
                       autoComplete="tel"
                       placeholder="+91 12345-67890"
-                      pattern="[+0-9 ()-]{8,}"
                       className="h-14 w-full rounded-xl border border-[#C05800]/45 bg-[#FDFBD4] px-4 text-base text-[#713600] outline-none transition-colors placeholder:text-[#713600] focus:border-[#C05800] focus:ring-2 focus:ring-[#C05800]/20"
                     />
                   </label>

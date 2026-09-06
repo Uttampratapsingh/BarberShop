@@ -1,10 +1,11 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 export default function ContactSection() {
   const [visible, setVisible] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"ready" | "sending" | "sent">("ready");
+  const isSubmittingRef = useRef(false);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -14,15 +15,65 @@ export default function ContactSection() {
     return () => window.clearTimeout(timer);
   }, []);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    e.currentTarget.reset();
-    setSent(true);
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  e.preventDefault();
 
-    window.setTimeout(() => {
-      setSent(false);
-    }, 3000);
+  // IMMEDIATE synchronous lock
+  // Prevents double/triple/rapid clicks
+  if (isSubmittingRef.current) {
+    console.log("Submission already in progress. Ignoring click.");
+    return;
+  }
+
+  isSubmittingRef.current = true;
+
+  // Immediately update UI
+  setSubmitStatus("sending");
+
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+
+  const data = {
+    formType: "contact",
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message"),
   };
+
+  console.log("Submitting:", data);
+
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbwcRoh_sjn5QCWqNndV9VUMDLtrYflIF__MPdzH3iWPqPbzppv6rkda1VeRLsExV1D9HA/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(data),
+      }
+    );
+
+    console.log("Submission completed");
+
+    // Only after request completes
+    setSubmitStatus("sent");
+
+    form.reset();
+
+    setTimeout(() => {
+      setSubmitStatus("ready");
+      isSubmittingRef.current = false;
+    }, 3000);
+
+  } catch (error) {
+    console.error("Submission error:", error);
+
+    // Allow another attempt
+    setSubmitStatus("ready");
+    isSubmittingRef.current = false;
+
+    alert("Unable to send your message. Please try again.");
+  }
+}
 
   return (
     <section className="contact-section relative min-h-screen overflow-hidden bg-[#FDFBD4] px-4 py-10 sm:px-6 lg:px-[8.3%]">
@@ -212,20 +263,26 @@ export default function ContactSection() {
 
                 {/* Button */}
                 <button
-                  type="submit"
-                  className="contact-action group mt-[29px] flex h-[48px] w-full items-center justify-center rounded-[8px] !bg-[#713600] text-[16px] font-bold !text-[#FDFBD4] transition-all duration-300 hover:-translate-y-1 hover:!bg-[#38240D] hover:shadow-[0_12px_30px_rgba(192,88,0,0.28)] active:translate-y-0"
-                >
-                  {sent ? (
-                    <span className="flex items-center gap-2 animate-pulse">
-                      <span className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#713600] text-xs">
-                        ✓
-                      </span>
-                      Message Sent
-                    </span>
-                  ) : (
-                    <span>Send Message</span>
-                  )}
-                </button>
+  type="submit"
+  disabled={submitStatus === "sending"}
+  className="contact-action group mt-[29px] flex h-[48px] w-full items-center justify-center rounded-[8px] !bg-[#713600] text-[16px] font-bold !text-[#FDFBD4] transition-all duration-300 hover:-translate-y-1 hover:!bg-[#38240D] hover:shadow-[0_12px_30px_rgba(192,88,0,0.28)] active:translate-y-0 disabled:cursor-wait disabled:opacity-80"
+>
+  {submitStatus === "sending" ? (
+    <span className="flex items-center gap-2">
+      <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#FDFBD4]/40 border-t-[#FDFBD4]" />
+      Sending...
+    </span>
+  ) : submitStatus === "sent" ? (
+    <span className="flex items-center gap-2">
+      <span className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#FDFBD4] text-xs">
+        ✓
+      </span>
+      Message Sent
+    </span>
+  ) : (
+    <span>Send Message</span>
+  )}
+</button>
 
                 <p className="mt-[18px] text-center text-[13px] text-[#A85A1A]">
                   We typically respond within 24 golden hours
