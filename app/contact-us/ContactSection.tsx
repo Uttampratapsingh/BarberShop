@@ -1,11 +1,11 @@
 "use client";
 
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 export default function ContactSection() {
   const [visible, setVisible] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"ready" | "sending" | "sent">("ready");
-  const isSubmittingRef = useRef(false);
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -18,17 +18,12 @@ export default function ContactSection() {
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
   e.preventDefault();
 
-  // IMMEDIATE synchronous lock
-  // Prevents double/triple/rapid clicks
-  if (isSubmittingRef.current) {
-    console.log("Submission already in progress. Ignoring click.");
+  // Prevent another submission
+  if (isSubmitting) {
     return;
   }
 
-  isSubmittingRef.current = true;
-
-  // Immediately update UI
-  setSubmitStatus("sending");
+  setIsSubmitting(true);
 
   const form = e.currentTarget;
   const formData = new FormData(form);
@@ -40,8 +35,6 @@ export default function ContactSection() {
     message: formData.get("message"),
   };
 
-  console.log("Submitting:", data);
-
   try {
     await fetch(
       "https://script.google.com/macros/s/AKfycbwcRoh_sjn5QCWqNndV9VUMDLtrYflIF__MPdzH3iWPqPbzppv6rkda1VeRLsExV1D9HA/exec",
@@ -52,25 +45,19 @@ export default function ContactSection() {
       }
     );
 
-    console.log("Submission completed");
-
-    // Only after request completes
-    setSubmitStatus("sent");
-
     form.reset();
 
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+
     setTimeout(() => {
-      setSubmitStatus("ready");
-      isSubmittingRef.current = false;
+      setIsSubmitted(false);
     }, 3000);
 
   } catch (error) {
     console.error("Submission error:", error);
 
-    // Allow another attempt
-    setSubmitStatus("ready");
-    isSubmittingRef.current = false;
-
+    setIsSubmitting(false);
     alert("Unable to send your message. Please try again.");
   }
 }
@@ -264,15 +251,15 @@ export default function ContactSection() {
                 {/* Button */}
                 <button
   type="submit"
-  disabled={submitStatus === "sending"}
+  disabled={isSubmitting}
   className="contact-action group mt-[29px] flex h-[48px] w-full items-center justify-center rounded-[8px] !bg-[#713600] text-[16px] font-bold !text-[#FDFBD4] transition-all duration-300 hover:-translate-y-1 hover:!bg-[#38240D] hover:shadow-[0_12px_30px_rgba(192,88,0,0.28)] active:translate-y-0 disabled:cursor-wait disabled:opacity-80"
 >
-  {submitStatus === "sending" ? (
+  {isSubmitting ? (
     <span className="flex items-center gap-2">
       <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#FDFBD4]/40 border-t-[#FDFBD4]" />
       Sending...
     </span>
-  ) : submitStatus === "sent" ? (
+  ) : isSubmitted ? (
     <span className="flex items-center gap-2">
       <span className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#FDFBD4] text-xs">
         ✓
